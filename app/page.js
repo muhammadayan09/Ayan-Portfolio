@@ -22,60 +22,57 @@ const stats = [
 
 const testimonials = [
   {
-    title: 'Discover how innovative financial management',
-    text: 'Discover how innovative financial management solutions can transform your financial life, making it simpler and more efficient.',
-    name: 'Melinda Parker',
-    role: 'Sales Manager',
+    name: 'Sarah Jenkins',
+    role: 'CEO, TechFlow Solutions',
+    text: "Partnering with Muhammad Ayan was the best decision for our digital presence. They didn't just build a website; they architected an engine that doubled our online lead generation in the first quarter alone. Absolutely brilliant team.",
     rating: 5,
   },
   {
-    title: 'Experience effortless connectivity with your',
-    text: 'Experience seamless integration that enables smooth and efficient financial management with your bank.',
-    name: 'Benjamin Evans',
-    role: 'Product Designer',
+    name: 'David Chen',
+    role: 'Founder, Elevate Commerce',
+    text: "The level of engineering excellence is unmatched. They took our slow, outdated Shopify store and transformed it into a blazing-fast, modern masterpiece. Our conversion rates have never been higher. Highly recommended!",
     rating: 5,
   },
   {
-    title: 'Streamline your contract management process',
-    text: 'Streamline your contract management process with intuitive tools that simplify every stage, from drafting and negotiation to execution and monitoring.',
-    name: 'James Miller',
-    role: 'Design Lead',
+    name: 'Elena Rodriguez',
+    role: 'Marketing Director, Nexus Group',
+    text: "Professional, incredibly fast, and detail-oriented. Muhammad Ayan's team delivered a complex corporate portal weeks ahead of schedule. Their understanding of modern UI/UX and technical SEO is truly industry-leading.",
     rating: 5,
   },
   {
-    title: 'Accelerate growth with data-driven insights',
-    text: 'We used analytics to optimize conversion flow, resulting in higher engagement and more qualified leads.',
-    name: 'Sasha Nguyen',
-    role: 'Growth Strategist',
+    name: 'James Harrison',
+    role: 'Operations Head, BuildRight',
+    text: "It's rare to find an agency that truly understands both design aesthetics and complex backend logic. They seamlessly integrated our internal APIs while giving us a beautiful, award-winning frontend. Outstanding work.",
     rating: 5,
   },
 ];
 
 const caseStudies = [
   {
-    title: 'E-commerce Revamp',
-    desc: 'Redesigned checkout experience to boost conversions and reduce bounce rate.',
-    tags: ['Shopify', 'UX', 'Performance'],
+    title: 'E-commerce Revenue Boost',
+    desc: 'Completely redesigned and optimized a Shopify store for a fashion retailer, resulting in a 45% increase in conversion rate and a 2x boost in organic traffic within 3 months.',
+    tags: ['Shopify', 'Conversion Optimization', 'SEO'],
   },
   {
-    title: 'SaaS Dashboard',
-    desc: 'Built a scalable dashboard with real-time analytics and modular components.',
-    tags: ['Next.js', 'React', 'Tailwind'],
+    title: 'High-Performance SaaS Platform',
+    desc: 'Engineered a lightning-fast frontend for a B2B SaaS startup using Next.js, reducing initial load times by 70% and drastically improving user retention rates.',
+    tags: ['Next.js', 'React', 'Performance'],
   },
   {
-    title: 'Landing Page Optimization',
-    desc: 'Improved load speed and conversion flow for high-traffic marketing campaigns.',
-    tags: ['SEO', 'A/B Testing', 'Accessibility'],
+    title: 'Corporate Identity Revamp',
+    desc: 'Delivered a premium, bespoke WordPress website for an international consulting firm, establishing a professional digital presence that generated widespread industry recognition.',
+    tags: ['WordPress', 'Custom Theme', 'Branding'],
   },
   {
-    title: 'Brand Refresh & UI Upgrade',
-    desc: 'Delivered a modern UI refresh that improved engagement and brand consistency.',
-    tags: ['Design', 'Figma', 'Accessibility'],
+    title: 'Real Estate Portal Architecture',
+    desc: 'Built a scalable, highly interactive property listing platform with advanced filtering and real-time mapping integrations, handling thousands of concurrent users seamlessly.',
+    tags: ['Architecture', 'API Integration', 'UI/UX'],
   },
 ];
 
 export default function Home() {
   const [mounted, setMounted] = useState(false);
+  const [openFaq, setOpenFaq] = useState(0);
   const [slideIndex, setSlideIndex] = useState(0);
   const [visibleCount, setVisibleCount] = useState(4);
   const [caseSlide, setCaseSlide] = useState(0);
@@ -197,16 +194,16 @@ export default function Home() {
             </div>
 
             <h1 className={`hero-title ${mounted ? 'animate-fade-in-up delay-1' : ''}`}>
-              Hi, I&apos;m <span className="gradient-text">Muhammad Ayan</span>
+              Welcome to <span className="gradient-text">Muhammad Ayan</span>
             </h1>
 
             <p className={`hero-role ${mounted ? 'animate-fade-in-up delay-2' : ''}`}>
-              Frontend Developer &amp; Digital Solutions Expert
+              Web Development & Digital Solutions Company
             </p>
 
             <p className={`hero-desc ${mounted ? 'animate-fade-in-up delay-3' : ''}`}>
-              I craft modern, performant web experiences using cutting-edge technologies.
-              From pixel-perfect frontends to complete e-commerce solutions — I bring your vision to life.
+              We craft modern, performant web experiences using cutting-edge technologies.
+              From pixel-perfect frontends to complete e-commerce solutions — we bring your vision to life.
             </p>
 
             <div className={`hero-actions ${mounted ? 'animate-fade-in-up delay-4' : ''}`}>
@@ -215,7 +212,7 @@ export default function Home() {
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
               </Link>
               <Link href="/skills" className="btn btn-outline">
-                View My Skills
+                View Our Skills
               </Link>
             </div>
 
@@ -244,8 +241,8 @@ export default function Home() {
                   <pre>
                     <code>
 {`const developer = {
-  name: "Muhammad Ayan",
-  role: "Frontend Developer",
+  company: "Muhammad Ayan",
+  type: "Web Dev Company",
   skills: [
     "HTML", "CSS",
     "Angular", "Next.js",
@@ -287,7 +284,7 @@ export default function Home() {
       <section className="section skills-highlight">
         <div className="container">
           <div className="section-header-center">
-            <span className="section-label">My Expertise</span>
+            <span className="section-label">Our Expertise</span>
             <h2 className="section-title">Skills &amp; Technologies</h2>
             <p className="section-subtitle" style={{ margin: '0 auto' }}>
               Proficient in modern web technologies to deliver exceptional digital experiences.
@@ -332,8 +329,8 @@ export default function Home() {
       <section className="section services-preview">
         <div className="container">
           <div className="section-header-center">
-            <span className="section-label">What I Do</span>
-            <h2 className="section-title">Services I Offer</h2>
+            <span className="section-label">What We Do</span>
+            <h2 className="section-title">Our Services</h2>
             <p className="section-subtitle" style={{ margin: '0 auto' }}>
               End-to-end web solutions tailored to your business needs.
             </p>
@@ -343,39 +340,27 @@ export default function Home() {
             {[
               {
                 icon: '💻',
-                title: 'Frontend Development',
-                desc: 'Building responsive, interactive, and pixel-perfect user interfaces with modern frameworks.',
-                tags: ['HTML', 'CSS', 'Angular', 'Next.js'],
+                title: 'Frontend Engineering',
+                desc: 'We build immersive, lightning-fast web experiences using modern frameworks like Next.js and React. Our frontends are engineered for scale, accessibility, and pixel-perfect precision.',
+                tags: ['Next.js', 'React', 'Animation'],
               },
               {
                 icon: '🛍️',
-                title: 'Shopify Development',
-                desc: 'Custom Shopify stores, theme customization, and e-commerce solutions that drive sales.',
-                tags: ['Shopify', 'Liquid', 'E-commerce'],
-              },
-              {
-                icon: '📝',
-                title: 'WordPress Development',
-                desc: 'Custom WordPress themes, plugins, and complete website solutions for any business.',
-                tags: ['WordPress', 'PHP', 'WooCommerce'],
+                title: 'eCommerce Solutions',
+                desc: 'We architect high-converting online stores. From bespoke Shopify theme development to seamless headless commerce integrations, we turn visitors into loyal customers.',
+                tags: ['Shopify', 'WooCommerce', 'Conversion'],
               },
               {
                 icon: '🚀',
-                title: 'SEO Optimization',
-                desc: 'Technical and on-page SEO strategies to boost your search rankings and organic traffic.',
-                tags: ['On-Page', 'Technical', 'Analytics'],
+                title: 'Technical SEO',
+                desc: 'A beautiful website is useless if no one finds it. We implement robust on-page and technical SEO strategies to guarantee top rankings and explosive organic growth.',
+                tags: ['Core Web Vitals', 'Schema', 'Audits'],
               },
               {
-                icon: '📦',
-                title: 'API Integration',
-                desc: 'Seamless connection of third-party services and data sources using REST/GraphQL.',
-                tags: ['REST', 'GraphQL', 'Webhooks'],
-              },
-              {
-                icon: '🔒',
-                title: 'Security Audits',
-                desc: 'Thorough vulnerability assessments and hardening for web applications.',
-                tags: ['Penetration', 'OWASP', 'Best Practices'],
+                icon: '📝',
+                title: 'Bespoke CMS Platforms',
+                desc: 'Empower your team with lightning-fast, custom headless CMS architectures and bespoke WordPress integrations engineered for ultimate flexibility and security.',
+                tags: ['Headless CMS', 'WordPress', 'Security'],
               },
             ].map((service, i) => (
               <div key={i} className="service-card glass-card">
@@ -408,7 +393,7 @@ export default function Home() {
               <span className="section-label">Work</span>
               <h2 className="section-title">Case Studies</h2>
               <p className="section-subtitle" style={{ margin: '0 auto' }}>
-                Real projects that showcase the outcomes, designs and impact I deliver.
+                Real projects that showcase the outcomes, designs and impact we deliver.
               </p>
             </div>
 
@@ -455,11 +440,7 @@ export default function Home() {
                       </div>
                       <h3 className="case-title">{project.title}</h3>
                       <p className="case-desc">{project.desc}</p>
-                      <div className="case-actions">
-                        <Link href="/case-studies" className="btn btn-outline">
-                          View Case Study
-                        </Link>
-                      </div>
+
                     </div>
                   </div>
                 ))}
@@ -554,31 +535,65 @@ export default function Home() {
             <span className="section-label">FAQ</span>
             <h2 className="section-title">Frequently Asked Questions</h2>
             <p className="section-subtitle" style={{ margin: '0 auto', maxWidth: '520px' }}>
-              Answers to common questions about my workflow, pricing, and collaboration process.
+              Answers to common questions about our workflow, pricing, and collaboration process.
             </p>
           </div>
 
-          <div className="faq-grid">
+          <div className="faq-accordion">
             {[
               {
-                question: 'How do you typically start a new project?',
-                answer:
-                  'I begin with a discovery call to understand your goals, timeline, and desired outcome. Then I create a proposal outlining scope, milestones, and next steps.',
+                question: '1. What services do you offer as a Web Development Company?',
+                answer: 'We specialize in Frontend Development, bespoke WordPress solutions, complete Shopify eCommerce stores, and technical SEO optimization. We build entirely custom, high-performance web experiences tailored to your brand.'
               },
               {
-                question: 'What technologies do you use for frontend projects?',
-                answer:
-                  'I build modern frontends using Next.js, React, and Tailwind, with clean HTML/CSS and accessible UX. I also integrate with headless CMS and e-commerce platforms when needed.',
+                question: '2. How do you typically start a new project?',
+                answer: 'We begin with a discovery call to understand your goals, target audience, and timeline. After defining the project scope, we provide a detailed proposal, timeline, and strategy before moving into design and development.'
               },
               {
-                question: 'Can you work with an existing design or Figma file?',
-                answer:
-                  'Yes — I can convert your Figma, Sketch, or Adobe XD designs into pixel-perfect, responsive web pages and make iterating fast and easy.',
+                question: '3. Can you work with my existing design files (Figma, Adobe XD)?',
+                answer: 'Absolutely. We regularly convert Figma, Sketch, or Adobe XD designs into pixel-perfect, responsive, and accessible Next.js, React, or HTML/CSS code.'
               },
+              {
+                question: '4. How long does a typical website project take?',
+                answer: 'A standard website takes 2-4 weeks from start to finish. More complex applications or large e-commerce stores can take 6-10 weeks. We provide a precise timeline during the proposal phase.'
+              },
+              {
+                question: '5. What technologies do you use for frontend projects?',
+                answer: 'We build modern frontends using Next.js, React, Angular, and Tailwind CSS. This ensures your website is incredibly fast, secure, and ready to scale.'
+              },
+              {
+                question: '6. Do you offer SEO optimization?',
+                answer: 'Yes! All our websites are built with technical SEO best practices from the ground up. We also offer dedicated SEO services including on-page optimization, keyword strategy, and schema markup.'
+              },
+              {
+                question: '7. Will my website be mobile-friendly?',
+                answer: '100%. We use a mobile-first approach, ensuring that your website looks and functions perfectly across all devices, from large desktop monitors to smartphones.'
+              },
+              {
+                question: '8. Do you provide ongoing maintenance and support?',
+                answer: 'Yes. We offer monthly maintenance packages to keep your website updated, secure, backed up, and performing optimally long after the initial launch.'
+              },
+              {
+                question: '9. How does pricing work?',
+                answer: 'We offer transparent package-based pricing as well as custom quotes for unique projects. You can check our Packages page for a general idea, or contact us directly to discuss your specific needs.'
+              },
+              {
+                question: '10. What do you need from me to get started?',
+                answer: 'We need your brand assets (logo, colors), existing content or copy, examples of websites you like, and a clear understanding of your business goals.'
+              }
             ].map((item, i) => (
-              <div key={i} className="faq-card glass-card">
-                <h3 className="faq-question">{item.question}</h3>
-                <p className="faq-answer">{item.answer}</p>
+              <div 
+                key={i} 
+                className={`faq-accordion-item glass-card ${openFaq === i ? 'active' : ''}`}
+                onClick={() => setOpenFaq(openFaq === i ? null : i)}
+              >
+                <div className="faq-accordion-header">
+                  <h3 className="faq-question">{item.question}</h3>
+                  <span className="faq-icon">{openFaq === i ? '−' : '+'}</span>
+                </div>
+                <div className="faq-accordion-body">
+                  <p className="faq-answer">{item.answer}</p>
+                </div>
               </div>
             ))}
           </div>
@@ -598,7 +613,7 @@ export default function Home() {
             <span className="section-label">Connect</span>
             <h2 className="section-title">Send Me a Message</h2>
             <p className="section-subtitle" style={{ margin: '0 auto', maxWidth: '520px' }}>
-              Fill out the form and I’ll send the details to WhatsApp so I can get back to you quickly.
+              Fill out the form and we'll send the details to WhatsApp so we can get back to you quickly.
             </p>
           </div>
 
@@ -606,7 +621,7 @@ export default function Home() {
             <div className="contact-info glass-card">
               <h3 className="contact-info-title">Let’s build something great.</h3>
               <p className="contact-info-text">
-                Share a few details about your project and I’ll follow up on WhatsApp with next steps.
+                Share a few details about your project and we'll follow up on WhatsApp with next steps.
                 Prefer email? Use the info below.
               </p>
 
@@ -1608,53 +1623,104 @@ export default function Home() {
 
         /* ===== FAQ SECTION ===== */
         .faq-section {
-          padding: 30px 0;
+          padding: 60px 0;
           background: linear-gradient(135deg, rgba(15, 18, 30, 0.95), rgba(18, 22, 40, 0.9));
         }
 
-        .faq-grid {
+        .faq-accordion {
           display: grid;
-          grid-template-columns: repeat(3, 1fr);
-          gap: 20px;
+          grid-template-columns: repeat(2, 1fr);
+          gap: 24px;
+          align-items: start;
           margin-top: 40px;
+          max-width: 1100px;
+          margin-left: auto;
+          margin-right: auto;
         }
 
-        .faq-card {
-          padding: 28px 22px;
-          border-radius: var(--border-radius-lg);
+        @media (max-width: 850px) {
+          .faq-accordion {
+            grid-template-columns: 1fr;
+          }
+        }
+
+        .faq-accordion-item {
+          border-radius: 16px;
           border: 1px solid rgba(255, 255, 255, 0.08);
           background: rgba(21, 24, 34, 0.65);
           backdrop-filter: blur(18px);
-          transition: transform 0.2s ease, box-shadow 0.2s ease;
+          overflow: hidden;
+          cursor: pointer;
+          transition: all 0.3s ease;
         }
 
-        .faq-card:hover {
-          transform: translateY(-4px);
-          box-shadow: var(--shadow-md);
+        .faq-accordion-item:hover {
+          border-color: rgba(108, 99, 255, 0.4);
+          transform: translateY(-2px);
+          box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+        }
+
+        .faq-accordion-header {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 16px 20px;
         }
 
         .faq-question {
-          font-size: 1.05rem;
+          font-size: 1.1rem;
           font-weight: 700;
-          margin-bottom: 12px;
+          margin: 0;
           color: var(--text-primary);
+          padding-right: 20px;
+        }
+
+        .faq-icon {
+          font-size: 1.5rem;
+          font-weight: 300;
+          color: var(--primary-light);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 32px;
+          height: 32px;
+          border-radius: 50%;
+          background: rgba(108, 99, 255, 0.1);
+          transition: transform 0.3s ease, background 0.3s ease, color 0.3s ease;
+        }
+
+        .faq-accordion-item.active .faq-icon {
+          background: var(--primary);
+          color: #fff;
+          transform: rotate(180deg);
+        }
+
+        .faq-accordion-item.active {
+          border-color: var(--primary);
+        }
+
+        .faq-accordion-body {
+          max-height: 0;
+          overflow: hidden;
+          transition: max-height 0.4s cubic-bezier(0, 1, 0, 1), padding 0.4s ease, opacity 0.4s ease;
+          opacity: 0;
+          padding: 0 28px;
+        }
+
+        .faq-accordion-item.active .faq-accordion-body {
+          max-height: 500px;
+          opacity: 1;
+          padding: 0 28px 24px 28px;
+          transition: max-height 0.4s ease-in-out, padding 0.4s ease, opacity 0.4s ease;
         }
 
         .faq-answer {
+          margin: 0;
           line-height: 1.7;
           color: var(--text-secondary);
-        }
-
-        @media (max-width: 1024px) {
-          .faq-grid {
-            grid-template-columns: repeat(2, 1fr);
-          }
-        }
-
-        @media (max-width: 768px) {
-          .faq-grid {
-            grid-template-columns: 1fr;
-          }
+          font-size: 0.95rem;
+          border-top: 1px solid rgba(255, 255, 255, 0.05);
+          padding-top: 20px;
         }
 
         /* ===== CONTACT SECTION ===== */

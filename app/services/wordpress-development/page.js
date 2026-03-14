@@ -17,7 +17,7 @@ export default function WordpressDevelopment() {
       <section className="section">
         <div className="container">
           <h2>Capabilities</h2>
-          <p>I build bespoke WordPress sites, personalize existing themes, integrate WooCommerce, and ensure speed and security.</p>
+          <p>We build bespoke WordPress sites, personalize existing themes, integrate WooCommerce, and ensure speed and security.</p>
         </div>
       </section>
 

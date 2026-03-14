@@ -7,7 +7,7 @@ const skillCategories = [
     title: 'Frontend Development',
     icon: '💻',
     color: '#6C63FF',
-    description: 'Building responsive, interactive, and high-performance user interfaces using modern technologies.',
+    description: 'Architecting dynamic, lightning-fast interfaces focused on accessibility, performance, and pixel-perfect precision.',
     skills: [
       { name: 'HTML5', level: 95, icon: '🌐' },
       { name: 'CSS3 / SASS', level: 92, icon: '🎨' },
@@ -20,7 +20,7 @@ const skillCategories = [
     title: 'Frameworks & Libraries',
     icon: '⚙️',
     color: '#00D4AA',
-    description: 'Proficient in popular frontend frameworks for building scalable applications.',
+    description: 'Leveraging cutting-edge ecosystems to engineer robust, enterprise-grade web applications.',
     skills: [
       { name: 'Angular', level: 85, icon: '🅰️' },
       { name: 'Next.js', level: 82, icon: '▲' },
@@ -33,7 +33,7 @@ const skillCategories = [
     title: 'WordPress',
     icon: '📝',
     color: '#21759B',
-    description: 'End-to-end WordPress development from custom themes to plugin customization.',
+    description: 'Delivering bespoke WordPress architectures, custom theme development, and secure, high-traffic deployments.',
     skills: [
       { name: 'Theme Development', level: 90, icon: '🎭' },
       { name: 'Plugin Customization', level: 85, icon: '🔌' },
@@ -46,7 +46,7 @@ const skillCategories = [
     title: 'SEO & Analytics',
     icon: '🔍',
     color: '#47A248',
-    description: 'Driving organic traffic with proven SEO strategies and data-driven decisions.',
+    description: 'Executing technical SEO and data-backed strategies to guarantee top rankings and digital dominance.',
     skills: [
       { name: 'On-Page SEO', level: 92, icon: '📄' },
       { name: 'Technical SEO', level: 88, icon: '🔧' },
@@ -59,7 +59,7 @@ const skillCategories = [
     title: 'Shopify',
     icon: '🛍️',
     color: '#96BF48',
-    description: 'Building conversion-driven Shopify stores with custom themes and integrations.',
+    description: 'Engineering highly optimized, custom eCommerce experiences that maximize conversion rates.',
     skills: [
       { name: 'Theme Customization', level: 88, icon: '🎨' },
       { name: 'Liquid Templating', level: 85, icon: '💧' },
@@ -72,7 +72,7 @@ const skillCategories = [
     title: 'Tools & Workflow',
     icon: '🛠️',
     color: '#FF6B6B',
-    description: 'Streamlined development workflow with modern tools and version control.',
+    description: 'Maintaining a rigorous, CI/CD-driven development lifecycle for rapid, reliable delivery.',
     skills: [
       { name: 'Git / GitHub', level: 88, icon: '📂' },
       { name: 'VS Code', level: 95, icon: '💻' },
@@ -90,10 +90,10 @@ export default function Skills() {
       <section className="page-header">
         <div className="page-header-glow" />
         <div className="container">
-          <span className="section-label">My Expertise</span>
+          <span className="section-label">Our Expertise</span>
           <h1 className="page-title">Skills &amp; <span className="gradient-text">Technologies</span></h1>
           <p className="page-subtitle">
-            A comprehensive showcase of the technologies, tools, and skills I bring to every project.
+            A deep dive into the technical arsenal and specialized methodologies we deploy to build elite digital experiences.
           </p>
         </div>
       </section>
@@ -164,14 +164,7 @@ export default function Skills() {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="section">
-        <div className="container text-center">
-          <h2>Want to work with me?</h2>
-          <p>Reach out to discuss your next project or request my resume.</p>
-          <Link href="/contact" className="btn btn-primary">Contact Me</Link>
-        </div>
-      </section>
+
 
       <style jsx>{`
         .page-header {

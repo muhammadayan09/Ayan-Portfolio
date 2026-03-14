@@ -18,8 +18,8 @@ export default function FrontendDevelopment() {
       {/* What we do */}
       <section className="section">
         <div className="container">
-          <h2>What I Offer</h2>
-          <p>From landing pages to complex SPA/MPA applications, I deliver clean, maintainable frontends using HTML, CSS, JavaScript, Angular, Next.js and React.</p>
+          <h2>What We Offer</h2>
+          <p>From landing pages to complex SPA/MPA applications, we deliver clean, maintainable frontends using HTML, CSS, JavaScript, Angular, Next.js and React.</p>
         </div>
       </section>
 
@@ -40,7 +40,7 @@ export default function FrontendDevelopment() {
       <section className="section text-center">
         <div className="container">
           <h2>Ready to start?</h2>
-          <Link href="/contact" className="btn btn-primary">Contact Me</Link>
+          <Link href="/contact" className="btn btn-primary">Contact Us</Link>
         </div>
       </section>
 

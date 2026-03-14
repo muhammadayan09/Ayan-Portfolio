@@ -11,6 +11,7 @@ export default function Footer() {
     { href: '/about', label: 'About' },
     { href: '/services', label: 'Services' },
     { href: '/skills', label: 'Skills' },
+    { href: '/packages', label: 'Packages' },
     { href: '/blog', label: 'Blog' },
     { href: '/contact', label: 'Contact' },
   ];

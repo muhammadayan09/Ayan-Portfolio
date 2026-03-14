@@ -102,7 +102,7 @@ export default function PrivacyPolicy() {
             <h2>Contact Us</h2>
           </div>
           <p>
-            If you have questions or comments about this Privacy Policy, please contact me directly. 
+            If you have questions or comments about this Privacy Policy, please contact us directly. 
             I typically respond within 24 hours.
           </p>
           <div className="contact-details mt-4">

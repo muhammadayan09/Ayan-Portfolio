@@ -6,7 +6,7 @@ import Link from 'next/link';
 
 const values = [
   { icon: '🎯', title: 'Pixel Perfect', desc: 'Every element is crafted with attention to detail and design precision.' },
-  { icon: '⚡', title: 'Performance First', desc: 'Speed and optimization are at the core of every project I deliver.' },
+  { icon: '⚡', title: 'Performance First', desc: 'Speed and optimization are at the core of every project we deliver.' },
   { icon: '🤝', title: 'Client Focused', desc: 'Your success is my priority — I listen, plan, and deliver beyond expectations.' },
   { icon: '🔄', title: 'Continuous Learning', desc: 'Technology evolves fast and so do I — always learning, always growing.' },
 ];
@@ -21,7 +21,7 @@ export default function About() {
           <span className="section-label">Get To Know Me</span>
           <h1 className="page-title">About <span className="gradient-text">Muhammad Ayan</span></h1>
           <p className="page-subtitle">
-            Passionate frontend developer on a mission to build beautiful, functional, and impactful web experiences.
+            An elite team of digital craftsmen dedicated to building sophisticated, high-performance web experiences that dominate your industry.
           </p>
         </div>
       </section>
@@ -58,16 +58,16 @@ export default function About() {
 
             <div className="about-text-col">
               <h2 className="about-heading">
-                Elevating Brands Through <span className="gradient-text">Premium Digital Execution</span>
+                Transforming Ambitious Brands Through <span className="gradient-text">Uncompromising Digital Execution</span>
               </h2>
               <p className="about-para">
-                I&apos;m Muhammad Ayan, founder of a digital agency based in India. I specialize in transforming complex business challenges into elegant, high-performance web solutions. My mission is to push the boundaries of modern web development and design for clients worldwide.
+                We are Muhammad Ayan, a boutique digital agency obsessed with pushing the boundaries of what's possible on the web. We don't just build websites; we architect high-performance digital engines designed to scale your business, captivate your audience, and drive measurable ROI.
               </p>
               <p className="about-para">
-                My expertise spans the entire digital ecosystem — from engineering scalable frontend architectures with Next.js and Angular, to architecting conversion-optimized Shopify and WordPress platforms. We don&apos;t just build websites; we engineer digital experiences that drive measurable growth and establish market dominance.
+                Our expertise spans the entire modern digital ecosystem. From engineering lightning-fast, highly interactive frontend architectures with Next.js and React, to deploying conversion-optimized Shopify and WordPress platforms, we bring a meticulous, engineering-first approach to every project we touch. 
               </p>
               <p className="about-para">
-                Our core philosophy is rooted in precision, performance, and partnership. Whether collaborating with ambitious startups or established enterprises, my team and I are committed to delivering pixel-perfect, SEO-optimized solutions that captivate audiences and elevate your brand to the next level.
+                We believe that true digital excellence requires a perfect symphony of stunning aesthetics, robust technical architecture, and ruthless performance optimization. Whether partnering with ambitious startups or established enterprises, our mission remains the same: to deliver pixel-perfect, SEO-optimized masterpieces that elevate your brand far above the competition.
               </p>
               <div className="about-actions">
                 <Link href="https://wa.me/917983505861" target="_blank" rel="noopener noreferrer" className="btn btn-primary">Contact Us</Link>
@@ -82,8 +82,8 @@ export default function About() {
       <section className="section values-section" style={{ padding: '30px 0' }}>
         <div className="container">
           <div className="section-header-center">
-            <span className="section-label">My Values</span>
-            <h2 className="section-title">What Drives Me</h2>
+            <span className="section-label">Our Core Principles</span>
+            <h2 className="section-title">The Standards We Live By</h2>
           </div>
           <div className="values-grid">
             {values.map((v, i) => (

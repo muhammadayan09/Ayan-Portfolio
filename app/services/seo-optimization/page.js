@@ -16,7 +16,7 @@ export default function SeoOptimization() {
 
       <section className="section">
         <div className="container">
-          <h2>What I Do</h2>
+          <h2>What We Do</h2>
           <p>Technical audits, on-page optimization, keyword research, schema markup and analytics setup to boost rankings.</p>
         </div>
       </section>

@@ -7,8 +7,8 @@ const services = [
     icon: '💻',
     title: 'Frontend Development',
     slug: 'frontend-development',
-    desc: 'I build clean, responsive, and interactive user interfaces using modern frameworks. From simple landing pages to complex single-page applications, I deliver performance-driven frontends with pixel-perfect precision.',
-    features: ['Responsive Design', 'Cross-browser Compatibility', 'Performance Optimization', 'Modern UI/UX', 'Component Architecture', 'API Integration'],
+    desc: 'We engineer immersive, lightning-fast web experiences using modern frameworks like Next.js and React. Our frontends are built for absolute scale, accessibility, and pixel-perfect precision.',
+    features: ['Responsive UI Architecture', 'Cross-browser Compatibility', 'Core Web Vitals Optimization', 'Component-Driven Design', 'Seamless API Integration', 'Advanced Micro-Animations'],
     tech: ['HTML', 'CSS', 'JavaScript', 'Angular', 'Next.js', 'React'],
     color: '#6C63FF',
   },
@@ -16,36 +16,36 @@ const services = [
     icon: '📝',
     title: 'WordPress Development',
     slug: 'wordpress-development',
-    desc: 'Custom WordPress websites tailored to your brand. I create unique themes from scratch, customize existing ones, and build plugin-powered solutions that are easy to manage and scale.',
-    features: ['Custom Theme Development', 'Plugin Customization', 'WooCommerce Setup', 'Speed Optimization', 'Security Hardening', 'Content Migration'],
-    tech: ['WordPress', 'PHP', 'MySQL', 'WooCommerce', 'Elementor'],
+    desc: 'Empower your team with lightning-fast, highly secure headless CMS architectures and bespoke WordPress integrations engineered for ultimate flexibility and limitless scaling.',
+    features: ['Headless CMS Integration', 'Bespoke Theme Development', 'High-volume WooCommerce', 'Enterprise-grade Security', 'Automated Content Migration', 'Server-side Optimization'],
+    tech: ['WordPress', 'PHP', 'MySQL', 'Next.js', 'GraphQL'],
     color: '#21759B',
   },
   {
     icon: '🔍',
     title: 'SEO Optimization',
     slug: 'seo-optimization',
-    desc: 'Boost your online visibility with proven SEO strategies. I implement technical SEO, on-page optimization, and content strategies that drive organic traffic and improve search rankings.',
-    features: ['Technical SEO Audit', 'On-Page Optimization', 'Keyword Research', 'Schema Markup', 'Speed Optimization', 'Analytics Setup'],
-    tech: ['Google Analytics', 'Search Console', 'Ahrefs', 'Yoast SEO'],
+    desc: 'A stunning digital presence is useless if nobody finds it. We execute aggressive, data-backed technical SEO strategies to guarantee top-tier search rankings and explosive organic acquisition.',
+    features: ['Complete Technical Audits', 'Advanced Schema Protocol', 'Core Web Vitals Engineering', 'Competitor Gap Analysis', 'Semantic HTML Structuring', 'Performance Monitoring'],
+    tech: ['Google Search Console', 'Ahrefs', 'Semrush', 'Lighthouse'],
     color: '#47A248',
   },
   {
     icon: '🛍️',
     title: 'Shopify Expert',
     slug: 'shopify-expert',
-    desc: 'End-to-end Shopify store development — from custom themes and product setup to payment integration and marketing. I create stores that convert visitors into customers.',
-    features: ['Custom Theme Design', 'Product Setup', 'Payment Gateway', 'App Integration', 'Conversion Optimization', 'Store Migration'],
-    tech: ['Shopify', 'Liquid', 'Shopify CLI', 'Shopify Apps'],
+    desc: 'We architect high-converting online stores that dominate your market. From bespoke Shopify theme development to complex headless commerce, we turn casual scrollers into loyal buyers.',
+    features: ['Bespoke Theme Engineering', 'Complex App Customizations', 'Headless Commerce via Next.js', 'Frictionless Checkouts', 'Conversion Rate Optimization', 'Global Store Migration'],
+    tech: ['Shopify Plus', 'Liquid templating', 'Hydrogen', 'GraphQL'],
     color: '#96BF48',
   },
 ];
 
 const process_steps = [
-  { number: '01', title: 'Discovery', desc: 'Understanding your goals, audience, and project requirements through detailed discussion.' },
-  { number: '02', title: 'Planning', desc: 'Creating wireframes, sitemap, and a clear development roadmap for the project.' },
-  { number: '03', title: 'Development', desc: 'Writing clean code and building the solution with regular updates and feedback loops.' },
-  { number: '04', title: 'Launch & Support', desc: 'Deploying the final product and providing ongoing support and maintenance.' },
+  { number: '01', title: 'Strategic Autopsy', desc: 'Thoroughly analyzing your brand objectives, competitors, and technical architecture to forge an impenetrable blueprint.' },
+  { number: '02', title: 'UX/UI Wireframing', desc: 'Mapping user journeys and crafting pixel-perfect, conversion-optimized interfaces prior to development.' },
+  { number: '03', title: 'Precision Engineering', desc: 'Executing the build with cutting-edge frameworks, uncompromising code quality, and surgical precision.' },
+  { number: '04', title: 'Deployment & Scale', desc: 'Rigorous performance auditing, frictionless launch, and ongoing specialized support.' },
 ];
 
 export default function Services() {
@@ -55,10 +55,10 @@ export default function Services() {
       <section className="page-header">
         <div className="page-header-glow" />
         <div className="container">
-          <span className="section-label">What I Offer</span>
-          <h1 className="page-title">My <span className="gradient-text">Services</span></h1>
+          <span className="section-label">What We Offer</span>
+          <h1 className="page-title">Our <span className="gradient-text">Services</span></h1>
           <p className="page-subtitle">
-            Comprehensive web development and digital solutions to help your business thrive online.
+            Premium, highly-engineered digital architectures designed to scale your enterprise and dominate the web.
           </p>
         </div>
       </section>
@@ -117,8 +117,8 @@ export default function Services() {
       <section className="section process-section">
         <div className="container">
           <div className="section-header-center">
-            <span className="section-label">How I Work</span>
-            <h2 className="section-title">My Process</h2>
+            <span className="section-label">How We Work</span>
+            <h2 className="section-title">Our Process</h2>
             <p className="section-subtitle" style={{ margin: '0 auto' }}>
               A streamlined workflow that ensures quality delivery on every project.
             </p>
@@ -141,7 +141,7 @@ export default function Services() {
         <div className="container">
           <div className="services-cta-card">
             <h2>Need a Custom Solution?</h2>
-            <p>Let&apos;s discuss your project requirements and find the perfect approach.</p>
+            <p>Our engineering team is ready to architect the perfect bespoke solution for your toughest digital challenges.</p>
             <div className="cta-btns">
               <Link href="/contact" className="btn btn-primary">Start a Project</Link>
               <a href="https://wa.me/917983505861" target="_blank" rel="noopener noreferrer" className="btn btn-outline">💬 WhatsApp</a>
