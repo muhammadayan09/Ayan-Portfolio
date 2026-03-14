@@ -889,3 +889,28 @@ body {
     gap: 16px;
   }
 }
+
+/* ===== BLOG POST CONTENT STYLES ===== */
+.blog-content-body {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: var(--text-secondary);
+}
+.blog-content-body p {
+  margin-bottom: 24px;
+}
+.blog-content-body h2 {
+  color: var(--text-primary);
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-top: 48px;
+  margin-bottom: 20px;
+  font-family: 'Space Grotesk', sans-serif;
+}
+.text-left {
+  text-align: left !important;
+  margin-left: 0 !important;
+}
+.pt-0 {
+  padding-top: 0 !important;
+}

@@ -2,62 +2,7 @@
 
 import Link from 'next/link';
 
-const blogPosts = [
-  {
-    id: 1,
-    title: 'Architecting High-Performance Web Applications in 2024',
-    excerpt: 'A deep dive into the modern web ecosystem. Discover how we engineer scalable, lightning-fast web applications using server-side rendering, edge caching, and optimized frontend architectures.',
-    category: 'Web Development',
-    date: 'March 14, 2024',
-    readTime: '8 min read',
-    color: '#6C63FF',
-  },
-  {
-    id: 2,
-    title: 'The Future of Headless: Decoupling WordPress for Limitless Scale',
-    excerpt: 'Explore the enterprise shift towards headless CMS architectures. Learn how combining WordPress with Next.js unlocks unprecedented performance, security, and developer flexibility.',
-    category: 'WordPress',
-    date: 'March 02, 2024',
-    readTime: '10 min read',
-    color: '#21759B',
-  },
-  {
-    id: 3,
-    title: 'Technical SEO Mastery: Engineering Websites for Search Dominance',
-    excerpt: 'Beyond keywords: an elite guide to Technical SEO. We unpack Core Web Vitals optimization, advanced schema implementation, and semantic HTML structuring to guarantee top-tier rankings.',
-    category: 'SEO',
-    date: 'February 24, 2024',
-    readTime: '12 min read',
-    color: '#47A248',
-  },
-  {
-    id: 4,
-    title: 'Next.js 14 vs React: The Enterprise Shift to Server Components',
-    excerpt: 'An analytical breakdown of modern React ecosystems. Understand when to leverage React Server Components (RSC) and why Next.js is becoming the de facto standard for scalable engineering.',
-    category: 'Frameworks',
-    date: 'February 15, 2024',
-    readTime: '9 min read',
-    color: '#DD0031',
-  },
-  {
-    id: 5,
-    title: 'Headless Commerce on Shopify: Building Frictionless Checkouts',
-    excerpt: 'Scaling eCommerce requires blazing speed. Discover how headless Shopify architectures built with custom Next.js storefronts dramatically increase conversion rates and customer retention.',
-    category: 'Shopify',
-    date: 'February 05, 2024',
-    readTime: '11 min read',
-    color: '#96BF48',
-  },
-  {
-    id: 6,
-    title: 'Modern CSS Architecture: Mastering Advanced Micro-Animations',
-    excerpt: 'Elevating UI/UX engineering with modern styling paradigms. Learn how to architect maintainable design systems while crafting premium, hardware-accelerated micro-animations.',
-    category: 'CSS',
-    date: 'January 28, 2024',
-    readTime: '7 min read',
-    color: '#1572B6',
-  },
-];
+import { blogPosts } from '../data/blog';
 
 const categories = ['All', 'Web Development', 'WordPress', 'SEO', 'Frameworks', 'Shopify', 'CSS'];
 
@@ -109,7 +54,7 @@ export default function Blog() {
                   <p className="blog-excerpt">{post.excerpt}</p>
                   <div className="blog-footer">
                     <span className="blog-read-time">📖 {post.readTime}</span>
-                    <span className="blog-read-more" style={{ color: post.color }}>Read More →</span>
+                    <Link href={`/blog/${post.slug}`} className="blog-read-more" style={{ color: post.color }}>Read More →</Link>
                   </div>
                 </div>
               </article>
