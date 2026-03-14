@@ -1623,7 +1623,7 @@ export default function Home() {
 
         /* ===== FAQ SECTION ===== */
         .faq-section {
-          padding: 60px 0;
+          padding: 20px 0;
           background: linear-gradient(135deg, rgba(15, 18, 30, 0.95), rgba(18, 22, 40, 0.9));
         }
 
@@ -1664,7 +1664,7 @@ export default function Home() {
           display: flex;
           justify-content: space-between;
           align-items: center;
-          padding: 16px 20px;
+          padding: 12px 20px;
         }
 
         .faq-question {
