@@ -72,7 +72,7 @@ const caseStudies = [
 
 export default function Home() {
   const [mounted, setMounted] = useState(false);
-  const [openFaq, setOpenFaq] = useState(0);
+  const [openFaq, setOpenFaq] = useState(null);
   const [slideIndex, setSlideIndex] = useState(0);
   const [visibleCount, setVisibleCount] = useState(4);
   const [caseSlide, setCaseSlide] = useState(0);
@@ -1630,9 +1630,9 @@ export default function Home() {
         .faq-accordion {
           display: grid;
           grid-template-columns: repeat(2, 1fr);
-          gap: 24px;
+          gap: 16px;
           align-items: start;
-          margin-top: 40px;
+          margin-top: 20px;
           max-width: 1100px;
           margin-left: auto;
           margin-right: auto;
@@ -1704,23 +1704,23 @@ export default function Home() {
           overflow: hidden;
           transition: max-height 0.4s cubic-bezier(0, 1, 0, 1), padding 0.4s ease, opacity 0.4s ease;
           opacity: 0;
-          padding: 0 28px;
+          padding: 0 20px;
         }
 
         .faq-accordion-item.active .faq-accordion-body {
           max-height: 500px;
           opacity: 1;
-          padding: 0 28px 24px 28px;
+          padding: 0 20px 16px 20px;
           transition: max-height 0.4s ease-in-out, padding 0.4s ease, opacity 0.4s ease;
         }
 
         .faq-answer {
           margin: 0;
-          line-height: 1.7;
+          line-height: 1.6;
           color: var(--text-secondary);
           font-size: 0.95rem;
           border-top: 1px solid rgba(255, 255, 255, 0.05);
-          padding-top: 20px;
+          padding-top: 16px;
         }
 
         /* ===== CONTACT SECTION ===== */
