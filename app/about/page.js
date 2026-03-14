@@ -61,7 +61,7 @@ export default function About() {
                 Transforming Ambitious Brands Through <span className="gradient-text">Uncompromising Digital Execution</span>
               </h2>
               <p className="about-para">
-                We are Muhammad Ayan, a boutique digital agency obsessed with pushing the boundaries of what's possible on the web. We don't just build websites; we architect high-performance digital engines designed to scale your business, captivate your audience, and drive measurable ROI.
+                We are Muhammad Ayan, a boutique digital agency obsessed with pushing the boundaries of what&apos;s possible on the web. We don&apos;t just build websites; we architect high-performance digital engines designed to scale your business, captivate your audience, and drive measurable ROI.
               </p>
               <p className="about-para">
                 Our expertise spans the entire modern digital ecosystem. From engineering lightning-fast, highly interactive frontend architectures with Next.js and React, to deploying conversion-optimized Shopify and WordPress platforms, we bring a meticulous, engineering-first approach to every project we touch. 

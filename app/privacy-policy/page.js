@@ -40,7 +40,7 @@ export default function PrivacyPolicy() {
             <h2>Information We Collect</h2>
           </div>
           <p>
-            Welcome to Muhammad Ayan's portfolio and digital solutions services. This Privacy Policy 
+            Welcome to Muhammad Ayan&apos;s portfolio and digital solutions services. This Privacy Policy 
             explains how I collect, use, disclose, and safeguard your information when you visit my 
             website or use my services. Please read this privacy policy carefully. If you do not agree 
             with the terms of this privacy policy, please do not access the site.

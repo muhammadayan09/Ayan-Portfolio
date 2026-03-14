@@ -31,7 +31,7 @@ export default function ShopifyExpert() {
       <section className="section text-center">
         <div className="container">
           <h2>Looking for a Shopify store?</h2>
-          <Link href="/contact" className="btn btn-primary">Let's Build</Link>
+          <Link href="/contact" className="btn btn-primary">Let&apos;s Build</Link>
         </div>
       </section>
     </>

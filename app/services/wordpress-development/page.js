@@ -31,7 +31,7 @@ export default function WordpressDevelopment() {
       <section className="section text-center">
         <div className="container">
           <h2>Want a WordPress site?</h2>
-          <Link href="/contact" className="btn btn-primary">Let's Talk</Link>
+          <Link href="/contact" className="btn btn-primary">Let&apos;s Build</Link>
         </div>
       </section>
     </>

@@ -613,15 +613,15 @@ export default function Home() {
             <span className="section-label">Connect</span>
             <h2 className="section-title">Send Me a Message</h2>
             <p className="section-subtitle" style={{ margin: '0 auto', maxWidth: '520px' }}>
-              Fill out the form and we'll send the details to WhatsApp so we can get back to you quickly.
+              Fill out the form and we&apos;ll send the details to WhatsApp so we can get back to you quickly.
             </p>
           </div>
 
           <div className="contact-grid">
             <div className="contact-info glass-card">
-              <h3 className="contact-info-title">Let’s build something great.</h3>
+              <h3 className="contact-info-title">Let&apos;s build something great.</h3>
               <p className="contact-info-text">
-                Share a few details about your project and we'll follow up on WhatsApp with next steps.
+                Share a few details about your project and we&apos;ll follow up on WhatsApp with next steps.
                 Prefer email? Use the info below.
               </p>
 
