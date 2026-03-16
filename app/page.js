@@ -4,13 +4,14 @@ import Link from 'next/link';
 import { useEffect, useState, useRef } from 'react';
 
 const skills = [
-  { name: 'HTML', icon: '🌐', color: '#E34F26' },
-  { name: 'CSS', icon: '🎨', color: '#1572B6' },
-  { name: 'Angular', icon: '🅰️', color: '#DD0031' },
-  { name: 'Next.js', icon: '⚡', color: '#000000' },
-  { name: 'WordPress', icon: '📝', color: '#21759B' },
-  { name: 'SEO', icon: '🔍', color: '#47A248' },
-  { name: 'Shopify', icon: '🛒', color: '#96BF48' },
+  { name: 'Next.js', icon: '⚡', color: '#ffffff', desc: 'Modern React Framework' },
+  { name: 'Angular', icon: '🅰️', color: '#DD0031', desc: 'Enterprise Applications' },
+  { name: 'WordPress', icon: '📝', color: '#21759B', desc: 'Custom CMS Solutions' },
+  { name: 'Shopify', icon: '🛒', color: '#96BF48', desc: 'E-commerce Mastery' },
+  { name: 'Node.js', icon: '🟢', color: '#339933', desc: 'Scalable Backends' },
+  { name: 'SEO', icon: '🔍', color: '#47A248', desc: 'Search Visibility' },
+  { name: 'UI/UX Design', icon: '🎨', color: '#F24E1E', desc: 'Figma & User Centric' },
+  { name: 'Technical SEO', icon: '🚀', color: '#FFB800', desc: 'Performance & Speed' },
 ];
 
 const stats = [
@@ -22,93 +23,93 @@ const stats = [
 
 const testimonials = [
   {
-    name: 'Sarah Jenkins',
-    role: 'CEO, TechFlow Solutions',
-    text: "Partnering with Muhammad Ayan was the best decision for our digital presence. They didn't just build a website; they architected an engine that doubled our online lead generation in the first quarter alone. Absolutely brilliant team.",
+    name: "Saba Nazim",
+    role: "CEO, SHS First Real Estate",
+    text: "Partnering with Muhammad Ayan was a game-changer for our digital presence in Dubai. They didn't just build a website; they architected an engine that doubled our online lead generation in the first quarter. Pure engineering excellence.",
     rating: 5,
   },
   {
-    name: 'David Chen',
-    role: 'Founder, Elevate Commerce',
-    text: "The level of engineering excellence is unmatched. They took our slow, outdated Shopify store and transformed it into a blazing-fast, modern masterpiece. Our conversion rates have never been higher. Highly recommended!",
+    name: "Muhammad Mustakeem",
+    role: "Owner, Zyra Delight",
+    text: "The level of design and technical execution is unmatched. They took our artisan honey brand and transformed it into a blazing-fast, modern e-commerce masterpiece. Our conversion rates have never been higher. Highly recommended!",
     rating: 5,
   },
   {
-    name: 'Elena Rodriguez',
-    role: 'Marketing Director, Nexus Group',
-    text: "Professional, incredibly fast, and detail-oriented. Muhammad Ayan's team delivered a complex corporate portal weeks ahead of schedule. Their understanding of modern UI/UX and technical SEO is truly industry-leading.",
+    name: "Dr. Zaheeruddin Fayeez",
+    role: "Founder, Zuf Dental Care",
+    text: "Professional, incredibly fast, and detail-oriented. Muhammad Ayan's team delivered a complex dental portal that our patients love. Their understanding of modern UI/UX and healthcare navigation is truly industry-leading.",
     rating: 5,
   },
   {
-    name: 'James Harrison',
-    role: 'Operations Head, BuildRight',
-    text: "It's rare to find an agency that truly understands both design aesthetics and complex backend logic. They seamlessly integrated our internal APIs while giving us a beautiful, award-winning frontend. Outstanding work.",
+    name: "Moon",
+    role: "Creative Director, Silent Stories Photography",
+    text: "It's rare to find an agency that truly understands both design aesthetics and performance. They seamlessly handled our massive photography portfolio while giving us a beautiful, award-winning frontend. Outstanding work!",
     rating: 5,
   },
 ];
 
 const caseStudies = [
   {
-    title: 'E-commerce Revenue Boost',
-    desc: 'Completely redesigned and optimized a Shopify store for a fashion retailer, resulting in a 45% increase in conversion rate and a 2x boost in organic traffic within 3 months.',
-    tags: ['Shopify', 'Conversion Optimization', 'SEO'],
+    slug: 'shs-real-estate',
+    title: "Luxury Real Estate Hub - Dubai",
+    desc: "Developed a premium property portal for SHS Real Estate in Dubai using WordPress. We architected a high-performance platform for luxury listings and off-plan properties.",
+    tags: ["WordPress", "Real Estate", "Luxury"],
+    url: "https://shsrealestatedubai.com/",
   },
   {
-    title: 'High-Performance SaaS Platform',
-    desc: 'Engineered a lightning-fast frontend for a B2B SaaS startup using Next.js, reducing initial load times by 70% and drastically improving user retention rates.',
-    tags: ['Next.js', 'React', 'Performance'],
+    slug: 'zyra-delight',
+    title: "Premium Artisan E-commerce",
+    desc: "Engineered a sophisticated digital storefront for Zyra Delight, an artisan brand on Shopify. We focused on immersive storytelling and a high-converting mobile experience.",
+    tags: ["Shopify", "Branding", "E-commerce"],
+    url: "https://zyradelight.com/",
   },
   {
-    title: 'Corporate Identity Revamp',
-    desc: 'Delivered a premium, bespoke WordPress website for an international consulting firm, establishing a professional digital presence that generated widespread industry recognition.',
-    tags: ['WordPress', 'Custom Theme', 'Branding'],
+    slug: 'zuf-dental-care',
+    title: "Advanced Healthcare Patient Portal",
+    desc: "Designed and implemented a modern digital presence for Zuf Dental Care in Solihull, UK. Our solution combined custom WordPress with a strategic SEO campaign.",
+    tags: ["WordPress", "Healthcare", "SEO"],
+    url: "https://zufdentalcare.co.uk/",
   },
   {
-    title: 'Real Estate Portal Architecture',
-    desc: 'Built a scalable, highly interactive property listing platform with advanced filtering and real-time mapping integrations, handling thousands of concurrent users seamlessly.',
-    tags: ['Architecture', 'API Integration', 'UI/UX'],
+    slug: 'silent-stories',
+    title: "Cinematic Photography Portfolio",
+    desc: "Created a visually stunning portfolio for Silent Stories Photography. Advanced image optimization and smooth animations deliver a lightning-fast experience.",
+    tags: ["React", "Portfolio", "Performance"],
+    url: "https://silentstoriesphotography.com/",
   },
 ];
 
 export default function Home() {
   const [mounted, setMounted] = useState(false);
-  const [openFaq, setOpenFaq] = useState(null);
-  const [slideIndex, setSlideIndex] = useState(0);
-  const [visibleCount, setVisibleCount] = useState(4);
   const [caseSlide, setCaseSlide] = useState(0);
-  const [caseVisible, setCaseVisible] = useState(4);
+  const [caseVisible, setCaseVisible] = useState(3);
   const [testimonialSlide, setTestimonialSlide] = useState(0);
   const [testimonialVisible, setTestimonialVisible] = useState(3);
   const [contactName, setContactName] = useState('');
   const [contactEmail, setContactEmail] = useState('');
   const [contactPhone, setContactPhone] = useState('');
   const [contactMessage, setContactMessage] = useState('');
-  const trackRef = useRef(null);
   const logoRef = useRef(null);
 
   useEffect(() => {
     setMounted(true);
   }, []);
 
-  // update visibleCount on resize (for skills & case studies)
+  // update visibility on resize
   useEffect(() => {
     const updateVisible = () => {
       const w = window.innerWidth;
       if (w <= 480) {
-        setVisibleCount(1);
         setCaseVisible(1);
         setTestimonialVisible(1);
       } else if (w <= 768) {
-        setVisibleCount(2);
         setCaseVisible(2);
         setTestimonialVisible(2);
       } else if (w <= 1024) {
-        setVisibleCount(3);
         setCaseVisible(3);
         setTestimonialVisible(3);
       } else {
-        setVisibleCount(4);
-        setCaseVisible(4);
+        setCaseVisible(3);
         setTestimonialVisible(3);
       }
     };
@@ -117,55 +118,14 @@ export default function Home() {
     return () => window.removeEventListener('resize', updateVisible);
   }, []);
 
-  // auto-advance by one card, respecting visibleCount
-  useEffect(() => {
-    const trackItems = [...skills, ...skills.slice(0, visibleCount)];
-    const maxIndex = trackItems.length - visibleCount;
-    const iv = setInterval(() => {
-      setSlideIndex((s) => s + 1);
-    }, 3000);
-    return () => clearInterval(iv);
-  }, [visibleCount]);
-
-  // handle wrap-around when index enters cloned segment
-  useEffect(() => {
-    const trackItems = [...skills, ...skills.slice(0, visibleCount)];
-    const maxIndex = trackItems.length - visibleCount;
-    if (slideIndex > maxIndex) {
-      const reset = () => {
-        if (trackRef.current) {
-          trackRef.current.style.transition = 'none';
-          setSlideIndex(0);
-          void trackRef.current.offsetWidth;
-          trackRef.current.style.transition = '';
-        }
-      };
-      setTimeout(reset, 600);
-    }
-  }, [slideIndex, visibleCount]);
-
-  // keep case slider index within bounds when visibility changes
+  // keep sliders index within bounds when visibility changes
   useEffect(() => {
     const maxCaseIndex = Math.max(0, caseStudies.length - caseVisible);
-    if (caseSlide > maxCaseIndex) {
-      setCaseSlide(maxCaseIndex);
-    }
+    if (caseSlide > maxCaseIndex) setCaseSlide(maxCaseIndex);
 
     const maxTestimonialIndex = Math.max(0, testimonials.length - testimonialVisible);
-    if (testimonialSlide > maxTestimonialIndex) {
-      setTestimonialSlide(maxTestimonialIndex);
-    }
+    if (testimonialSlide > maxTestimonialIndex) setTestimonialSlide(maxTestimonialIndex);
   }, [caseSlide, caseVisible, testimonialSlide, testimonialVisible]);
-
-  // update tracking transform in pixels since gap breaks percent logic
-  useEffect(() => {
-    if (!trackRef.current) return;
-    const cards = trackRef.current.querySelectorAll('.skill-card');
-    if (cards.length === 0) return;
-    const gap = 32; // must match CSS gap/margin
-    const cardWidth = cards[0].offsetWidth + gap;
-    trackRef.current.style.transform = `translateX(-${slideIndex * cardWidth}px)`;
-  }, [slideIndex, visibleCount]);
 
   // auto-scroll logos by duplicating track content
   useEffect(() => {
@@ -210,9 +170,6 @@ export default function Home() {
               <Link href="/contact" className="btn btn-primary">
                 Let&apos;s Work Together
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-              </Link>
-              <Link href="/skills" className="btn btn-outline">
-                View Our Skills
               </Link>
             </div>
 
@@ -280,50 +237,35 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Skills Highlight */}
-      <section className="section skills-highlight">
+      {/* Technologies Section */}
+      <section className="section tech-section" id="tech-stack">
         <div className="container">
           <div className="section-header-center">
-            <span className="section-label">Our Expertise</span>
-            <h2 className="section-title">Skills &amp; Technologies</h2>
+            <span className="section-label">Our Stack</span>
+            <h2 className="section-title">Technologies We <span className="gradient-text">Master</span></h2>
             <p className="section-subtitle" style={{ margin: '0 auto' }}>
-              Proficient in modern web technologies to deliver exceptional digital experiences.
+              We leverage the most powerful and modern tools to build high-performance digital solutions for your business.
             </p>
           </div>
 
-          {/* carousel wrapper */}
-          <div className="skills-slider">
-            <div
-              ref={trackRef}
-              className="skills-track"
-            >
-              {[...skills, ...skills.slice(0, visibleCount)].map((skill, i) => (
-                <div key={i} className="skill-card glass-card" style={{ animationDelay: `${i * 0.1}s` }}>
-                  <div className="skill-icon-wrapper" style={{ background: `${skill.color}20` }}>
-                    <span className="skill-icon">{skill.icon}</span>
-                  </div>
-                  <h3 className="skill-name">{skill.name}</h3>
-                  <div className="skill-bar-container">
-                    <div
-                      className="skill-bar"
-                      style={{
-                        width: `${80 + (i % skills.length) * 3}%`,
-                        background: `linear-gradient(90deg, ${skill.color}, ${skill.color}88)`,
-                      }}
-                    />
-                  </div>
+          <div className="tech-grid">
+            {skills.map((skill, i) => (
+              <div key={i} className="tech-card glass-card">
+                <div className="tech-card-glow" style={{ background: `${skill.color}15` }} />
+                <div className="tech-icon-box" style={{ background: `${skill.color}15`, color: skill.color }}>
+                  <span className="tech-icon">{skill.icon}</span>
                 </div>
-              ))}
-            </div>
-          </div>
-
-          <div className="skills-cta">
-            <Link href="/skills" className="btn btn-outline">
-              View All Skills →
-            </Link>
+                <div className="tech-info">
+                  <h3 className="tech-name">{skill.name}</h3>
+                  <p className="tech-desc">{skill.desc}</p>
+                </div>
+                <div className="tech-accent-line" style={{ background: `linear-gradient(90deg, ${skill.color}, transparent)` }} />
+              </div>
+            ))}
           </div>
         </div>
       </section>
+
 
       {/* Services Preview */}
       <section className="section services-preview">
@@ -361,6 +303,18 @@ export default function Home() {
                 title: 'Bespoke CMS Platforms',
                 desc: 'Empower your team with lightning-fast, custom headless CMS architectures and bespoke WordPress integrations engineered for ultimate flexibility and security.',
                 tags: ['Headless CMS', 'WordPress', 'Security'],
+              },
+              {
+                icon: '🎨',
+                title: 'UI/UX Design Strategy',
+                desc: 'We create user-centric designs that convert. From wireframing to interactive prototyping, we ensure your digital product is both beautiful and intuitively functional.',
+                tags: ['Figma', 'Prototyping', 'User Research'],
+              },
+              {
+                icon: '⚡',
+                title: 'Performance Optimization',
+                desc: 'Speed is a feature. We audit and optimize every line of code to ensure your website passes Core Web Vitals with flying colors and provides a seamless user experience.',
+                tags: ['Web Vitals', 'Optimization', 'Speed'],
               },
             ].map((service, i) => (
               <div key={i} className="service-card glass-card">
@@ -421,31 +375,24 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="case-slider">
-            <div className="case-track-wrapper">
-              <div
-                className="case-track"
-                style={{
-                  transform: `translateX(-${(100 / caseVisible) * caseSlide}%)`,
-                }}
-              >
-                {caseStudies.map((project, i) => (
-                  <div key={i} className="case-card glass-card">
-                    <div className="case-image" />
-                    <div className="case-content">
-                      <div className="case-tags">
-                        {project.tags.map((tag) => (
-                          <span key={tag} className="case-tag">{tag}</span>
-                        ))}
-                      </div>
-                      <h3 className="case-title">{project.title}</h3>
-                      <p className="case-desc">{project.desc}</p>
-
+          <div className="case-grid">
+            {caseStudies.slice(caseSlide, caseSlide + caseVisible).map((project, i) => (
+              <Link key={project.slug} href={`/case-studies/${project.slug}`} className="case-card-link">
+                <div className="case-card glass-card">
+                  <div className="case-image" />
+                  <div className="case-content">
+                    <div className="case-tags">
+                      {project.tags.map((tag) => (
+                        <span key={tag} className="case-tag">{tag}</span>
+                      ))}
                     </div>
+                    <h3 className="case-title">{project.title}</h3>
+                    <p className="case-desc">{project.desc}</p>
+                    <span className="case-read-more">Read More →</span>
                   </div>
-                ))}
-              </div>
-            </div>
+                </div>
+              </Link>
+            ))}
           </div>
         </div>
       </section>
@@ -529,73 +476,87 @@ export default function Home() {
       </section>
 
       {/* FAQ Section */}
-      <section className="section faq-section">
+      <section style={{ padding: '80px 0' }}>
         <div className="container">
-          <div className="section-header-center">
-            <span className="section-label">FAQ</span>
-            <h2 className="section-title">Frequently Asked Questions</h2>
-            <p className="section-subtitle" style={{ margin: '0 auto', maxWidth: '520px' }}>
-              Answers to common questions about our workflow, pricing, and collaboration process.
-            </p>
-          </div>
-
-          <div className="faq-accordion">
-            {[
-              {
-                question: '1. What services do you offer as a Web Development Company?',
-                answer: 'We specialize in Frontend Development, bespoke WordPress solutions, complete Shopify eCommerce stores, and technical SEO optimization. We build entirely custom, high-performance web experiences tailored to your brand.'
-              },
-              {
-                question: '2. How do you typically start a new project?',
-                answer: 'We begin with a discovery call to understand your goals, target audience, and timeline. After defining the project scope, we provide a detailed proposal, timeline, and strategy before moving into design and development.'
-              },
-              {
-                question: '3. Can you work with my existing design files (Figma, Adobe XD)?',
-                answer: 'Absolutely. We regularly convert Figma, Sketch, or Adobe XD designs into pixel-perfect, responsive, and accessible Next.js, React, or HTML/CSS code.'
-              },
-              {
-                question: '4. How long does a typical website project take?',
-                answer: 'A standard website takes 2-4 weeks from start to finish. More complex applications or large e-commerce stores can take 6-10 weeks. We provide a precise timeline during the proposal phase.'
-              },
-              {
-                question: '5. What technologies do you use for frontend projects?',
-                answer: 'We build modern frontends using Next.js, React, Angular, and Tailwind CSS. This ensures your website is incredibly fast, secure, and ready to scale.'
-              },
-              {
-                question: '6. Do you offer SEO optimization?',
-                answer: 'Yes! All our websites are built with technical SEO best practices from the ground up. We also offer dedicated SEO services including on-page optimization, keyword strategy, and schema markup.'
-              },
-              {
-                question: '7. Will my website be mobile-friendly?',
-                answer: '100%. We use a mobile-first approach, ensuring that your website looks and functions perfectly across all devices, from large desktop monitors to smartphones.'
-              },
-              {
-                question: '8. Do you provide ongoing maintenance and support?',
-                answer: 'Yes. We offer monthly maintenance packages to keep your website updated, secure, backed up, and performing optimally long after the initial launch.'
-              },
-              {
-                question: '9. How does pricing work?',
-                answer: 'We offer transparent package-based pricing as well as custom quotes for unique projects. You can check our Packages page for a general idea, or contact us directly to discuss your specific needs.'
-              },
-              {
-                question: '10. What do you need from me to get started?',
-                answer: 'We need your brand assets (logo, colors), existing content or copy, examples of websites you like, and a clear understanding of your business goals.'
-              }
-            ].map((item, i) => (
-              <div 
-                key={i} 
-                className={`faq-accordion-item glass-card ${openFaq === i ? 'active' : ''}`}
-                onClick={() => setOpenFaq(openFaq === i ? null : i)}
+          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1.5fr', gap: '60px', alignItems: 'start' }} className="faq-grid">
+            {/* Left side - heading */}
+            <div style={{ position: 'sticky', top: '120px' }}>
+              <span className="section-label">FAQ</span>
+              <h2 style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 'clamp(1.8rem, 3vw, 2.4rem)', fontWeight: 800, lineHeight: 1.2, marginBottom: '16px' }}>
+                Frequently Asked <span className="gradient-text">Questions</span>
+              </h2>
+              <p style={{ fontSize: '0.95rem', color: 'var(--text-secondary)', lineHeight: 1.8, marginBottom: '28px' }}>
+                Answers to common questions about our workflow, pricing, and collaboration process.
+              </p>
+              <a
+                href="https://wa.me/917983505861?text=Hi!%20I%20have%20a%20question."
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  gap: '8px',
+                  padding: '12px 24px',
+                  borderRadius: '50px',
+                  background: 'linear-gradient(135deg, #25D366, #128C7E)',
+                  color: '#fff',
+                  fontSize: '0.88rem',
+                  fontWeight: 600,
+                  textDecoration: 'none',
+                  boxShadow: '0 4px 20px rgba(37, 211, 102, 0.3)',
+                  transition: 'transform 0.2s, box-shadow 0.2s',
+                }}
               >
-                <div className="faq-accordion-header">
-                  <h3 className="faq-question">{item.question}</h3>
-                  <span className="faq-icon">{openFaq === i ? '−' : '+'}</span>
+                💬 Ask me anything
+              </a>
+            </div>
+
+            {/* Right side - FAQ items */}
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
+              {[
+                { num: '01', q: 'What services do you offer as a Web Development Company?', a: 'We specialize in Frontend Development, bespoke WordPress solutions, complete Shopify eCommerce stores, and technical SEO optimization. We build entirely custom, high-performance web experiences tailored to your brand.' },
+                { num: '02', q: 'How do you typically start a new project?', a: 'We begin with a discovery call to understand your goals, target audience, and timeline. After defining the project scope, we provide a detailed proposal, timeline, and strategy before moving into design and development.' },
+                { num: '03', q: 'Can you work with my existing design files (Figma, Adobe XD)?', a: 'Absolutely. We regularly convert Figma, Sketch, or Adobe XD designs into pixel-perfect, responsive, and accessible Next.js, React, or HTML/CSS code.' },
+                { num: '04', q: 'How long does a typical website project take?', a: 'A standard website takes 2-4 weeks from start to finish. More complex applications or large e-commerce stores can take 6-10 weeks. We provide a precise timeline during the proposal phase.' },
+                { num: '05', q: 'What technologies do you use for frontend projects?', a: 'We build modern frontends using Next.js, React, Angular, and Tailwind CSS. This ensures your website is incredibly fast, secure, and ready to scale.' },
+                { num: '06', q: 'Do you offer SEO optimization?', a: 'Yes! All our websites are built with technical SEO best practices from the ground up. We also offer dedicated SEO services including on-page optimization, keyword strategy, and schema markup.' },
+                { num: '07', q: 'Will my website be mobile-friendly?', a: '100%. We use a mobile-first approach, ensuring that your website looks and functions perfectly across all devices, from large desktop monitors to smartphones.' },
+                { num: '08', q: 'Do you provide ongoing maintenance and support?', a: 'Yes. We offer monthly maintenance packages to keep your website updated, secure, backed up, and performing optimally long after the initial launch.' },
+                { num: '09', q: 'How does pricing work?', a: 'We offer transparent package-based pricing as well as custom quotes for unique projects. You can check our Packages page for a general idea, or contact us directly to discuss your specific needs.' },
+                { num: '10', q: 'What do you need from me to get started?', a: 'We need your brand assets (logo, colors), existing content or copy, examples of websites you like, and a clear understanding of your business goals.' },
+              ].map((item, i) => (
+                <div
+                  key={i}
+                  style={{
+                    padding: '24px 28px',
+                    borderRadius: '16px',
+                    background: 'var(--bg-glass)',
+                    border: '1px solid var(--border)',
+                    backdropFilter: 'blur(10px)',
+                    transition: 'all 0.3s ease',
+                    cursor: 'default',
+                  }}
+                  onMouseOver={(e) => {
+                    e.currentTarget.style.transform = 'translateY(-3px)';
+                    e.currentTarget.style.boxShadow = '0 12px 40px rgba(108, 99, 255, 0.1)';
+                    e.currentTarget.style.borderColor = 'rgba(108, 99, 255, 0.3)';
+                  }}
+                  onMouseOut={(e) => {
+                    e.currentTarget.style.transform = 'translateY(0)';
+                    e.currentTarget.style.boxShadow = 'none';
+                    e.currentTarget.style.borderColor = 'var(--border)';
+                  }}
+                >
+                  <div style={{ display: 'flex', alignItems: 'flex-start', gap: '16px' }}>
+                    <span style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: '1.5rem', fontWeight: 800, color: 'rgba(108, 99, 255, 0.15)', flexShrink: 0, lineHeight: 1 }}>{item.num}</span>
+                    <div>
+                      <h3 style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: '1rem', fontWeight: 700, marginBottom: '8px' }}>{item.q}</h3>
+                      <p style={{ fontSize: '0.88rem', color: 'var(--text-secondary)', lineHeight: 1.7, margin: 0 }}>{item.a}</p>
+                    </div>
+                  </div>
                 </div>
-                <div className="faq-accordion-body">
-                  <p className="faq-answer">{item.answer}</p>
-                </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </div>
       </section>
@@ -1302,32 +1263,27 @@ export default function Home() {
           padding-top: 30px;
         }
 
-        .case-slider {
-          position: relative;
-          display: flex;
-          align-items: center;
-          gap: 12px;
+        .case-grid {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          gap: 24px;
           margin-top: 40px;
         }
 
-        .case-track-wrapper {
-          flex: 1;
-          overflow: hidden;
-        }
-
-        .case-track {
-          display: flex;
-          gap: 24px;
-          transition: transform 0.4s ease;
+        .case-card-link {
+          text-decoration: none;
+          display: block;
         }
 
         .case-card {
-          flex: 0 0 calc(33.333% - 16px);
+          height: 100%;
           position: relative;
           overflow: hidden;
           border: 1px solid var(--border);
           transition: transform 0.3s ease, box-shadow 0.3s ease;
           min-height: 420px;
+          display: flex;
+          flex-direction: column;
         }
 
         .case-card:hover {
@@ -1417,14 +1373,14 @@ export default function Home() {
         }
 
         @media (max-width: 1024px) {
-          .case-card {
-            flex: 0 0 calc(50% - 12px);
+          .case-grid {
+            grid-template-columns: repeat(2, 1fr);
           }
         }
 
         @media (max-width: 768px) {
-          .case-card {
-            flex: 0 0 100%;
+          .case-grid {
+            grid-template-columns: 1fr;
           }
         }
 
@@ -1580,6 +1536,169 @@ export default function Home() {
           }
         }
 
+
+        .case-read-more {
+          display: inline-block;
+          margin-top: 16px;
+          font-weight: 700;
+          color: var(--accent);
+          font-size: 0.9rem;
+          transition: transform 0.3s ease;
+        }
+
+        .case-card:hover .case-read-more {
+          transform: translateX(5px);
+        }
+
+        /* ===== DIAGRAM SECTION ===== */
+        .diagram-section {
+          padding: 100px 0;
+          position: relative;
+          overflow: hidden;
+          background: linear-gradient(180deg, transparent, rgba(108, 99, 255, 0.04));
+        }
+
+        .diagram-container {
+          margin-top: 60px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          max-width: 900px;
+          margin-left: auto;
+          margin-right: auto;
+        }
+
+        .diagram-top {
+          display: flex;
+          justify-content: center;
+          width: 100%;
+        }
+
+        .d-node {
+          position: relative;
+          background: rgba(21, 24, 40, 0.9);
+          border: 1px solid rgba(255, 255, 255, 0.1);
+          padding: 36px 48px;
+          border-radius: 28px;
+          text-align: center;
+          backdrop-filter: blur(20px);
+          transition: all 0.4s ease;
+          z-index: 5;
+          overflow: hidden;
+        }
+
+        .d-node:hover {
+          transform: translateY(-6px);
+          box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+        }
+
+        .d-node-glow {
+          position: absolute;
+          inset: 0;
+          background: radial-gradient(circle at center, rgba(108, 99, 255, 0.12), transparent 70%);
+          z-index: 0;
+        }
+
+        .d-node-glow.glow-blue {
+          background: radial-gradient(circle at center, rgba(33, 117, 155, 0.15), transparent 70%);
+        }
+
+        .d-node-glow.glow-green {
+          background: radial-gradient(circle at center, rgba(71, 162, 72, 0.15), transparent 70%);
+        }
+
+        .d-node-primary {
+          border-color: rgba(108, 99, 255, 0.4);
+          box-shadow: 0 0 50px rgba(108, 99, 255, 0.12);
+        }
+
+        .d-node-cms {
+          border-color: rgba(33, 117, 155, 0.35);
+        }
+
+        .d-node-growth {
+          border-color: rgba(71, 162, 72, 0.35);
+        }
+
+        .d-icon {
+          font-size: 3rem;
+          margin-bottom: 16px;
+          position: relative;
+          z-index: 1;
+          filter: drop-shadow(0 0 12px rgba(255, 255, 255, 0.15));
+        }
+
+        .d-title {
+          font-family: 'Space Grotesk', sans-serif;
+          font-size: 1.35rem;
+          font-weight: 800;
+          margin-bottom: 8px;
+          position: relative;
+          z-index: 1;
+          background: linear-gradient(90deg, #fff, rgba(255,255,255,0.75));
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+
+        .d-sub {
+          font-size: 0.88rem;
+          color: var(--text-muted);
+          font-weight: 500;
+          letter-spacing: 0.5px;
+          position: relative;
+          z-index: 1;
+        }
+
+        .diagram-svg-wrap {
+          width: 100%;
+          height: 120px;
+          position: relative;
+          z-index: 1;
+        }
+
+        .diagram-svg {
+          width: 100%;
+          height: 100%;
+          opacity: 0.6;
+        }
+
+        .diagram-bottom {
+          display: flex;
+          gap: 40px;
+          width: 100%;
+          justify-content: center;
+        }
+
+        .diagram-badge-row {
+          margin-top: 50px;
+          text-align: center;
+        }
+
+        .d-badge {
+          display: inline-block;
+          padding: 12px 32px;
+          background: rgba(108, 99, 255, 0.1);
+          border: 1px solid rgba(108, 99, 255, 0.3);
+          border-radius: 50px;
+          font-size: 0.85rem;
+          font-weight: 700;
+          color: var(--accent);
+          text-transform: uppercase;
+          letter-spacing: 2px;
+          animation: pulseGlow 3s infinite;
+        }
+
+        @keyframes pulseGlow {
+          0% { box-shadow: 0 0 0 0 rgba(108, 99, 255, 0.4); }
+          70% { box-shadow: 0 0 0 15px rgba(108, 99, 255, 0); }
+          100% { box-shadow: 0 0 0 0 rgba(108, 99, 255, 0); }
+        }
+
+        @media (max-width: 900px) {
+          .diagram-bottom { flex-direction: column; align-items: center; gap: 24px; }
+          .diagram-svg-wrap { display: none; }
+          .d-node { width: 100%; }
+        }
 
         .service-card {
           padding: 30px;
@@ -2064,6 +2183,92 @@ export default function Home() {
         }
 
         /* ===== RESPONSIVE ===== */
+        .tech-grid {
+          display: grid;
+          grid-template-columns: repeat(4, 1fr);
+          gap: 24px;
+          margin-top: 48px;
+        }
+
+        .tech-card {
+          position: relative;
+          padding: 32px 24px;
+          border-radius: 20px;
+          overflow: hidden;
+          transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+          cursor: default;
+        }
+
+        .tech-card-glow {
+          position: absolute;
+          inset: 0;
+          opacity: 0;
+          transition: opacity 0.4s ease;
+        }
+
+        .tech-card:hover {
+          transform: translateY(-8px);
+          border-color: rgba(108, 99, 255, 0.3);
+          box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .tech-card:hover .tech-card-glow {
+          opacity: 1;
+        }
+
+        .tech-icon-box {
+          width: 56px;
+          height: 56px;
+          border-radius: 16px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 1.8rem;
+          margin-bottom: 20px;
+          position: relative;
+          z-index: 2;
+        }
+
+        .tech-info {
+          position: relative;
+          z-index: 2;
+        }
+
+        .tech-name {
+          font-family: 'Space Grotesk', sans-serif;
+          font-size: 1.15rem;
+          font-weight: 700;
+          margin-bottom: 6px;
+        }
+
+        .tech-desc {
+          font-size: 0.85rem;
+          color: var(--text-secondary);
+          line-height: 1.5;
+        }
+
+        .tech-accent-line {
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          height: 2px;
+          opacity: 0;
+          transition: opacity 0.3s ease;
+        }
+
+        .tech-card:hover .tech-accent-line {
+          opacity: 1;
+        }
+
+        @media (max-width: 1024px) {
+          .tech-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+
+        @media (max-width: 600px) {
+          .tech-grid { grid-template-columns: 1fr; }
+        }
+
         @media (max-width: 768px) {
           .hero-content {
             grid-template-columns: 1fr;
