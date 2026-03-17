@@ -28,7 +28,22 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
+      <head>
+        <style dangerouslySetInnerHTML={{ __html: `
+          body { opacity: 0; transition: opacity 0.15s ease-in; }
+          body.ready { opacity: 1; }
+        `}} />
+        <script dangerouslySetInnerHTML={{ __html: `
+          if (document.readyState === 'complete' || document.readyState === 'interactive') {
+            document.body.classList.add('ready');
+          } else {
+            window.addEventListener('DOMContentLoaded', function() {
+              document.body.classList.add('ready');
+            });
+          }
+        `}} />
+      </head>
       <body>
         <Navbar />
         <main>{children}</main>
