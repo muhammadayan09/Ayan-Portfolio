@@ -24,6 +24,9 @@ export const metadata = {
   icons: {
     icon: '/platuweb-fav.png',
   },
+  verification: {
+    google: 'MBrfZiFRPKaKG1NMPBRYC4ky4LBXN8lpGTlRcFKw-OI',
+  },
 };
 
 export default function RootLayout({ children }) {
