@@ -22,17 +22,17 @@ const caseStudies = [
   },
   {
     slug: 'zuf-dental-care',
-    title: "Healthcare Patient Portal",
-    desc: "Modern digital presence for a UK dental clinic, combining custom builds with strategic SEO.",
+    title: "High-Converting Dental Website",
+    desc: "A performance-driven dental website with SEO optimisation, improving rankings, traffic, and patient enquiries.",
     tags: ["WordPress", "Healthcare", "SEO"],
     color: "#3498db",
     image: "/projects/healthcare.jpg"
   },
   {
     slug: 'silent-stories',
-    title: "Cinematic Photography Portfolio",
-    desc: "Visually stunning portfolio with advanced image optimization and smooth interactive animations.",
-    tags: ["React", "Portfolio", "Performance"],
+    title: "Wedding & Event Photography Platform",
+    desc: "A visually stunning photography platform with optimised galleries, fast performance, and lead generation integration.",
+    tags: ["WordPress", "Photography", "SEO"],
     color: "#ffffff",
     image: "/projects/photography.jpg"
   },
@@ -142,8 +142,12 @@ export default function CaseStudiesPage() {
         }
 
         .project-card-wrapper {
-          text-decoration: none;
+          text-decoration: none !important;
           color: inherit;
+        }
+
+        .project-card-wrapper * {
+          text-decoration: none !important;
         }
 
         .project-card {

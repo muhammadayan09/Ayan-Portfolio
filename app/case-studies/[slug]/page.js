@@ -10,20 +10,31 @@ const projectData = {
     client: "SHS Real Estate Dubai",
     category: "Real Estate Portal",
     tech: ["WordPress", "PHP", "MySQL", "Google Maps API", "Advanced Custom Fields"],
+    issues: ["Outdated Structure", "Slow Performance", "Weak User Experience", "Low Conversion Rate"],
     stats: [
-      { label: "Lead Gen", value: "+45%" },
-      { label: "Site Speed", value: "0.8s" },
-      { label: "Rankings", value: "Top 3" }
+      { label: "Lead Generation", value: "+45%" },
+      { label: "Load Time", value: "0.8s" },
+      { label: "Keyword Rankings", value: "Top 3" }
     ],
-    challenge: "SHS Real Estate needed a ultra-premium portal to compete in the Dubai luxury market. The existing site was slow, not mobile-friendly, and didn't reflect the high-end nature of their $10M+ listings.",
-    solution: "We engineered a custom WordPress architecture using headless-ready techniques for maximum speed. We integrated a dynamic off-plan property module and a seamless WhatsApp-first lead flow. Visuals were optimized for retina displays while maintaining perfect PageSpeed scores.",
+    challenge: "SHS Real Estate Dubai needed a premium digital platform to match the luxury standard of their property portfolio. Their previous website struggled with slow loading times, poor mobile responsiveness, and a generic design that failed to reflect high-value listings.",
+    challengeExtra: "The user journey was not optimised for conversions, resulting in missed opportunities and low-quality leads.",
+    solutionIntro: "We redesigned and rebuilt the platform with a performance-first approach, focusing on speed, scalability, and user engagement.",
+    solutionDetail: "A custom WordPress architecture was developed to support dynamic property listings, advanced filtering, and seamless navigation. We also integrated lead-focused features like instant WhatsApp contact and strategically placed enquiry forms to improve conversion rates.",
+    solutionHeading: ["Architecting a ", "High-Performance", " Experience"],
     process: [
-      { title: "Strategic Architecture", desc: "Mapping the user journey for high-net-worth investors." },
-      { title: "Performance Engineering", desc: "Optimizing image delivery and backend queries for instant loading." },
-      { title: "Premium UI Design", desc: "Crafting a 'glassmorphism' aesthetic that screams luxury." },
-      { title: "Lead Optimization", desc: "Integrating one-click WhatsApp and expert advisor routing." }
+      { title: "Strategic Architecture", desc: "We mapped user journeys to align with high-intent buyers and investors." },
+      { title: "Performance Optimisation", desc: "Optimised images, caching, and backend queries for fast loading speeds." },
+      { title: "Premium UI/UX Design", desc: "Created a clean, modern interface that reflects the luxury market." },
+      { title: "Lead Generation System", desc: "Integrated WhatsApp and enquiry flows to capture high-quality leads." }
     ],
-    result: "The new portal transformed their digital presence. Within 3 months, organic traffic doubled, and lead quality improved significantly. The site is now recognized as a benchmark for real estate UI in Dubai.",
+    result: "The new website significantly improved performance, usability, and overall user experience. Within the first 3 months, the platform saw a strong increase in organic visibility and lead generation. The improved structure and SEO optimisation helped key pages rank higher on Google. The website is now positioned as a high-end real estate platform that effectively converts visitors into serious enquiries.",
+    resultStats: [
+      "45% Increase in Leads",
+      "2X Growth in Organic Traffic",
+      "Top 3 Rankings for Target Keywords",
+      "0.8s Page Load Speed"
+    ],
+    ctaDesc: "Let\u0027s build a high-performance website that drives real business results.",
     color: "#cfa968"
   },
   'zyra-delight': {
@@ -31,21 +42,96 @@ const projectData = {
     client: "Zyra Delight",
     category: "Luxury E-commerce",
     tech: ["Shopify Plus", "Liquid", "React", "Klaviyo", "SEO"],
+    issues: ["Outdated Design", "Poor Mobile UX", "Low Conversion Rate", "Weak Brand Experience"],
     stats: [
-      { label: "Revenue", value: "+65%" },
-      { label: "Mobile Conv", value: "4.2%" },
+      { label: "Revenue Growth", value: "+65%" },
+      { label: "Mobile Conversion", value: "4.2%" },
       { label: "Bounce Rate", value: "-30%" }
     ],
-    challenge: "Zyra Delight's artisan products were world-class, but their online store felt generic. They were struggling with high bounce rates on mobile and low customer retention.",
-    solution: "We performed a complete brand immersion and rebuilt their Shopify store from the ground up. We replaced standard templates with custom Liquid sections and interactive product storytelling components. We focused on 'The Joy of Unboxing' digital experience.",
+    challenge: "Zyra Delight offered high-quality artisan products, but their online store did not reflect the premium nature of their brand. The design felt generic, and the user experience lacked emotional engagement.",
+    challengeExtra: "The store struggled with high bounce rates, low mobile conversions, and poor retention, leading to missed revenue opportunities.",
+    solutionIntro: "We completely redesigned and rebuilt the Shopify store with a focus on storytelling, performance, and conversion optimisation.",
+    solutionDetail: "The goal was to transform the shopping experience from a simple transaction into an emotional journey that connects with customers.",
+    solutionHeading: ["Architecting a ", "Conversion-Focused", " Experience"],
     process: [
-      { title: "Storytelling UX", desc: "Creating a narrative-driven shopping experience." },
-      { title: "Custom Shopify Dev", desc: "Developing bespoke Liquid sections for unique product layouts." },
-      { title: "Mobile Mastering", desc: "Optimizing the checkout flow for one-handed mobile use." },
-      { title: "Retention Strategy", desc: "Integrating SMS and Email automation tailored to artisan buyers." }
+      { title: "Storytelling Experience", desc: "We crafted product pages that tell a story, creating emotional engagement and increasing purchase intent." },
+      { title: "Custom Shopify Development", desc: "Developed bespoke Liquid sections and interactive components tailored to the brand identity." },
+      { title: "Mobile Optimisation", desc: "Optimised the entire store for mobile users, ensuring a smooth and fast checkout experience." },
+      { title: "Retention & Automation", desc: "Integrated email and SMS marketing flows to improve customer retention and lifetime value." }
     ],
-    result: "Zyra Delight saw an immediate 65% jump in monthly revenue. The brand successfully transitioned from 'just a store' to a luxury destination. Customer lifetime value increased by 40% due to the improved experience.",
+    result: "The redesigned Shopify store delivered immediate improvements in both user experience and business performance. Within the first few months, the brand saw a significant increase in conversions, engagement, and revenue. The improved UX and storytelling approach helped position Zyra Delight as a premium ecommerce brand.",
+    resultStats: [
+      "65% Increase in Revenue",
+      "4.2% Mobile Conversion Rate",
+      "30% Reduction in Bounce Rate",
+      "Higher Customer Retention"
+    ],
+    ctaDesc: "Let\u0027s build an ecommerce experience that drives real sales and long-term growth.",
     color: "#96BF48"
+  },
+  'zuf-dental-care': {
+    title: "High-Converting Dental Website",
+    client: "Zuf Dental Care",
+    category: "Dental SEO Project",
+    tech: ["WordPress", "PHP", "MySQL", "On-Page SEO", "Technical SEO", "Local SEO"],
+    issues: ["Low Google Rankings", "Poor Website Structure", "Slow Speed", "Low Enquiry Rate"],
+    stats: [
+      { label: "Organic Traffic Growth", value: "+120%" },
+      { label: "Local Keyword Rankings", value: "Top 3" },
+      { label: "Patient Enquiries", value: "+70%" }
+    ],
+    challenge: "Zuf Dental Care needed a modern, professional website that could attract new patients and rank well in local search results. Their previous online presence was weak, with low visibility on Google and minimal patient enquiries.",
+    challengeExtra: "The website lacked proper SEO structure, had slow loading speeds, and did not clearly communicate services, which made it difficult for users to take action.",
+    solutionIntro: "We designed and developed a clean, user-friendly WordPress website focused on patient experience and SEO performance.",
+    solutionDetail: "Alongside development, we implemented a complete SEO strategy to improve visibility, rankings, and lead generation.",
+    solutionHeading: ["Building a ", "Performance-Driven", " Dental Platform"],
+    process: [
+      { title: "SEO-Focused Website Structure", desc: "We created clear service pages targeting high-intent keywords like dental treatments and emergency care." },
+      { title: "On-Page Optimisation", desc: "Optimised meta tags, headings, internal linking, and content to improve relevance and rankings." },
+      { title: "Technical SEO Improvements", desc: "Improved website speed, mobile responsiveness, and indexing to meet Google standards." },
+      { title: "Local SEO Strategy", desc: "Optimised Google Business Profile, local keywords, and location-based content to attract nearby patients." }
+    ],
+    result: "The new website and SEO strategy significantly improved online visibility and patient engagement. Within a few months, Zuf Dental Care saw a strong increase in organic traffic, better keyword rankings, and more patient enquiries. The website now works as a powerful lead-generation system for the clinic.",
+    resultStats: [
+      "120% Increase in Organic Traffic",
+      "Top 3 Rankings for Local Keywords",
+      "70% Growth in Patient Enquiries",
+      "Improved Website Speed & UX"
+    ],
+    ctaDesc: "Let\u0027s build and optimise your website to attract more customers and grow your business.",
+    color: "#3498db"
+  },
+  'silent-stories': {
+    title: "Wedding & Event Photography Platform",
+    client: "[Client Name / Studio Name]",
+    category: "Photography & Event Services",
+    tech: ["WordPress", "Elementor", "PHP", "MySQL", "Gallery Plugins", "WhatsApp Integration"],
+    issues: ["Outdated Design", "Slow Image Loading", "Poor Portfolio Display", "Low Enquiry Rate"],
+    stats: [
+      { label: "Booking Increase", value: "+60%" },
+      { label: "Load Time", value: "1.2s" },
+      { label: "Local Rankings", value: "Top 5" }
+    ],
+    challenge: "The photography business offered high-quality wedding and event coverage, but their website failed to showcase their work effectively. The design was outdated, slow, and lacked emotional storytelling — which is critical in the photography industry.",
+    challengeExtra: "Visitors were not engaging with the portfolio, and the enquiry process was complicated, resulting in fewer bookings.",
+    solutionIntro: "We redesigned the entire website with a strong focus on visual storytelling, speed, and conversion optimisation.",
+    solutionDetail: "The goal was to create an emotional connection with visitors and make it easy for them to explore work and book services.",
+    solutionHeading: ["Crafting a ", "Visual-First", " Experience"],
+    process: [
+      { title: "Portfolio-Focused Design", desc: "We created visually engaging gallery layouts that highlight wedding and event photography in a premium way." },
+      { title: "Performance Optimisation", desc: "Images were optimised and lazy-loaded to maintain high quality while ensuring fast loading speed." },
+      { title: "Mobile-First Experience", desc: "Designed a seamless mobile browsing experience since most users explore photography on mobile devices." },
+      { title: "Lead Generation Integration", desc: "Integrated WhatsApp, quick enquiry forms, and call buttons to simplify booking and increase conversions." }
+    ],
+    result: "The new website transformed how the photography business presents its work online. Visitors now spend more time exploring galleries, leading to higher engagement and more enquiries. Within a few months, the business saw a noticeable increase in bookings and improved local visibility on Google.",
+    resultStats: [
+      "60% Increase in Bookings",
+      "Higher User Engagement",
+      "Top 5 Rankings for Local Keywords",
+      "Faster Website Performance (1.2s Load Time)"
+    ],
+    ctaDesc: "Let\u0027s build a visually stunning website that turns visitors into real bookings.",
+    color: "#ffffff"
   }
 };
 
@@ -93,17 +179,26 @@ export default function CaseStudyDetail() {
               <span className="section-label">01. The Challenge</span>
               <h2 className="case-h2">The <span className="gradient-text">Problem</span> We Solved</h2>
               <p className="case-p">{data.challenge}</p>
+              {data.challengeExtra && <p className="case-p">{data.challengeExtra}</p>}
               <div className="tech-stack">
                 <h4 className="tech-title">Technologies Used:</h4>
                 <div className="tech-pills">
                   {data.tech.map(t => <span key={t} className="tech-pill">{t}</span>)}
                 </div>
               </div>
+              {data.issues && (
+                <div className="tech-stack" style={{ marginTop: '24px' }}>
+                  <h4 className="tech-title">Key Issues:</h4>
+                  <div className="tech-pills">
+                    {data.issues.map(issue => <span key={issue} className="tech-pill" style={{ borderColor: 'rgba(255,107,107,0.3)', color: '#FF6B6B' }}>{issue}</span>)}
+                  </div>
+                </div>
+              )}
             </div>
             <div className="visual-side">
               <div className="problem-card glass-card">
                 <div className="problem-icon">⚠️</div>
-                <div className="problem-text">Outdated Architecture • Slow Load Times • Low Conversion</div>
+                <div className="problem-text">{data.issues ? data.issues.join(' • ') : 'Outdated Architecture • Slow Load Times • Low Conversion'}</div>
               </div>
             </div>
           </div>
@@ -116,8 +211,15 @@ export default function CaseStudyDetail() {
           <div className="grid-split reverse">
             <div className="content-side">
               <span className="section-label">02. The Solution</span>
-              <h2 className="case-h2">Architecting <span className="gradient-text">Excellence</span></h2>
-              <p className="case-p">{data.solution}</p>
+              <h2 className="case-h2">{data.solutionHeading ? <>{data.solutionHeading[0]}<span className="gradient-text">{data.solutionHeading[1]}</span>{data.solutionHeading[2]}</> : <>Architecting <span className="gradient-text">Excellence</span></>}</h2>
+              {data.solutionIntro ? (
+                <>
+                  <p className="case-p">{data.solutionIntro}</p>
+                  <p className="case-p">{data.solutionDetail}</p>
+                </>
+              ) : (
+                <p className="case-p">{data.solution}</p>
+              )}
               <div className="process-list">
                 {data.process.map((step, i) => (
                   <div key={i} className="process-item">
@@ -149,15 +251,25 @@ export default function CaseStudyDetail() {
       <section className="case-section bg-gradient">
         <div className="container text-center">
             <span className="section-label white">03. Impact</span>
-            <h2 className="case-h2 white">The <span className="gradient-text">Outcome</span></h2>
+            <h2 className="case-h2 white">The <span className="gradient-text">Results</span></h2>
             <p className="case-p max-700 mx-auto white-op">{data.result}</p>
+            {data.resultStats && (
+              <div className="result-stats-grid">
+                {data.resultStats.map((rs, i) => (
+                  <div key={i} className="result-stat-item glass-card">
+                    <span className="result-check">✔</span>
+                    <span>{rs}</span>
+                  </div>
+                ))}
+              </div>
+            )}
             
             <div className="case-cta-box glass-card scale-hover">
-              <h3>Have a similar project?</h3>
-              <p>Let's discuss how we can bring these results to your brand.</p>
+              <h3>Have a Similar Project?</h3>
+              <p>{data.ctaDesc || 'Let\u0027s discuss how we can bring these results to your brand.'}</p>
               <div className="cta-btns">
                 <Link href="/contact" className="btn btn-primary">Start Your Success Story</Link>
-                <Link href="/case-studies" className="btn btn-outline">View Other Studies</Link>
+                <Link href="/case-studies" className="btn btn-outline">View Other Case Studies</Link>
               </div>
             </div>
         </div>
@@ -238,6 +350,9 @@ export default function CaseStudyDetail() {
         .skeleton-hero { height: 160px; border-radius: 12px; margin-bottom: 20px; }
         .skeleton-grid { height: 200px; background: rgba(255,255,255,0.05); border-radius: 12px; }
 
+        .result-stats-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; max-width: 600px; margin: 40px auto 0; }
+        .result-stat-item { display: flex; align-items: center; gap: 12px; padding: 16px 20px; font-weight: 600; font-size: 0.95rem; }
+        .result-check { color: #00D4AA; font-size: 1.1rem; }
         .case-cta-box { margin-top: 60px; padding: 60px; text-align: center; }
         .case-cta-box h3 { font-size: 2rem; font-weight: 700; margin-bottom: 12px; }
         .case-cta-box p { color: var(--text-secondary); margin-bottom: 32px; }
@@ -249,6 +364,7 @@ export default function CaseStudyDetail() {
           .visual-side { order: -1; }
           .case-hero { height: auto; padding: 60px 0; }
           .case-stats { flex-wrap: wrap; }
+          .result-stats-grid { grid-template-columns: 1fr; }
         }
 
         .animate-up { animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards; }

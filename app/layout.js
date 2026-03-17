@@ -3,14 +3,26 @@ import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 
 export const metadata = {
-  title: 'Muhammad Ayan | Frontend Developer & Digital Expert',
-  description: 'Professional portfolio of Muhammad Ayan — Frontend Developer, WordPress Expert, SEO Specialist, and Shopify Developer. Building modern, fast, and user-friendly web experiences.',
-  keywords: 'Frontend Developer, WordPress, SEO, Shopify, Angular, Next.js, Web Developer',
-  authors: [{ name: 'Muhammad Ayan' }],
+  title: 'Website Development Company in India | PilatuWeb',
+  description: 'Top website development company in India offering WordPress, Shopify, SEO & custom web solutions to grow your business online.',
+  keywords: 'website development company India, web development agency India, SEO agency India, Shopify development India, WordPress development India, UI UX design, ecommerce development',
+  robots: 'index, follow',
+  alternates: {
+    canonical: 'https://pilatuweb.com/',
+  },
   openGraph: {
-    title: 'Muhammad Ayan | Frontend Developer & Digital Expert',
-    description: 'Building modern, fast, and user-friendly web experiences.',
+    title: 'Website Development Company in India | PilatuWeb',
+    description: 'Top website development company in India offering WordPress, Shopify, SEO & custom web solutions to grow your business online.',
+    url: 'https://pilatuweb.com/',
     type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Website Development Company in India | PilatuWeb',
+    description: 'Top website development company in India offering WordPress, Shopify, SEO & custom web solutions to grow your business online.',
+  },
+  icons: {
+    icon: '/platuweb-fav.png',
   },
 };
 

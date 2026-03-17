@@ -14,13 +14,13 @@ export default function SeoOptimization() {
         <div className="container" style={{ position: 'relative', zIndex: 2 }}>
           <div className="svc-hero-badge"><span className="svc-hero-badge-dot" />SEO Optimization</div>
           <h1 className="svc-hero-title">Dominate <span className="gradient-text">Google</span><br />Search Rankings</h1>
-          <p className="svc-hero-desc">Data-driven technical SEO strategies that boost your organic traffic, improve search visibility, and turn your website into a lead-generation machine.</p>
+          <p className="svc-hero-desc">We use data-driven SEO strategies to increase your organic traffic, improve search visibility, and turn your website into a powerful lead-generation system.</p>
           <div className="svc-hero-actions">
             <Link href="/contact" className="btn btn-primary">Get a Free Audit →</Link>
             <a href="https://wa.me/917983505861?text=Hi!%20I%20need%20SEO%20services." target="_blank" rel="noopener noreferrer" className="btn btn-outline">💬 Chat on WhatsApp</a>
           </div>
           <div className="svc-hero-stats">
-            {[{ num: '300%', label: 'Avg Traffic Growth' }, { num: '#1', label: 'Page Rankings' }, { num: '40+', label: 'SEO Projects' }].map((s, i) => (
+            {[{ num: '300%', label: 'Average Traffic Growth' }, { num: '#1', label: 'Page Rankings Achieved' }, { num: '40+', label: 'SEO Projects Delivered' }].map((s, i) => (
               <div key={i} className="svc-hero-stat"><span className="svc-hero-stat-num">{s.num}</span><span className="svc-hero-stat-label">{s.label}</span></div>
             ))}
           </div>
@@ -32,16 +32,16 @@ export default function SeoOptimization() {
           <div className="svc-section-header">
             <span className="section-label">What We Do</span>
             <h2 className="svc-section-title">Our SEO <span className="gradient-text">Services</span></h2>
-            <p className="svc-section-subtitle">A beautiful website is useless if nobody finds it. We make sure they do.</p>
+            <p className="svc-section-subtitle">A great website means nothing if it can&apos;t be found. We make sure your business shows up where it matters.</p>
           </div>
           <div className="svc-features-grid">
             {[
-              { icon: '🔍', title: 'Technical SEO Audits', desc: 'Deep-dive analysis of site architecture, crawlability, indexation, broken links, and Core Web Vitals performance.', color: '#6C63FF' },
-              { icon: '📝', title: 'On-Page Optimization', desc: 'Strategic keyword placement, meta tags, heading structures, internal linking, and content optimization.', color: '#00D4AA' },
-              { icon: '📊', title: 'Schema & Rich Results', desc: 'Structured data markup (JSON-LD) for rich snippets, knowledge panels, and enhanced search result appearances.', color: '#FFB800' },
-              { icon: '📈', title: 'Analytics & Reporting', desc: 'Google Analytics, Search Console setup, custom dashboards, and monthly performance reports with insights.', color: '#FF6B6B' },
-              { icon: '🔗', title: 'Link Building', desc: 'Strategic outreach and high-quality backlink acquisition to boost domain authority and search rankings.', color: '#4ECDC4' },
-              { icon: '🎯', title: 'Keyword Strategy', desc: 'In-depth keyword research identifying high-value, low-competition opportunities aligned with search intent.', color: '#F093FB' },
+              { icon: '🔍', title: 'Technical SEO Audits', desc: 'We analyse your website\u0027s structure, crawlability, indexing, and performance to identify issues that impact rankings.', color: '#6C63FF' },
+              { icon: '📝', title: 'On-Page Optimisation', desc: 'We optimise titles, meta tags, headings, content, and internal linking to improve relevance and visibility.', color: '#00D4AA' },
+              { icon: '📊', title: 'Schema & Rich Results', desc: 'We implement structured data to enhance search listings with rich snippets and improved click-through rates.', color: '#FFB800' },
+              { icon: '📈', title: 'Analytics & Reporting', desc: 'We set up Google Analytics and Search Console with detailed reporting to track performance and growth.', color: '#FF6B6B' },
+              { icon: '🔗', title: 'Link Building', desc: 'We build high-quality backlinks through strategic outreach to improve domain authority and rankings.', color: '#4ECDC4' },
+              { icon: '🎯', title: 'Keyword Strategy', desc: 'We research high-intent keywords to target the right audience and maximise organic growth.', color: '#F093FB' },
             ].map((item, i) => (
               <div key={i} className={`svc-feature-card ${hoveredCard === i ? 'active' : ''}`} onMouseEnter={() => setHoveredCard(i)} onMouseLeave={() => setHoveredCard(null)}>
                 <div className="svc-feature-card-glow" style={{ background: `${item.color}15` }} />
@@ -61,14 +61,14 @@ export default function SeoOptimization() {
           <div className="svc-section-header">
             <span className="section-label">Our Strategy</span>
             <h2 className="svc-section-title">SEO <span className="gradient-text">Workflow</span></h2>
-            <p className="svc-section-subtitle">A proven, results-driven approach to boosting your organic visibility.</p>
+            <p className="svc-section-subtitle">A proven, step-by-step approach to achieving consistent ranking improvements.</p>
           </div>
           <div className="svc-timeline">
             {[
-              { num: '01', title: 'Audit & Analysis', desc: 'Comprehensive audit of current SEO health, competitor landscape, and keyword opportunities.', icon: '🔍' },
-              { num: '02', title: 'Keyword Strategy', desc: 'Identify high-value keywords aligned with your business goals, search volume, and intent.', icon: '🎯' },
-              { num: '03', title: 'Implementation', desc: 'On-page optimizations, technical fixes, schema markup, speed optimization, and content updates.', icon: '⚙️' },
-              { num: '04', title: 'Monitor & Grow', desc: 'Continuous monitoring with monthly reports, ranking tracking, and strategy adjustments.', icon: '📈' },
+              { num: '01', title: 'Audit & Analysis', desc: 'We perform a complete SEO audit, competitor analysis, and identify growth opportunities.', icon: '🔍' },
+              { num: '02', title: 'Keyword Strategy', desc: 'We select high-value keywords based on search intent, competition, and business goals.', icon: '🎯' },
+              { num: '03', title: 'Implementation', desc: 'We optimise technical SEO, on-page elements, and content for maximum performance.', icon: '⚙️' },
+              { num: '04', title: 'Monitor & Grow', desc: 'We continuously track rankings, analyse data, and refine strategies for long-term growth.', icon: '📈' },
             ].map((step, i) => (
               <div key={i} className={`svc-timeline-item ${hoveredStep === i ? 'active' : ''}`} onMouseEnter={() => setHoveredStep(i)} onMouseLeave={() => setHoveredStep(null)}>
                 <div className="svc-timeline-num-wrap"><span className="svc-timeline-num">{step.num}</span><span className="svc-timeline-icon">{step.icon}</span></div>
@@ -81,11 +81,11 @@ export default function SeoOptimization() {
 
       <section className="svc-features" style={{ paddingTop: '40px' }}>
         <div className="container">
-          <div className="svc-section-header"><span className="section-label">Tools & Platforms</span><h2 className="svc-section-title">We Work <span className="gradient-text">With</span></h2></div>
+          <div className="svc-section-header"><span className="section-label">Tools & Platforms</span><h2 className="svc-section-title">We Work <span className="gradient-text">With</span></h2><p className="svc-section-subtitle">We use industry-leading tools to deliver accurate insights and measurable results.</p></div>
           <div className="svc-tech-grid">
             {[
-              { name: 'Analytics', icon: '📊', color: '#F9AB00' },{ name: 'Search Console', icon: '🔍', color: '#4285F4' },{ name: 'Ahrefs', icon: '🔗', color: '#1C64F2' },{ name: 'SEMrush', icon: '📈', color: '#FF642D' },
-              { name: 'Screaming Frog', icon: '🐸', color: '#7BBD42' },{ name: 'PageSpeed', icon: '⚡', color: '#4285F4' },{ name: 'Schema.org', icon: '🏷️', color: '#E34C26' },{ name: 'GTmetrix', icon: '🚀', color: '#68A063' },
+              { name: 'Google Analytics', icon: '📊', color: '#F9AB00' },{ name: 'Google Search Console', icon: '🔍', color: '#4285F4' },{ name: 'Ahrefs', icon: '🔗', color: '#1C64F2' },{ name: 'SEMrush', icon: '📈', color: '#FF642D' },
+              { name: 'Screaming Frog', icon: '🐸', color: '#7BBD42' },{ name: 'PageSpeed Insights', icon: '⚡', color: '#4285F4' },{ name: 'Schema.org', icon: '🏷️', color: '#E34C26' },{ name: 'GTmetrix', icon: '🚀', color: '#68A063' },
             ].map((tech, i) => (
               <div key={i} className="svc-tech-item"><span className="svc-tech-icon">{tech.icon}</span><span className="svc-tech-name">{tech.name}</span><div className="svc-tech-glow" style={{ background: `${tech.color}20` }} /></div>
             ))}

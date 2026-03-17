@@ -29,15 +29,15 @@ export default function Navbar() {
   return (
     <nav className={`navbar ${scrolled ? 'navbar-scrolled' : ''}`}>
       <div className="nav-container">
-        {/* Logo — 340px */}
+        {/* Logo */}
         <Link href="/" className="nav-brand" aria-label="Home">
           <Image 
-            src="/ayan-logo-1.png" 
-            alt="Ayan logo" 
-            width={340} 
-            height={90} 
+            src="/platuweb-logo-1.png" 
+            alt="PilatuWeb logo" 
+            width={240} 
+            height={60} 
             priority 
-            style={{ width: '340px', height: 'auto', objectPosition: 'left center', transform: 'translate(-35px, 4px)', marginRight: '-80px' }} 
+            style={{ width: '180px', height: 'auto', objectFit: 'contain' }} 
           />
         </Link>
 

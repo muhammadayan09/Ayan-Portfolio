@@ -70,6 +70,11 @@
   box-sizing: border-box;
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 html {
   scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
@@ -332,7 +337,7 @@ body {
 }
 
 .navbar-scrolled {
-  background: rgba(8, 8, 14, 0.98);
+  background: #00000C;
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   border-bottom: 1px solid rgba(0, 212, 255, 0.15);
@@ -517,7 +522,7 @@ body {
     right: 0;
     width: 280px;
     height: 100vh;
-    background: rgba(12, 12, 20, 0.98);
+    background: rgba(0, 0, 12, 0.98);
     backdrop-filter: blur(30px);
     -webkit-backdrop-filter: blur(30px);
     border-left: 1px solid rgba(0, 212, 255, 0.1);
@@ -569,7 +574,7 @@ body {
 
 /* ===== FOOTER STYLES ===== */
 .footer {
-  background: var(--bg-secondary);
+  background: #00000C;
   border-top: 1px solid var(--border);
   padding: 40px 0 32px;
   position: relative;

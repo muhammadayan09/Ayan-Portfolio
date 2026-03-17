@@ -5,17 +5,17 @@ import { useEffect, useState, useRef } from 'react';
 
 const skills = [
   { name: 'Next.js', icon: '⚡', color: '#ffffff', desc: 'Modern React Framework' },
-  { name: 'Angular', icon: '🅰️', color: '#DD0031', desc: 'Enterprise Applications' },
+  { name: 'Angular', icon: '🅰️', color: '#DD0031', desc: 'Dynamic Web Applications' },
   { name: 'WordPress', icon: '📝', color: '#21759B', desc: 'Custom CMS Solutions' },
-  { name: 'Shopify', icon: '🛒', color: '#96BF48', desc: 'E-commerce Mastery' },
-  { name: 'Node.js', icon: '🟢', color: '#339933', desc: 'Scalable Backends' },
-  { name: 'SEO', icon: '🔍', color: '#47A248', desc: 'Search Visibility' },
-  { name: 'UI/UX Design', icon: '🎨', color: '#F24E1E', desc: 'Figma & User Centric' },
-  { name: 'Technical SEO', icon: '🚀', color: '#FFB800', desc: 'Performance & Speed' },
+  { name: 'Shopify', icon: '🛒', color: '#96BF48', desc: 'Ecommerce Development' },
+  { name: 'Node.js', icon: '🟢', color: '#339933', desc: 'Backend Development' },
+  { name: 'SEO', icon: '🔍', color: '#47A248', desc: 'Search Visibility Growth' },
+  { name: 'UI/UX Design', icon: '🎨', color: '#F24E1E', desc: 'User-Centered Design' },
+  { name: 'Technical SEO', icon: '🚀', color: '#FFB800', desc: 'Performance & Structure' },
 ];
 
 const stats = [
-  { number: '50+', label: 'Projects Completed' },
+  { number: '50+', label: 'Projects Delivered' },
   { number: '30+', label: 'Happy Clients' },
   { number: '3+', label: 'Years Experience' },
   { number: '99%', label: 'Client Satisfaction' },
@@ -52,29 +52,29 @@ const caseStudies = [
   {
     slug: 'shs-real-estate',
     title: "Luxury Real Estate Hub - Dubai",
-    desc: "Developed a premium property portal for SHS Real Estate in Dubai using WordPress. We architected a high-performance platform for luxury listings and off-plan properties.",
+    desc: "A premium property portal for SHS Real Estate in Dubai using WordPress, architected for high-performance luxury and off-plan properties.",
     tags: ["WordPress", "Real Estate", "Luxury"],
     url: "https://shsrealestatedubai.com/",
   },
   {
     slug: 'zyra-delight',
     title: "Premium Artisan E-commerce",
-    desc: "Engineered a sophisticated digital storefront for Zyra Delight, an artisan brand on Shopify. We focused on immersive storytelling and a high-converting mobile experience.",
+    desc: "A sophisticated digital storefront for an artisan brand, Zyra Delight, on Shopify. We focused on immersive storytelling and mobile conversion.",
     tags: ["Shopify", "Branding", "E-commerce"],
     url: "https://zyradelight.com/",
   },
   {
     slug: 'zuf-dental-care',
-    title: "Advanced Healthcare Patient Portal",
-    desc: "Designed and implemented a modern digital presence for Zuf Dental Care in Solihull, UK. Our solution combined custom WordPress with a strategic SEO campaign.",
+    title: "High-Converting Dental Website",
+    desc: "A performance-driven dental website with SEO optimisation, improving rankings, traffic, and patient enquiries.",
     tags: ["WordPress", "Healthcare", "SEO"],
     url: "https://zufdentalcare.co.uk/",
   },
   {
     slug: 'silent-stories',
-    title: "Cinematic Photography Portfolio",
-    desc: "Created a visually stunning portfolio for Silent Stories Photography. Advanced image optimization and smooth animations deliver a lightning-fast experience.",
-    tags: ["React", "Portfolio", "Performance"],
+    title: "Wedding & Event Photography Platform",
+    desc: "A visually stunning photography platform with optimised galleries, fast performance, and lead generation integration.",
+    tags: ["WordPress", "Photography", "SEO"],
     url: "https://silentstoriesphotography.com/",
   },
 ];
@@ -154,29 +154,31 @@ export default function Home() {
             </div>
 
             <h1 className={`hero-title ${mounted ? 'animate-fade-in-up delay-1' : ''}`}>
-              Welcome to <span className="gradient-text">Muhammad Ayan</span>
+              Welcome to <span className="gradient-text">PilatuWeb</span>
             </h1>
 
             <p className={`hero-role ${mounted ? 'animate-fade-in-up delay-2' : ''}`}>
-              Web Development & Digital Solutions Company
+              We Build Powerful Digital Experiences That Drive Real Business Growth
             </p>
 
             <p className={`hero-desc ${mounted ? 'animate-fade-in-up delay-3' : ''}`}>
-              We craft modern, performant web experiences using cutting-edge technologies.
-              From pixel-perfect frontends to complete e-commerce solutions — we bring your vision to life.
+              At PilatuWeb, we combine design, development, and SEO to create websites that don’t just look modern — they perform, rank, and convert. From startups to growing businesses, we help brands build a strong online presence with scalable and result-driven solutions.
             </p>
 
             <div className={`hero-actions ${mounted ? 'animate-fade-in-up delay-4' : ''}`}>
               <Link href="/contact" className="btn btn-primary">
-                Let&apos;s Work Together
+                Start Your Project
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </Link>
+              <Link href="/case-studies" className="btn btn-secondary" style={{ marginLeft: '12px', border: '1px solid var(--border)', background: 'var(--bg-glass)', borderRadius: '50px', padding: '12px 28px', color: 'var(--text-primary)', textDecoration: 'none', display: 'inline-flex', alignItems: 'center', fontWeight: 600 }}>
+                View Our Work
               </Link>
             </div>
 
             <div className={`hero-tech-stack ${mounted ? 'animate-fade-in-up delay-5' : ''}`}>
               <span className="tech-label">Tech Stack</span>
               <div className="tech-icons">
-                {['HTML', 'CSS', 'Angular', 'Next.js', 'WordPress'].map((tech) => (
+                {['Web Development', 'SEO', 'UI/UX', 'WordPress', 'Shopify'].map((tech) => (
                   <span key={tech} className="tech-chip">{tech}</span>
                 ))}
               </div>
@@ -197,16 +199,16 @@ export default function Home() {
                 <div className="code-body">
                   <pre>
                     <code>
-{`const developer = {
-  company: "Muhammad Ayan",
-  type: "Web Dev Company",
+{`const agency = {
+  company: "PilatuWeb",
+  type: "Web Development & SEO",
   skills: [
-    "HTML", "CSS",
-    "Angular", "Next.js",
-    "WordPress", "Shopify"
+    "Next.js", "Shopify",
+    "WordPress", "SEO",
+    "UI/UX Strategy"
   ],
-  passion: "Building amazing
-    web experiences ✨"
+  mission: "Building growth-
+    driven digital products"
 };`}
                     </code>
                   </pre>
@@ -244,7 +246,7 @@ export default function Home() {
             <span className="section-label">Our Stack</span>
             <h2 className="section-title">Technologies We <span className="gradient-text">Master</span></h2>
             <p className="section-subtitle" style={{ margin: '0 auto' }}>
-              We leverage the most powerful and modern tools to build high-performance digital solutions for your business.
+              We use modern tools and proven technologies to build fast, scalable, and high-performing digital solutions tailored for your business success.
             </p>
           </div>
 
@@ -271,10 +273,10 @@ export default function Home() {
       <section className="section services-preview">
         <div className="container">
           <div className="section-header-center">
-            <span className="section-label">What We Do</span>
+            <span className="section-label">🚀 Our Services</span>
             <h2 className="section-title">Our Services</h2>
             <p className="section-subtitle" style={{ margin: '0 auto' }}>
-              End-to-end web solutions tailored to your business needs.
+              We provide complete digital solutions designed to help your business grow, rank higher, and convert better.
             </p>
           </div>
 
@@ -283,37 +285,37 @@ export default function Home() {
               {
                 icon: '💻',
                 title: 'Frontend Engineering',
-                desc: 'We build immersive, lightning-fast web experiences using modern frameworks like Next.js and React. Our frontends are engineered for scale, accessibility, and pixel-perfect precision.',
-                tags: ['Next.js', 'React', 'Animation'],
+                desc: 'We build responsive, high-performance interfaces using modern frameworks like React, Next.js, and Angular to deliver seamless user experiences across all devices.',
+                tags: ['Next.js', 'React', 'Angular'],
               },
               {
                 icon: '🛍️',
-                title: 'eCommerce Solutions',
-                desc: 'We architect high-converting online stores. From bespoke Shopify theme development to seamless headless commerce integrations, we turn visitors into loyal customers.',
-                tags: ['Shopify', 'WooCommerce', 'Conversion'],
+                title: 'Ecommerce Solutions',
+                desc: 'From Shopify stores to custom ecommerce platforms, we create fast, conversion-focused online stores that drive sales and improve user journeys.',
+                tags: ['Shopify', 'Ecommerce', 'Sales'],
               },
               {
                 icon: '🚀',
                 title: 'Technical SEO',
-                desc: 'A beautiful website is useless if no one finds it. We implement robust on-page and technical SEO strategies to guarantee top rankings and explosive organic growth.',
-                tags: ['Core Web Vitals', 'Schema', 'Audits'],
+                desc: 'We optimise your website structure, speed, and indexing to improve search engine visibility and ensure long-term organic growth.',
+                tags: ['Optimization', 'Speed', 'SEO'],
               },
               {
                 icon: '📝',
-                title: 'Bespoke CMS Platforms',
-                desc: 'Empower your team with lightning-fast, custom headless CMS architectures and bespoke WordPress integrations engineered for ultimate flexibility and security.',
-                tags: ['Headless CMS', 'WordPress', 'Security'],
+                title: 'Responsive CMS Platforms',
+                desc: 'We develop scalable CMS websites using WordPress and other platforms, making it easy for you to manage content and grow your business.',
+                tags: ['WordPress', 'CMS', 'Development'],
               },
               {
                 icon: '🎨',
                 title: 'UI/UX Design Strategy',
-                desc: 'We create user-centric designs that convert. From wireframing to interactive prototyping, we ensure your digital product is both beautiful and intuitively functional.',
-                tags: ['Figma', 'Prototyping', 'User Research'],
+                desc: 'We design user-focused interfaces that enhance usability, engagement, and conversions through research-driven design decisions.',
+                tags: ['Figma', 'UI/UX', 'Research'],
               },
               {
                 icon: '⚡',
-                title: 'Performance Optimization',
-                desc: 'Speed is a feature. We audit and optimize every line of code to ensure your website passes Core Web Vitals with flying colors and provides a seamless user experience.',
+                title: 'Performance Optimisation',
+                desc: 'We improve website speed, performance, and core web vitals to ensure better rankings, lower bounce rates, and improved user experience.',
                 tags: ['Web Vitals', 'Optimization', 'Speed'],
               },
             ].map((service, i) => (
@@ -344,10 +346,10 @@ export default function Home() {
         <div className="container">
           <div className="section-header-center case-header">
             <div>
-              <span className="section-label">Work</span>
+              <span className="section-label">💼 Case Studies</span>
               <h2 className="section-title">Case Studies</h2>
               <p className="section-subtitle" style={{ margin: '0 auto' }}>
-                Real projects that showcase the outcomes, designs and impact we deliver.
+                Real projects that demonstrate our ability to deliver performance-driven results.
               </p>
             </div>
 
@@ -514,16 +516,11 @@ export default function Home() {
             {/* Right side - FAQ items */}
             <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
               {[
-                { num: '01', q: 'What services do you offer as a Web Development Company?', a: 'We specialize in Frontend Development, bespoke WordPress solutions, complete Shopify eCommerce stores, and technical SEO optimization. We build entirely custom, high-performance web experiences tailored to your brand.' },
-                { num: '02', q: 'How do you typically start a new project?', a: 'We begin with a discovery call to understand your goals, target audience, and timeline. After defining the project scope, we provide a detailed proposal, timeline, and strategy before moving into design and development.' },
-                { num: '03', q: 'Can you work with my existing design files (Figma, Adobe XD)?', a: 'Absolutely. We regularly convert Figma, Sketch, or Adobe XD designs into pixel-perfect, responsive, and accessible Next.js, React, or HTML/CSS code.' },
-                { num: '04', q: 'How long does a typical website project take?', a: 'A standard website takes 2-4 weeks from start to finish. More complex applications or large e-commerce stores can take 6-10 weeks. We provide a precise timeline during the proposal phase.' },
-                { num: '05', q: 'What technologies do you use for frontend projects?', a: 'We build modern frontends using Next.js, React, Angular, and Tailwind CSS. This ensures your website is incredibly fast, secure, and ready to scale.' },
-                { num: '06', q: 'Do you offer SEO optimization?', a: 'Yes! All our websites are built with technical SEO best practices from the ground up. We also offer dedicated SEO services including on-page optimization, keyword strategy, and schema markup.' },
-                { num: '07', q: 'Will my website be mobile-friendly?', a: '100%. We use a mobile-first approach, ensuring that your website looks and functions perfectly across all devices, from large desktop monitors to smartphones.' },
-                { num: '08', q: 'Do you provide ongoing maintenance and support?', a: 'Yes. We offer monthly maintenance packages to keep your website updated, secure, backed up, and performing optimally long after the initial launch.' },
-                { num: '09', q: 'How does pricing work?', a: 'We offer transparent package-based pricing as well as custom quotes for unique projects. You can check our Packages page for a general idea, or contact us directly to discuss your specific needs.' },
-                { num: '10', q: 'What do you need from me to get started?', a: 'We need your brand assets (logo, colors), existing content or copy, examples of websites you like, and a clear understanding of your business goals.' },
+                { num: '01', q: 'What services do you offer as a web development company?', a: 'We specialise in frontend development, SEO, ecommerce solutions, responsive CMS platforms, and performance optimisation for modern businesses.' },
+                { num: '02', q: 'How long does it take to complete a project?', a: 'Project timelines vary based on complexity, but most websites are delivered within 2–6 weeks with proper planning and execution.' },
+                { num: '03', q: 'Do you work with international clients?', a: 'Yes, we work with clients globally and provide remote communication, updates, and support throughout the project.' },
+                { num: '04', q: 'Do you offer SEO services along with development?', a: 'Yes, we integrate SEO strategies directly into development to ensure better rankings and long-term organic growth.' },
+                { num: '05', q: 'Will my website be mobile-friendly?', a: 'Absolutely. All websites we build are fully responsive and optimised for mobile, tablet, and desktop devices.' },
               ].map((item, i) => (
                 <div
                   key={i}
@@ -580,10 +577,9 @@ export default function Home() {
 
           <div className="contact-grid">
             <div className="contact-info glass-card">
-              <h3 className="contact-info-title">Let&apos;s build something great.</h3>
+              <h3 className="contact-info-title">Let’s build something great</h3>
               <p className="contact-info-text">
-                Share a few details about your project and we&apos;ll follow up on WhatsApp with next steps.
-                Prefer email? Use the info below.
+                Share your project details and we’ll help you turn your idea into a high-performing digital experience.
               </p>
 
               <div className="contact-meta">
@@ -605,8 +601,8 @@ export default function Home() {
                   <span className="meta-icon">✉️</span>
                   <div>
                     <span className="meta-label">Email</span>
-                    <a className="meta-value" href="mailto:hello@ayan.dev">
-                      hello@ayan.dev
+                    <a className="meta-value" href="mailto:hello@pilatuweb.com">
+                      hello@pilatuweb.com
                     </a>
                   </div>
                 </div>
@@ -1089,6 +1085,11 @@ export default function Home() {
         }
 
         /* Case studies header + nav */
+        .case-card-link, .case-card-link * {
+          text-decoration: none !important;
+          color: inherit;
+        }
+
         .case-header {
           display: flex;
           align-items: center;

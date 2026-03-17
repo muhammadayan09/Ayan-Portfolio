@@ -32,18 +32,17 @@ export default function Footer() {
         <div className="footer-grid">
           {/* Brand */}
           <div className="footer-brand">
-            <Link href="/" className="footer-logo" aria-label="Home">
+            <Link href="/" className="footer-logo" aria-label="Home" style={{ marginBottom: '16px' }}>
               <Image 
-                src="/ayan-logo-1.png" 
-                alt="Ayan logo" 
-                width={340} 
-                height={96} 
-                style={{ width: '340px', height: 'auto', objectPosition: 'left center', transform: 'translateX(-50px)' }} 
+                src="/platuweb-logo.png" 
+                alt="PilatuWeb logo" 
+                width={240} 
+                height={60} 
+                style={{ width: '200px', height: 'auto', objectFit: 'contain' }} 
               />
             </Link>
             <p className="footer-desc" style={{ marginTop: '12px' }}>
-              Frontend Developer & Digital Solutions Expert. Building modern, performant,
-              and user-friendly web experiences.
+              PilatuWeb delivers high-quality web development and SEO solutions to help businesses grow, rank, and succeed online.
             </p>
             <div className="footer-socials">
               <a href="https://github.com/muhammadayan09" target="_blank" rel="noopener noreferrer" className="social-link" aria-label="GitHub">
@@ -114,7 +113,7 @@ export default function Footer() {
         </div>
 
         <div className="footer-bottom">
-          <p>© {currentYear} Muhammad Ayan. All rights reserved.</p>
+          <p>Copyright © 2026 PilatuWeb. All rights reserved</p>
           <div className="footer-legal" style={{ display: 'flex', gap: '16px' }}>
             <Link href="/privacy-policy" className="footer-link">Privacy Policy</Link>
             <Link href="/terms-and-conditions" className="footer-link">Terms & Conditions</Link>

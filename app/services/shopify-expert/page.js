@@ -26,8 +26,7 @@ export default function ShopifyExpert() {
             That Convert
           </h1>
           <p className="svc-hero-desc">
-            We architect high-converting Shopify stores with custom themes, seamless checkout 
-            experiences, and conversion-optimized funnels that turn browsers into loyal customers.
+            We build high-converting Shopify stores with custom themes, seamless checkout experiences, and conversion-focused design that turns visitors into loyal customers.
           </p>
           <div className="svc-hero-actions">
             <Link href="/contact" className="btn btn-primary">Launch Your Store →</Link>
@@ -36,8 +35,8 @@ export default function ShopifyExpert() {
           <div className="svc-hero-stats">
             {[
               { num: '25+', label: 'Stores Launched' },
-              { num: '200%', label: 'Avg Sales Boost' },
-              { num: '3.2s', label: 'Avg Load Speed' },
+              { num: '200%', label: 'Average Sales Growth' },
+              { num: '3s', label: 'Average Load Speed' },
             ].map((s, i) => (
               <div key={i} className="svc-hero-stat">
                 <span className="svc-hero-stat-num">{s.num}</span>
@@ -51,18 +50,18 @@ export default function ShopifyExpert() {
       <section className="svc-features">
         <div className="container">
           <div className="svc-section-header">
-            <span className="section-label">Features</span>
-            <h2 className="svc-section-title">Shopify <span className="gradient-text">Superpowers</span></h2>
-            <p className="svc-section-subtitle">End-to-end eCommerce solutions built for growth, speed, and maximum conversions.</p>
+            <span className="section-label">FEATURES</span>
+            <h2 className="svc-section-title">Shopify <span className="gradient-text">Capabilities</span></h2>
+            <p className="svc-section-subtitle">End-to-end ecommerce solutions built for growth, performance, and maximum conversions.</p>
           </div>
           <div className="svc-features-grid">
             {[
-              { icon: '🎨', title: 'Custom Theme Design', desc: 'Bespoke Shopify themes built from scratch using Liquid for a unique brand identity.', color: '#96BF48' },
-              { icon: '🛒', title: 'Store Setup & Migration', desc: 'Hassle-free migration from WooCommerce, Magento, or other platforms with zero data loss.', color: '#00D4AA' },
-              { icon: '📱', title: 'Mobile-First Shopping', desc: 'Seamless touch-friendly checkout experiences optimized for the majority of eCommerce traffic.', color: '#6C63FF' },
-              { icon: '📈', title: 'Conversion Funnels', desc: 'Optimized product pages and cart flows designed to reduce abandonment and increase AOV.', color: '#FFB800' },
-              { icon: '🔌', title: 'App Integrations', desc: 'Strategic integration of Klaviyo, reviews, loyalty programs, and inventory sync tools.', color: '#FF6B6B' },
-              { icon: '⚖️', title: 'Shopify Plus Scaling', desc: 'Enterprise-level solutions for high-volume merchants needing advanced custom functionality.', color: '#F093FB' },
+              { icon: '🎨', title: 'Custom Theme Design', desc: 'We design and develop unique Shopify themes from scratch using Liquid for a fully customised brand experience.', color: '#96BF48' },
+              { icon: '🛒', title: 'Store Setup & Migration', desc: 'We migrate your store from WooCommerce, Magento, or other platforms with zero data loss and minimal downtime.', color: '#00D4AA' },
+              { icon: '📱', title: 'Mobile-First Experience', desc: 'We optimise your store for mobile users with smooth navigation and fast checkout flows.', color: '#6C63FF' },
+              { icon: '📈', title: 'Conversion Funnels', desc: 'We create high-converting product pages and checkout flows that reduce cart abandonment and increase average order value.', color: '#FFB800' },
+              { icon: '🔌', title: 'App Integrations', desc: 'We integrate essential tools like Klaviyo, reviews, analytics, and inventory systems to streamline your business.', color: '#FF6B6B' },
+              { icon: '⚖️', title: 'Shopify Plus Scaling', desc: 'Advanced Shopify solutions for high-volume businesses requiring custom features and scalability.', color: '#F093FB' },
             ].map((item, i) => (
               <div key={i} className={`svc-feature-card ${hoveredCard === i ? 'active' : ''}`} onMouseEnter={() => setHoveredCard(i)} onMouseLeave={() => setHoveredCard(null)}>
                 <div className="svc-feature-card-glow" style={{ background: `${item.color}15` }} />
@@ -109,8 +108,11 @@ export default function ShopifyExpert() {
       <section className="svc-features" style={{ paddingTop: '40px' }}>
         <div className="container">
           <div className="svc-section-header">
-            <span className="section-label">Technologies</span>
+            <span className="section-label">TECHNOLOGIES</span>
             <h2 className="svc-section-title">Shopify <span className="gradient-text">Stack</span></h2>
+            <p className="svc-section-subtitle" style={{ margin: '0 auto', marginBottom: '40px' }}>
+              We use modern ecommerce tools and technologies to build scalable and powerful stores.
+            </p>
           </div>
           <div className="svc-tech-grid">
             {[
@@ -120,7 +122,7 @@ export default function ShopifyExpert() {
               { name: 'Hydrogen', icon: '⚛️', color: '#61DAFB' },
               { name: 'Klaviyo', icon: '📧', color: '#24CE7B' },
               { name: 'Prisma', icon: '💎', color: '#5A67D8' },
-              { name: 'Tailwind', icon: '💨', color: '#06B6D4' },
+              { name: 'Tailwind CSS', icon: '💨', color: '#06B6D4' },
               { name: 'GitHub', icon: '🐙', color: '#ffffff' },
             ].map((tech, i) => (
               <div key={i} className="svc-tech-item">
@@ -140,12 +142,12 @@ export default function ShopifyExpert() {
         </div>
         <div className="container" style={{ position: 'relative', zIndex: 2 }}>
           <div className="svc-cta-content">
-            <span className="section-label" style={{ justifyContent: 'center' }}>Launch Now</span>
+            <span className="section-label" style={{ justifyContent: 'center' }}>LAUNCH NOW</span>
             <h2 className="svc-cta-title">
               Ready to Own the <span className="gradient-text">Market?</span>
             </h2>
             <p className="svc-cta-desc">
-              Let&apos;s build a Shopify store that doesn&apos;t just look pretty, but actually prints money.
+              Let’s build a Shopify store that not only looks great but drives real sales and business growth.
             </p>
             <div className="svc-cta-actions">
               <Link href="/contact" className="svc-cta-btn-primary">
@@ -153,7 +155,7 @@ export default function ShopifyExpert() {
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
               </Link>
               <a href="https://wa.me/917983505861" target="_blank" rel="noopener noreferrer" className="svc-cta-btn-secondary">
-                💬 WhatsApp Us
+                👉 WhatsApp Us
               </a>
             </div>
           </div>

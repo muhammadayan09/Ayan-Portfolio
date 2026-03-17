@@ -26,8 +26,7 @@ export default function WordpressDevelopment() {
             Solutions
           </h1>
           <p className="svc-hero-desc">
-            We build bespoke WordPress sites that are fast, secure, and easy to manage. 
-            No bloated themes or plugins — just pure performance and custom CMS architectures.
+            We build high-performance WordPress websites that are fast, secure, and easy to manage. No unnecessary plugins or bloated themes — just clean, scalable, and efficient CMS solutions.
           </p>
           <div className="svc-hero-actions">
             <Link href="/contact" className="btn btn-primary">Start Building →</Link>
@@ -36,8 +35,8 @@ export default function WordpressDevelopment() {
           <div className="svc-hero-stats">
             {[
               { num: '40+', label: 'Themes Built' },
-              { num: '98/100', label: 'Speed Score' },
-              { num: 'Zero', label: 'Security Breaches' },
+              { num: '98/100', label: 'Performance Score' },
+              { num: 'Zero', label: 'Security Issues' },
             ].map((s, i) => (
               <div key={i} className="svc-hero-stat">
                 <span className="svc-hero-stat-num">{s.num}</span>
@@ -51,18 +50,18 @@ export default function WordpressDevelopment() {
       <section className="svc-features">
         <div className="container">
           <div className="svc-section-header">
-            <span className="section-label">What We Do</span>
+            <span className="section-label">WHAT WE DO</span>
             <h2 className="svc-section-title">WordPress <span className="gradient-text">Capabilities</span></h2>
-            <p className="svc-section-subtitle">Premium CMS development tailored for high-performance business applications.</p>
+            <p className="svc-section-subtitle">We create powerful and flexible WordPress solutions tailored for modern businesses.</p>
           </div>
           <div className="svc-features-grid">
             {[
-              { icon: '🎨', title: 'Custom Theme Dev', desc: 'Bespoke, coded-from-scratch WordPress themes with zero bloat and maximum speed.', color: '#21759B' },
-              { icon: '🔌', title: 'Plugin Engineering', desc: 'Custom plugin development for unique functionality that off-the-shelf solutions can&apos;t provide.', color: '#00D4AA' },
-              { icon: '🛍️', title: 'WooCommerce Mastery', desc: 'Scalable eCommerce solutions built on WordPress for a flexible, powerful online store.', color: '#6C63FF' },
-              { icon: '🔒', title: 'Security Hardening', desc: 'Enterprise-grade security configurations to protect your data and prevent vulnerabilities.', color: '#FFB800' },
-              { icon: '⚡', title: 'Core Web Vitals', desc: 'Meticulous optimization ensuring your WordPress site passes every performance test.', color: '#FF6B6B' },
-              { icon: '🛠️', title: 'Headless WordPress', desc: 'Combining the power of WordPress CMS with modern frontends like Next.js for ultimate performance.', color: '#F093FB' },
+              { icon: '🎨', title: 'Custom Theme Development', desc: 'We build lightweight, fully customised WordPress themes from scratch without relying on bloated templates.', color: '#21759B' },
+              { icon: '🔌', title: 'Plugin Development', desc: 'Custom plugins built specifically for your business needs to extend functionality without compromising performance.', color: '#00D4AA' },
+              { icon: '🛍️', title: 'WooCommerce Development', desc: 'Scalable ecommerce solutions with secure checkout, product management, and optimised user experience.', color: '#6C63FF' },
+              { icon: '🔒', title: 'Security Hardening', desc: 'Advanced security configurations to protect your website from vulnerabilities and threats.', color: '#FFB800' },
+              { icon: '⚡', title: 'Core Web Vitals Optimisation', desc: 'We optimise speed, performance, and loading times to meet Google’s performance standards.', color: '#FF6B6B' },
+              { icon: '🛠️', title: 'Headless WordPress', desc: 'We combine WordPress with modern frontend frameworks like Next.js for high-performance websites.', color: '#F093FB' },
             ].map((item, i) => (
               <div key={i} className={`svc-feature-card ${hoveredCard === i ? 'active' : ''}`} onMouseEnter={() => setHoveredCard(i)} onMouseLeave={() => setHoveredCard(null)}>
                 <div className="svc-feature-card-glow" style={{ background: `${item.color}15` }} />
@@ -80,16 +79,16 @@ export default function WordpressDevelopment() {
         <div className="svc-process-bg" />
         <div className="container" style={{ position: 'relative', zIndex: 2 }}>
           <div className="svc-section-header">
-            <span className="section-label">How We Build</span>
+            <span className="section-label">HOW WE BUILD</span>
             <h2 className="svc-section-title">Development <span className="gradient-text">Process</span></h2>
-            <p className="svc-section-subtitle">A streamlined, transparent workflow for your custom WordPress project.</p>
+            <p className="svc-section-subtitle">A structured approach to deliver clean, scalable, and secure WordPress websites.</p>
           </div>
           <div className="svc-timeline">
             {[
-              { num: '01', title: 'Plan & Wireframe', desc: 'We define the sitemap, content architecture, and functionality requirements for your CMS.', icon: '📋' },
-              { num: '02', title: 'Theme Development', desc: 'Hand-coding your custom theme with clean PHP, CSS, and interactive JavaScript.', icon: '💻' },
-              { num: '03', title: 'Content & Plugins', desc: 'Setting up custom post types, fields, and essential security & performance plugins.', icon: '⚙️' },
-              { num: '04', title: 'Launch & Support', desc: 'Final testing, server optimization, SSL setup, and handover with training.', icon: '🚀' },
+              { num: '01', title: 'Planning & Structure', desc: 'We define sitemap, content flow, and functional requirements to create a strong foundation.', icon: '📋' },
+              { num: '02', title: 'Theme Development', desc: 'We develop a custom theme using clean code with HTML, CSS, and JavaScript.', icon: '💻' },
+              { num: '03', title: 'Content & Functionality', desc: 'We integrate content, custom fields, plugins, and optimise performance and security.', icon: '⚙️' },
+              { num: '04', title: 'Launch & Support', desc: 'We test, deploy, and provide ongoing support, updates, and optimisation.', icon: '🚀' },
             ].map((step, i) => (
               <div key={i} className={`svc-timeline-item ${hoveredStep === i ? 'active' : ''}`} onMouseEnter={() => setHoveredStep(i)} onMouseLeave={() => setHoveredStep(null)}>
                 <div className="svc-timeline-num-wrap">
@@ -109,18 +108,21 @@ export default function WordpressDevelopment() {
       <section className="svc-features" style={{ paddingTop: '40px' }}>
         <div className="container">
           <div className="svc-section-header">
-            <span className="section-label">Technologies</span>
+            <span className="section-label">TECHNOLOGIES</span>
             <h2 className="svc-section-title">WordPress <span className="gradient-text">Stack</span></h2>
+            <p className="svc-section-subtitle" style={{ margin: '0 auto', marginBottom: '40px' }}>
+              We use reliable technologies to ensure performance, flexibility, and scalability.
+            </p>
           </div>
           <div className="svc-tech-grid">
             {[
-              { name: 'PHP 8.x', icon: '🐘', color: '#777BB4' },
+              { name: 'PHP', icon: '🐘', color: '#777BB4' },
               { name: 'MySQL', icon: '🐬', color: '#00758F' },
               { name: 'WordPress', icon: '📝', color: '#21759B' },
               { name: 'WooCommerce', icon: '🛍️', color: '#96588A' },
               { name: 'Elementor', icon: '🎨', color: '#92278F' },
               { name: 'ACF Pro', icon: '🛠️', color: '#00D4AA' },
-              { name: 'Redux', icon: '📦', color: '#764ABC' },
+              { name: 'Redux Framework', icon: '📦', color: '#764ABC' },
               { name: 'Cloudflare', icon: '☁️', color: '#F38020' },
             ].map((tech, i) => (
               <div key={i} className="svc-tech-item">
@@ -140,12 +142,12 @@ export default function WordpressDevelopment() {
         </div>
         <div className="container" style={{ position: 'relative', zIndex: 2 }}>
           <div className="svc-cta-content">
-            <span className="section-label" style={{ justifyContent: 'center' }}>Get Started</span>
+            <span className="section-label" style={{ justifyContent: 'center' }}>GET STARTED</span>
             <h2 className="svc-cta-title">
               Ready for a Better <span className="gradient-text">WordPress?</span>
             </h2>
             <p className="svc-cta-desc">
-              Let&apos;s build a website that is as easy to manage as it is beautiful to look at.
+              Let’s build a website that is as easy to manage as it is beautiful to look at.
             </p>
             <div className="svc-cta-actions">
               <Link href="/contact" className="svc-cta-btn-primary">
@@ -153,7 +155,7 @@ export default function WordpressDevelopment() {
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
               </Link>
               <a href="https://wa.me/917983505861" target="_blank" rel="noopener noreferrer" className="svc-cta-btn-secondary">
-                💬 WhatsApp Us
+                👉 WhatsApp Us
               </a>
             </div>
           </div>

@@ -27,8 +27,7 @@ export default function FrontendDevelopment() {
             Web Interfaces
           </h1>
           <p className="svc-hero-desc">
-            From stunning landing pages to complex enterprise dashboards — we engineer responsive, 
-            high-performance user interfaces that captivate your audience and convert visitors into customers.
+            From landing pages to complex enterprise dashboards, we create fast, responsive, and visually engaging web interfaces that turn visitors into customers.
           </p>
           <div className="svc-hero-actions">
             <Link href="/contact" className="btn btn-primary">Start Your Project →</Link>
@@ -53,18 +52,18 @@ export default function FrontendDevelopment() {
       <section className="svc-features">
         <div className="container">
           <div className="svc-section-header">
-            <span className="section-label">What We Offer</span>
-            <h2 className="svc-section-title">Our Frontend <span className="gradient-text">Superpowers</span></h2>
-            <p className="svc-section-subtitle">We don&apos;t just write code — we craft immersive digital experiences that users love.</p>
+            <span className="section-label">WHAT WE OFFER</span>
+            <h2 className="svc-section-title">Our Frontend <span className="gradient-text">Capabilities</span></h2>
+            <p className="svc-section-subtitle">We don’t just write code — we build experiences that are fast, scalable, and designed to perform.</p>
           </div>
           <div className="svc-features-grid">
             {[
-              { icon: '⚡', title: 'Lightning-Fast SPAs', desc: 'Blazing-fast Single Page Applications using React, Angular, and Next.js with instant, app-like experiences.', color: '#FFB800' },
-              { icon: '📱', title: 'Responsive Design', desc: 'Mobile-first interfaces that look flawless on every screen — from 4K monitors to the smallest smartphones.', color: '#00D4AA' },
-              { icon: '🎨', title: 'Pixel-Perfect UI', desc: 'We convert your Figma, Sketch, or Adobe XD designs into production-ready code with obsessive attention to detail.', color: '#6C63FF' },
-              { icon: '♿', title: 'Accessible & Inclusive', desc: 'WCAG-compliant interfaces ensuring your website is usable by everyone, including users with disabilities.', color: '#FF6B6B' },
-              { icon: '🔄', title: 'Smooth Animations', desc: 'Micro-interactions, scroll animations, and transitions that make your interface feel alive and engaging.', color: '#4ECDC4' },
-              { icon: '🧩', title: 'Component Libraries', desc: 'Scalable, reusable design systems and component libraries for consistent UI across all your products.', color: '#F093FB' },
+              { icon: '⚡', title: 'Lightning-Fast Applications', desc: 'We develop high-performance web apps using modern frameworks like React and Next.js for instant loading and smooth performance.', color: '#FFB800' },
+              { icon: '📱', title: 'Responsive Design', desc: 'Every interface is fully responsive and optimised for mobile, tablet, and desktop devices.', color: '#00D4AA' },
+              { icon: '🎨', title: 'Pixel-Perfect UI', desc: 'We convert your Figma or design files into clean, accurate, and production-ready code.', color: '#6C63FF' },
+              { icon: '♿', title: 'Accessibility Focused', desc: 'We follow accessibility standards to ensure your website is usable by all users, including those with disabilities.', color: '#FF6B6B' },
+              { icon: '🔄', title: 'Smooth Animations', desc: 'We add subtle animations and interactions to improve user engagement without affecting performance.', color: '#4ECDC4' },
+              { icon: '🧩', title: 'Component-Based Architecture', desc: 'We build reusable and scalable components to maintain consistency and speed up future development.', color: '#F093FB' },
             ].map((item, i) => (
               <div
                 key={i}
@@ -90,16 +89,16 @@ export default function FrontendDevelopment() {
         <div className="svc-process-bg" />
         <div className="container" style={{ position: 'relative', zIndex: 2 }}>
           <div className="svc-section-header">
-            <span className="section-label">Our Process</span>
+            <span className="section-label">OUR PROCESS</span>
             <h2 className="svc-section-title">From Idea to <span className="gradient-text">Launch</span></h2>
-            <p className="svc-section-subtitle">A battle-tested, 4-phase workflow that delivers exceptional results every time.</p>
+            <p className="svc-section-subtitle">A proven workflow that ensures your project is delivered with quality and precision.</p>
           </div>
           <div className="svc-timeline">
             {[
-              { num: '01', title: 'Discovery & Strategy', desc: 'Deep-dive into your requirements, competitive analysis, user personas, and a detailed development roadmap.', icon: '🔍' },
-              { num: '02', title: 'UI/UX Design', desc: 'Wireframes, interactive prototypes, and high-fidelity mockups crafted to perfection in Figma.', icon: '✏️' },
-              { num: '03', title: 'Development & QA', desc: 'Clean, modular code with component-driven development, unit tests, and cross-browser testing.', icon: '💻' },
-              { num: '04', title: 'Launch & Growth', desc: 'Performance optimization, deployment, monitoring setup, and ongoing maintenance & feature updates.', icon: '🚀' },
+              { num: '01', title: 'Discovery & Strategy', desc: 'We analyse your requirements, audience, and goals to define a clear development roadmap.', icon: '🔍' },
+              { num: '02', title: 'UI/UX Design', desc: 'We design user-friendly and conversion-focused layouts based on your brand identity.', icon: '✏️' },
+              { num: '03', title: 'Development & Testing', desc: 'We build fast, scalable, and clean frontend code with cross-browser and device testing.', icon: '💻' },
+              { num: '04', title: 'Launch & Optimisation', desc: 'We deploy your project and optimise performance, speed, and user experience.', icon: '🚀' },
             ].map((step, i) => (
               <div
                 key={i}
@@ -125,8 +124,11 @@ export default function FrontendDevelopment() {
       <section className="svc-features" style={{ paddingTop: '40px' }}>
         <div className="container">
           <div className="svc-section-header">
-            <span className="section-label">Technologies</span>
-            <h2 className="svc-section-title">Our Tech <span className="gradient-text">Arsenal</span></h2>
+            <span className="section-label">TECHNOLOGIES</span>
+            <h2 className="svc-section-title">Our Tech <span className="gradient-text">Stack</span></h2>
+            <p className="svc-section-subtitle" style={{ margin: '0 auto', marginBottom: '40px' }}>
+              We use modern technologies to ensure high performance and scalability.
+            </p>
           </div>
           <div className="svc-tech-grid">
             {[
@@ -137,7 +139,7 @@ export default function FrontendDevelopment() {
               { name: 'React', icon: '⚛️', color: '#61DAFB' },
               { name: 'Angular', icon: '🅰️', color: '#DD0031' },
               { name: 'Next.js', icon: '▲', color: '#ffffff' },
-              { name: 'Tailwind', icon: '💨', color: '#06B6D4' },
+              { name: 'Tailwind CSS', icon: '💨', color: '#06B6D4' },
             ].map((tech, i) => (
               <div key={i} className="svc-tech-item">
                 <span className="svc-tech-icon">{tech.icon}</span>
@@ -157,12 +159,12 @@ export default function FrontendDevelopment() {
         </div>
         <div className="container" style={{ position: 'relative', zIndex: 2 }}>
           <div className="svc-cta-content">
-            <span className="section-label" style={{ justifyContent: 'center' }}>Let&apos;s Talk</span>
+            <span className="section-label" style={{ justifyContent: 'center' }}>LET’S TALK</span>
             <h2 className="svc-cta-title">
               Ready to Build Something <span className="gradient-text">Amazing?</span>
             </h2>
             <p className="svc-cta-desc">
-              Tell us about your project and let&apos;s create a frontend experience that your users will absolutely love.
+              Tell us about your project and let’s create a frontend experience that delivers performance and results.
             </p>
             <div className="svc-cta-actions">
               <Link href="/contact" className="svc-cta-btn-primary">
@@ -170,7 +172,7 @@ export default function FrontendDevelopment() {
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
               </Link>
               <a href="https://wa.me/917983505861" target="_blank" rel="noopener noreferrer" className="svc-cta-btn-secondary">
-                💬 WhatsApp Us
+                👉 WhatsApp Us
               </a>
             </div>
           </div>
