@@ -1,5 +1,5 @@
 export default async function sitemap() {
-  const baseUrl = 'https://pilatuweb.com';
+  const baseUrl = 'https://pilatuweb.netlify.app';
 
   // Static Pages
   const staticPages = [

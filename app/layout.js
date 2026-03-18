@@ -8,12 +8,12 @@ export const metadata = {
   keywords: 'website development company India, web development agency India, SEO agency India, Shopify development India, WordPress development India, UI UX design, ecommerce development',
   robots: 'index, follow',
   alternates: {
-    canonical: 'https://pilatuweb.com/',
+    canonical: 'https://pilatuweb.netlify.app/',
   },
   openGraph: {
     title: 'Website Development Company in India | PilatuWeb',
     description: 'Top website development company in India offering WordPress, Shopify, SEO & custom web solutions to grow your business online.',
-    url: 'https://pilatuweb.com/',
+    url: 'https://pilatuweb.netlify.app/',
     type: 'website',
   },
   twitter: {
