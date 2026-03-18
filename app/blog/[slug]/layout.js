@@ -30,15 +30,23 @@ const blogMeta = {
 export async function generateMetadata({ params }) {
   const slug = (await params).slug;
   const meta = blogMeta[slug];
+  const canonicalUrl = `https://pilatuweb.netlify.app/blog/${slug}/`;
+
   if (meta) {
     return {
       title: meta.title,
       description: meta.description,
+      alternates: {
+        canonical: canonicalUrl,
+      },
     };
   }
   return {
     title: 'Blog | PilatuWeb',
     description: 'Latest insights on web development, SEO, and modern technologies.',
+    alternates: {
+      canonical: canonicalUrl,
+    },
   };
 }
 

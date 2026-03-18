@@ -1,3 +1,5 @@
+import { blogPosts } from './data/blog';
+
 export default async function sitemap() {
   const baseUrl = 'https://pilatuweb.netlify.app';
 
@@ -38,20 +40,13 @@ export default async function sitemap() {
     priority: 0.7,
   }));
 
-  // Dynamic Blog Posts
-  const blogPosts = [
-    'architecting-high-performance-web-applications-2024',
-    'future-of-headless-decoupling-wordpress-limitless-scale',
-    'technical-seo-mastery-engineering-search-dominance',
-    'nextjs-14-vs-react-enterprise-shift-server-components',
-    'headless-commerce-shopify-frictionless-checkouts',
-    'modern-css-architecture-advanced-micro-animations',
-  ].map((slug) => ({
-    url: `${baseUrl}/blog/${slug}`,
+  // Blog posts are read from the content data so new entries are picked up automatically.
+  const blogPostEntries = blogPosts.map((post) => ({
+    url: `${baseUrl}/blog/${post.slug}`,
     lastModified: new Date().toISOString(),
     changeFrequency: 'monthly',
     priority: 0.6,
   }));
 
-  return [...staticPages, ...caseStudies, ...blogPosts];
+  return [...staticPages, ...caseStudies, ...blogPostEntries];
 }
