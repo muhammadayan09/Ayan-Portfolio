@@ -97,7 +97,7 @@ export default function Contact() {
                 icon: '📍',
                 title: 'Location',
                 subtitle: 'Based in',
-                value: 'India (Remote Worldwide)',
+                value: 'FF91 Gaur City Centre, Gaur Chowk, West, Sector 4, Greater Noida, Uttar Pradesh 203207 India',
                 href: null,
                 color: '#F5A623',
                 btnText: null,
@@ -262,7 +262,7 @@ export default function Contact() {
                         borderRadius: '14px',
                         background: 'linear-gradient(135deg, #6C63FF, #8B5CF6)',
                         color: '#fff',
-                        fontFamily: "'Space Grotesk', sans-serif",
+                        fontFamily: "var(--font-display), sans-serif",
                         fontSize: '1.1rem',
                         fontWeight: 700,
                         cursor: 'pointer',
@@ -305,7 +305,7 @@ export default function Contact() {
             {/* Left side - heading */}
             <div style={{ position: 'sticky', top: '120px' }}>
               <span className="section-label">FAQ</span>
-              <h2 style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 'clamp(1.8rem, 3vw, 2.4rem)', fontWeight: 800, lineHeight: 1.2, marginBottom: '16px' }}>
+              <h2 style={{ fontFamily: "var(--font-display), sans-serif", fontSize: 'clamp(1.8rem, 3vw, 2.4rem)', fontWeight: 800, lineHeight: 1.2, marginBottom: '16px' }}>
                 Got <span className="gradient-text">Questions?</span>
               </h2>
               <p style={{ fontSize: '0.95rem', color: 'var(--text-secondary)', lineHeight: 1.8, marginBottom: '28px' }}>
@@ -367,9 +367,9 @@ export default function Contact() {
                   }}
                 >
                   <div style={{ display: 'flex', alignItems: 'flex-start', gap: '16px' }}>
-                    <span style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: '1.5rem', fontWeight: 800, color: 'rgba(108, 99, 255, 0.15)', flexShrink: 0, lineHeight: 1 }}>{item.num}</span>
+                    <span style={{ fontFamily: "var(--font-display), sans-serif", fontSize: '1.5rem', fontWeight: 800, color: 'rgba(108, 99, 255, 0.15)', flexShrink: 0, lineHeight: 1 }}>{item.num}</span>
                     <div>
-                      <h3 style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: '1rem', fontWeight: 700, marginBottom: '8px' }}>{item.q}</h3>
+                      <h3 style={{ fontFamily: "var(--font-display), sans-serif", fontSize: '1rem', fontWeight: 700, marginBottom: '8px' }}>{item.q}</h3>
                       <p style={{ fontSize: '0.88rem', color: 'var(--text-secondary)', lineHeight: 1.7, margin: 0 }}>{item.a}</p>
                     </div>
                   </div>
@@ -454,7 +454,7 @@ export default function Contact() {
         }
 
         .hero-title {
-          font-family: 'Space Grotesk', sans-serif;
+          font-family: var(--font-display), sans-serif;
           font-size: clamp(2.5rem, 5vw, 4rem);
           font-weight: 800;
           line-height: 1.15;
@@ -481,7 +481,7 @@ export default function Contact() {
         }
 
         .hero-stat-number {
-          font-family: 'Space Grotesk', sans-serif;
+          font-family: var(--font-display), sans-serif;
           font-size: 2rem;
           font-weight: 800;
         }
@@ -533,7 +533,7 @@ export default function Contact() {
         }
 
         .method-title {
-          font-family: 'Space Grotesk', sans-serif;
+          font-family: var(--font-display), sans-serif;
           font-size: 1.1rem;
           font-weight: 700;
           margin-bottom: 4px;
@@ -610,7 +610,7 @@ export default function Contact() {
         }
 
         .info-title {
-          font-family: 'Space Grotesk', sans-serif;
+          font-family: var(--font-display), sans-serif;
           font-size: clamp(1.8rem, 3vw, 2.4rem);
           font-weight: 800;
           line-height: 1.2;
@@ -678,7 +678,7 @@ export default function Contact() {
         }
 
         .form-title {
-          font-family: 'Space Grotesk', sans-serif;
+          font-family: var(--font-display), sans-serif;
           font-size: 1.5rem;
           font-weight: 700;
           margin-bottom: 8px;
@@ -723,7 +723,7 @@ export default function Contact() {
           background: var(--bg-secondary);
           border: 1.5px solid var(--border);
           color: var(--text-primary);
-          font-family: 'Inter', sans-serif;
+          font-family: var(--font-sans), sans-serif;
           font-size: 0.9rem;
           transition: all 0.2s ease;
           outline: none;
@@ -810,3 +810,4 @@ export default function Contact() {
     </>
   );
 }
+

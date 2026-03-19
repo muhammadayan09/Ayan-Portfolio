@@ -1,11 +1,7 @@
-'use client';
-
 import Image from 'next/image';
 import Link from 'next/link';
 
 export default function Footer() {
-  const currentYear = new Date().getFullYear();
-
   const quickLinks = [
     { href: '/', label: 'Home' },
     { href: '/about', label: 'About' },
@@ -105,7 +101,7 @@ export default function Footer() {
               </li>
               <li>
                 <span className="footer-link" style={{ cursor: 'default' }}>
-                  📍 India, Uttar Pradesh
+                  📍 FF91 Gaur City Centre, Gaur Chowk, West, Sector 4, Greater Noida, Uttar Pradesh 203207 India
                 </span>
               </li>
             </ul>

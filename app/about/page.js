@@ -1,5 +1,6 @@
-'use client';
+ 'use client';
 
+import Image from 'next/image';
 import Link from 'next/link';
 
 
@@ -49,7 +50,7 @@ export default function About() {
             <div className="about-image-col">
               <div className="about-image-card glass-card">
                 <div className="about-avatar">
-                  <img src="/muhammad-ayan.png" alt="Muhammad Ayan" className="about-avatar-img" />
+                  <Image src="/muhammad-ayan.png" alt="Muhammad Ayan" fill className="about-avatar-img" sizes="140px" />
                 </div>
                 <div className="about-name-card">
                   <h3>PilatuWeb Team</h3>
@@ -58,7 +59,7 @@ export default function About() {
                 <div className="about-quick-facts">
                   <div className="quick-fact">
                     <span className="fact-icon">📍</span>
-                    <span>India</span>
+                    <span>FF91 Gaur City Centre, Gaur Chowk, West, Sector 4, Greater Noida, Uttar Pradesh 203207 India</span>
                   </div>
                   <div className="quick-fact">
                     <span className="fact-icon">🏢</span>
@@ -187,7 +188,7 @@ export default function About() {
         }
 
         .page-title {
-          font-family: 'Space Grotesk', sans-serif;
+          font-family: var(--font-display), sans-serif;
           font-size: clamp(2.2rem, 4.5vw, 3.5rem);
           font-weight: 800;
           margin-bottom: 16px;
@@ -221,13 +222,13 @@ export default function About() {
 
         .about-avatar-img { width: 100%; height: 100%; object-fit: cover; }
 
-        .about-name-card h3 { font-family: 'Space Grotesk', sans-serif; font-size: 1.3rem; font-weight: 700; margin-bottom: 4px; }
+        .about-name-card h3 { font-family: var(--font-display), sans-serif; font-size: 1.3rem; font-weight: 700; margin-bottom: 4px; }
         .about-name-card p { color: var(--primary-light); font-size: 0.9rem; font-weight: 500; margin-bottom: 24px; }
 
         .about-quick-facts { display: flex; flex-direction: column; gap: 12px; }
         .quick-fact { display: flex; align-items: center; gap: 10px; font-size: 0.9rem; color: var(--text-secondary); padding: 10px 16px; border-radius: var(--border-radius-sm); background: var(--bg-secondary); }
 
-        .about-heading { font-family: 'Space Grotesk', sans-serif; font-size: clamp(1.5rem, 3vw, 2rem); font-weight: 700; line-height: 1.3; margin-bottom: 24px; }
+        .about-heading { font-family: var(--font-display), sans-serif; font-size: clamp(1.5rem, 3vw, 2rem); font-weight: 700; line-height: 1.3; margin-bottom: 24px; }
         .about-para { font-size: 1rem; color: var(--text-secondary); line-height: 1.85; margin-bottom: 16px; }
         .about-actions { display: flex; gap: 16px; margin-top: 28px; }
 
@@ -237,7 +238,7 @@ export default function About() {
         .values-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
         .value-card { text-align: center; padding: 30px 20px; }
         .value-icon { font-size: 2.5rem; display: block; margin-bottom: 16px; }
-        .value-title { font-family: 'Space Grotesk', sans-serif; font-size: 1rem; font-weight: 600; margin-bottom: 10px; }
+        .value-title { font-family: var(--font-display), sans-serif; font-size: 1rem; font-weight: 600; margin-bottom: 10px; }
         .value-desc { font-size: 0.85rem; color: var(--text-secondary); line-height: 1.7; }
 
         /* ===== WHY CHOOSE US ===== */
@@ -270,7 +271,7 @@ export default function About() {
         }
 
         .why-icon { font-size: 1.8rem; }
-        .why-title { font-family: 'Space Grotesk', sans-serif; font-size: 1.15rem; font-weight: 700; margin-bottom: 12px; }
+        .why-title { font-family: var(--font-display), sans-serif; font-size: 1.15rem; font-weight: 700; margin-bottom: 12px; }
         .why-desc { font-size: 0.9rem; color: var(--text-secondary); line-height: 1.75; }
 
         /* ===== OUR PROCESS ===== */
@@ -298,7 +299,7 @@ export default function About() {
         }
 
         .process-num {
-          font-family: 'Space Grotesk', sans-serif;
+          font-family: var(--font-display), sans-serif;
           font-size: 3rem;
           font-weight: 900;
           opacity: 0.8;
@@ -311,7 +312,7 @@ export default function About() {
           border-radius: 2px;
         }
 
-        .process-title { font-family: 'Space Grotesk', sans-serif; font-size: 1.1rem; font-weight: 700; margin-bottom: 12px; }
+        .process-title { font-family: var(--font-display), sans-serif; font-size: 1.1rem; font-weight: 700; margin-bottom: 12px; }
         .process-desc { font-size: 0.88rem; color: var(--text-secondary); line-height: 1.7; }
 
         @media (max-width: 1024px) {
@@ -333,3 +334,4 @@ export default function About() {
     </>
   );
 }
+
