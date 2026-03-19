@@ -106,7 +106,7 @@ export default function PrivacyPolicy() {
             I typically respond within 24 hours.
           </p>
           <div className="contact-details mt-4">
-            <p><strong>Email:</strong> <a href="mailto:iamayan469@gmail.com" style={{color: 'var(--primary-light)', textDecoration: 'none'}}>iamayan469@gmail.com</a></p>
+            <p><strong>Email:</strong> <a href="mailto:pilatuweb2026@gmail.com" style={{color: 'var(--primary-light)', textDecoration: 'none'}}>pilatuweb2026@gmail.com</a></p>
             <p><strong>WhatsApp:</strong> <a href="https://wa.me/917983505861" style={{color: 'var(--primary-light)', textDecoration: 'none'}}>+91 79835 05861</a></p>
           </div>
         </div>

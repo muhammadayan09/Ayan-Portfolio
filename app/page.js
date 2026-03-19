@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { useEffect, useState, useRef } from 'react';
+import { useEffect, useState } from 'react';
 
 const skills = [
   { name: 'Next.js', icon: '⚡', color: '#ffffff', desc: 'Modern React Framework' },
@@ -80,7 +80,6 @@ const caseStudies = [
 ];
 
 export default function Home() {
-  const [mounted, setMounted] = useState(false);
   const [caseSlide, setCaseSlide] = useState(0);
   const [caseVisible, setCaseVisible] = useState(3);
   const [testimonialSlide, setTestimonialSlide] = useState(0);
@@ -89,11 +88,6 @@ export default function Home() {
   const [contactEmail, setContactEmail] = useState('');
   const [contactPhone, setContactPhone] = useState('');
   const [contactMessage, setContactMessage] = useState('');
-  const logoRef = useRef(null);
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
 
   // update visibility on resize
   useEffect(() => {
@@ -127,14 +121,6 @@ export default function Home() {
     if (testimonialSlide > maxTestimonialIndex) setTestimonialSlide(maxTestimonialIndex);
   }, [caseSlide, caseVisible, testimonialSlide, testimonialVisible]);
 
-  // auto-scroll logos by duplicating track content
-  useEffect(() => {
-    if (!logoRef.current) return;
-    const track = logoRef.current;
-    // duplicate items for seamless loop
-    track.innerHTML += track.innerHTML;
-  }, []);
-
   return (
     <>
       {/* Hero Section */}
@@ -148,24 +134,24 @@ export default function Home() {
 
         <div className="container hero-content">
           <div className="hero-text">
-            <div className={`hero-badge ${mounted ? 'animate-fade-in-up' : ''}`}>
+            <div className="hero-badge animate-fade-in-up">
               <span className="badge-dot" />
               Accepting New Projects
             </div>
 
-            <h1 className={`hero-title ${mounted ? 'animate-fade-in-up delay-1' : ''}`}>
+            <h1 className="hero-title animate-fade-in-up delay-1">
               Welcome to <span className="gradient-text">PilatuWeb</span>
             </h1>
 
-            <p className={`hero-role ${mounted ? 'animate-fade-in-up delay-2' : ''}`}>
+            <p className="hero-role animate-fade-in-up delay-2">
               We Build Powerful Digital Experiences That Drive Real Business Growth
             </p>
 
-            <p className={`hero-desc ${mounted ? 'animate-fade-in-up delay-3' : ''}`}>
+            <p className="hero-desc animate-fade-in-up delay-3">
               At PilatuWeb, we combine design, development, and SEO to create websites that don’t just look modern — they perform, rank, and convert. From startups to growing businesses, we help brands build a strong online presence with scalable and result-driven solutions.
             </p>
 
-            <div className={`hero-actions ${mounted ? 'animate-fade-in-up delay-4' : ''}`}>
+            <div className="hero-actions animate-fade-in-up delay-4">
               <Link href="/contact" className="btn btn-primary">
                 Start Your Project
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
@@ -175,7 +161,7 @@ export default function Home() {
               </Link>
             </div>
 
-            <div className={`hero-tech-stack ${mounted ? 'animate-fade-in-up delay-5' : ''}`}>
+            <div className="hero-tech-stack animate-fade-in-up delay-5">
               <span className="tech-label">Tech Stack</span>
               <div className="tech-icons">
                 {['Web Development', 'SEO', 'UI/UX', 'WordPress', 'Shopify'].map((tech) => (
@@ -185,7 +171,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className={`hero-visual ${mounted ? 'animate-slide-right delay-2' : ''}`}>
+          <div className="hero-visual animate-slide-right delay-2">
             <div className="hero-card-stack">
               <div className="code-window">
                 <div className="code-header">
@@ -484,7 +470,7 @@ export default function Home() {
             {/* Left side - heading */}
             <div style={{ position: 'sticky', top: '120px' }}>
               <span className="section-label">FAQ</span>
-              <h2 style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 'clamp(1.8rem, 3vw, 2.4rem)', fontWeight: 800, lineHeight: 1.2, marginBottom: '16px' }}>
+              <h2 style={{ fontFamily: "var(--font-display), sans-serif", fontSize: 'clamp(1.8rem, 3vw, 2.4rem)', fontWeight: 800, lineHeight: 1.2, marginBottom: '16px' }}>
                 Frequently Asked <span className="gradient-text">Questions</span>
               </h2>
               <p style={{ fontSize: '0.95rem', color: 'var(--text-secondary)', lineHeight: 1.8, marginBottom: '28px' }}>
@@ -545,9 +531,9 @@ export default function Home() {
                   }}
                 >
                   <div style={{ display: 'flex', alignItems: 'flex-start', gap: '16px' }}>
-                    <span style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: '1.5rem', fontWeight: 800, color: 'rgba(108, 99, 255, 0.15)', flexShrink: 0, lineHeight: 1 }}>{item.num}</span>
+                    <span style={{ fontFamily: "var(--font-display), sans-serif", fontSize: '1.5rem', fontWeight: 800, color: 'rgba(108, 99, 255, 0.15)', flexShrink: 0, lineHeight: 1 }}>{item.num}</span>
                     <div>
-                      <h3 style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: '1rem', fontWeight: 700, marginBottom: '8px' }}>{item.q}</h3>
+                      <h3 style={{ fontFamily: "var(--font-display), sans-serif", fontSize: '1rem', fontWeight: 700, marginBottom: '8px' }}>{item.q}</h3>
                       <p style={{ fontSize: '0.88rem', color: 'var(--text-secondary)', lineHeight: 1.7, margin: 0 }}>{item.a}</p>
                     </div>
                   </div>
@@ -601,8 +587,8 @@ export default function Home() {
                   <span className="meta-icon">✉️</span>
                   <div>
                     <span className="meta-label">Email</span>
-                    <a className="meta-value" href="mailto:hello@pilatuweb.com">
-                      hello@pilatuweb.com
+                    <a className="meta-value" href="mailto:pilatuweb2026@gmail.com">
+                      pilatuweb2026@gmail.com
                     </a>
                   </div>
                 </div>
@@ -804,7 +790,7 @@ export default function Home() {
         }
 
         .hero-title {
-          font-family: 'Space Grotesk', sans-serif;
+          font-family: var(--font-display), sans-serif;
           font-size: clamp(2.5rem, 5vw, 4rem);
           font-weight: 800;
           line-height: 1.15;
@@ -912,7 +898,7 @@ export default function Home() {
         .code-filename {
           font-size: 0.78rem;
           color: var(--text-muted);
-          font-family: 'Space Grotesk', monospace;
+          font-family: var(--font-display), monospace;
         }
 
         .code-body {
@@ -924,7 +910,7 @@ export default function Home() {
         }
 
         .code-body code {
-          font-family: 'Space Grotesk', 'Courier New', monospace;
+          font-family: var(--font-display), monospace;
           font-size: 0.85rem;
           color: var(--text-secondary);
           line-height: 1.8;
@@ -1017,7 +1003,7 @@ export default function Home() {
         }
 
         .stat-number {
-          font-family: 'Space Grotesk', sans-serif;
+          font-family: var(--font-display), sans-serif;
           font-size: 3.5rem;
           font-weight: 800;
           display: inline-block;
@@ -1630,7 +1616,7 @@ export default function Home() {
         }
 
         .d-title {
-          font-family: 'Space Grotesk', sans-serif;
+          font-family: var(--font-display), sans-serif;
           font-size: 1.35rem;
           font-weight: 800;
           margin-bottom: 8px;
@@ -1712,7 +1698,7 @@ export default function Home() {
         }
 
         .service-title {
-          font-family: 'Space Grotesk', sans-serif;
+          font-family: var(--font-display), sans-serif;
           font-size: 1.2rem;
           font-weight: 600;
           margin-bottom: 12px;
@@ -2155,7 +2141,7 @@ export default function Home() {
         }
 
         .cta-title {
-          font-family: 'Space Grotesk', sans-serif;
+          font-family: var(--font-display), sans-serif;
           font-size: clamp(1.8rem, 3vw, 2.5rem);
           font-weight: 700;
           margin-bottom: 16px;
@@ -2236,7 +2222,7 @@ export default function Home() {
         }
 
         .tech-name {
-          font-family: 'Space Grotesk', sans-serif;
+          font-family: var(--font-display), sans-serif;
           font-size: 1.15rem;
           font-weight: 700;
           margin-bottom: 6px;
@@ -2313,3 +2299,4 @@ export default function Home() {
     </>
   );
 }
+

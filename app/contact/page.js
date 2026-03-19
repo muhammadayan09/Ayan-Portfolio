@@ -11,6 +11,10 @@ export default function Contact() {
   const [service, setService] = useState('');
   const [message, setMessage] = useState('');
   const [submitted, setSubmitted] = useState(false);
+  const officeAddress = 'FF91 Gaur City Centre, Gaur Chowk, West, Sector 4, Greater Noida, Uttar Pradesh 203207 India';
+  const mapQuery = encodeURIComponent(officeAddress);
+  const mapEmbedUrl = `https://www.google.com/maps?q=${mapQuery}&output=embed`;
+  const mapOpenUrl = `https://www.google.com/maps?q=${mapQuery}`;
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -77,8 +81,8 @@ export default function Contact() {
                 icon: '📧',
                 title: 'Email',
                 subtitle: 'For detailed discussions',
-                value: 'iamayan469@gmail.com',
-                href: 'mailto:iamayan469@gmail.com',
+                value: 'pilatuweb2026@gmail.com',
+                href: 'mailto:pilatuweb2026@gmail.com',
                 color: '#6C63FF',
                 btnText: 'Send Email',
                 external: false,
@@ -293,6 +297,40 @@ export default function Contact() {
                   </form>
                 </>
               )}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Location Map Section */}
+      <section className="section location-map-section">
+        <div className="container">
+          <div className="location-map-grid">
+            <div className="location-map-copy">
+              <span className="section-label">Our Location</span>
+              <h2 className="location-map-title">
+                Find Us At <span className="gradient-text">Gaur City Centre</span>
+              </h2>
+              <p className="location-map-desc">
+                Meet us at our office location in Greater Noida. You can use the live map to navigate directly.
+              </p>
+              <div className="location-map-address glass-card">
+                <h3>Office Address</h3>
+                <p>{officeAddress}</p>
+              </div>
+              <a href={mapOpenUrl} target="_blank" rel="noopener noreferrer" className="btn btn-primary">
+                Open In Google Maps
+              </a>
+            </div>
+
+            <div className="location-map-frame glass-card">
+              <iframe
+                title="PilatuWeb Office Location"
+                src={mapEmbedUrl}
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                allowFullScreen
+              />
             </div>
           </div>
         </div>
@@ -756,6 +794,71 @@ export default function Contact() {
           min-height: 120px;
         }
 
+        /* ===== LOCATION MAP ===== */
+        .location-map-section {
+          padding-top: 10px;
+        }
+
+        .location-map-grid {
+          display: grid;
+          grid-template-columns: 1fr 1.2fr;
+          gap: 28px;
+          align-items: stretch;
+        }
+
+        .location-map-copy {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+        }
+
+        .location-map-title {
+          font-family: var(--font-display), sans-serif;
+          font-size: clamp(1.8rem, 3vw, 2.4rem);
+          font-weight: 800;
+          line-height: 1.2;
+          margin: 10px 0 14px;
+        }
+
+        .location-map-desc {
+          font-size: 0.95rem;
+          color: var(--text-secondary);
+          line-height: 1.8;
+          margin-bottom: 18px;
+        }
+
+        .location-map-address {
+          padding: 20px;
+          margin-bottom: 18px;
+        }
+
+        .location-map-address h3 {
+          font-family: var(--font-display), sans-serif;
+          font-size: 1rem;
+          margin-bottom: 8px;
+        }
+
+        .location-map-address p {
+          margin: 0;
+          font-size: 0.88rem;
+          color: var(--text-secondary);
+          line-height: 1.7;
+        }
+
+        .location-map-frame {
+          overflow: hidden;
+          border-radius: 18px;
+          min-height: 420px;
+        }
+
+        .location-map-frame iframe {
+          width: 100%;
+          height: 100%;
+          min-height: 420px;
+          border: 0;
+          display: block;
+        }
+
         /* ===== RESPONSIVE ===== */
         @media (max-width: 1024px) {
           .contact-layout {
@@ -769,6 +872,10 @@ export default function Contact() {
 
           .methods-grid {
             grid-template-columns: repeat(2, 1fr);
+          }
+
+          .location-map-grid {
+            grid-template-columns: 1fr;
           }
         }
 

@@ -218,6 +218,7 @@ export default function About() {
           margin: 0 auto 20px;
           box-shadow: 0 0 40px var(--primary-glow);
           overflow: hidden; background: var(--bg-card);
+          position: relative;
         }
 
         .about-avatar-img { width: 100%; height: 100%; object-fit: cover; }
