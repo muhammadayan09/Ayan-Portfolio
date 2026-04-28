@@ -4,6 +4,7 @@ export default function robots() {
       userAgent: '*',
       allow: '/',
     },
+    host: 'https://pilatuweb.netlify.app',
     sitemap: 'https://pilatuweb.netlify.app/sitemap.xml',
   };
 }

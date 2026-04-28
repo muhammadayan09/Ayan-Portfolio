@@ -1,34 +1,49 @@
-const caseStudyMeta = {
-  'shs-real-estate': {
-    title: 'Real Estate Website Case Study | WordPress Dubai',
-    description: 'See how we built a luxury real estate website using WordPress and improved speed, SEO rankings, and lead generation.',
-  },
-  'zyra-delight': {
-    title: 'Shopify Ecommerce Case Study | Sales Growth',
-    description: 'Discover how we increased ecommerce revenue and conversions using Shopify development and UX optimization strategies.',
-  },
-  'zuf-dental-care': {
-    title: 'Dental SEO Case Study India | Traffic & Leads Growth',
-    description: 'Learn how we improved SEO rankings and leads for a dental clinic with technical SEO and website optimization strategies.',
-  },
-  'silent-stories': {
-    title: 'Photography Website Case Study | WordPress Design',
-    description: 'Case study of a photography website built on WordPress for weddings and events with modern UI and lead generation focus.',
-  },
-};
+import { caseStudies, getCaseStudyBySlug } from '../../data/caseStudies';
+
+export const dynamicParams = false;
+
+export function generateStaticParams() {
+  return caseStudies.map((study) => ({ slug: study.slug }));
+}
 
 export async function generateMetadata({ params }) {
-  const slug = (await params).slug;
-  const meta = caseStudyMeta[slug];
-  if (meta) {
+  const study = getCaseStudyBySlug(params.slug);
+  const canonical = `https://pilatuweb.netlify.app/case-studies/${params.slug}/`;
+
+  if (!study) {
     return {
-      title: meta.title,
-      description: meta.description,
+      title: 'Case Study | PilatuWeb',
+      description: 'Explore our web development case studies showcasing real results and business growth.',
+      alternates: {
+        canonical,
+      },
+      robots: {
+        index: false,
+        follow: false,
+      },
     };
   }
+
+  const title = `${study.title} Case Study | PilatuWeb`;
+  const description = study.summary;
+
   return {
-    title: 'Case Study | PilatuWeb',
-    description: 'Explore our web development case studies showcasing real results and business growth.',
+    title,
+    description,
+    alternates: {
+      canonical,
+    },
+    openGraph: {
+      title,
+      description,
+      url: canonical,
+      type: 'article',
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title,
+      description,
+    },
   };
 }
 

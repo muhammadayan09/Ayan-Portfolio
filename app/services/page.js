@@ -170,7 +170,7 @@ export default function Services() {
         }
 
         .page-title {
-          font-family: 'Space Grotesk', sans-serif;
+          font-family: var(--font-display), sans-serif;
           font-size: clamp(2.2rem, 4.5vw, 3.5rem);
           font-weight: 800;
           margin-bottom: 16px;
@@ -238,7 +238,7 @@ export default function Services() {
         }
 
         .service-detail-title {
-          font-family: 'Space Grotesk', sans-serif;
+          font-family: var(--font-display), sans-serif;
           font-size: 1.5rem;
           font-weight: 700;
           margin-bottom: 10px;
@@ -350,7 +350,7 @@ export default function Services() {
         }
 
         .process-number {
-          font-family: 'Space Grotesk', sans-serif;
+          font-family: var(--font-display), sans-serif;
           font-size: 2.5rem;
           font-weight: 800;
           display: block;
@@ -379,7 +379,7 @@ export default function Services() {
         }
 
         .services-cta-card h2 {
-          font-family: 'Space Grotesk', sans-serif;
+          font-family: var(--font-display), sans-serif;
           font-size: 1.8rem;
           font-weight: 700;
           margin-bottom: 12px;
@@ -423,3 +423,4 @@ export default function Services() {
     </>
   );
 }
+

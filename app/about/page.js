@@ -50,7 +50,13 @@ export default function About() {
             <div className="about-image-col">
               <div className="about-image-card glass-card">
                 <div className="about-avatar">
-                  <Image src="/muhammad-ayan.png" alt="Muhammad Ayan" fill className="about-avatar-img" sizes="140px" />
+                  <Image
+                    src="/muhammad-ayan.png"
+                    alt="Muhammad Ayan"
+                    width={140}
+                    height={140}
+                    className="about-avatar-img"
+                  />
                 </div>
                 <div className="about-name-card">
                   <h3>PilatuWeb Team</h3>
@@ -221,7 +227,7 @@ export default function About() {
           position: relative;
         }
 
-        .about-avatar-img { width: 100%; height: 100%; object-fit: cover; }
+        .about-avatar-img { width: 100%; height: 100%; object-fit: cover; display: block; }
 
         .about-name-card h3 { font-family: var(--font-display), sans-serif; font-size: 1.3rem; font-weight: 700; margin-bottom: 4px; }
         .about-name-card p { color: var(--primary-light); font-size: 0.9rem; font-weight: 500; margin-bottom: 24px; }

@@ -1,12 +1,36 @@
 import './globals.css';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
+import { Inter, Space_Grotesk } from 'next/font/google';
+
+const inter = Inter({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-sans',
+});
+
+const spaceGrotesk = Space_Grotesk({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-display',
+});
 
 export const metadata = {
+  metadataBase: new URL('https://pilatuweb.netlify.app'),
   title: 'Website Development Company in India | PilatuWeb',
   description: 'Top website development company in India offering WordPress, Shopify, SEO & custom web solutions to grow your business online.',
   keywords: 'website development company India, web development agency India, SEO agency India, Shopify development India, WordPress development India, UI UX design, ecommerce development',
-  robots: 'index, follow',
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+      'max-video-preview': -1,
+    },
+  },
   alternates: {
     canonical: 'https://pilatuweb.netlify.app/',
   },
@@ -31,23 +55,8 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <head>
-        <style dangerouslySetInnerHTML={{ __html: `
-          body { opacity: 0; transition: opacity 0.15s ease-in; }
-          body.ready { opacity: 1; }
-        `}} />
-        <script dangerouslySetInnerHTML={{ __html: `
-          if (document.readyState === 'complete' || document.readyState === 'interactive') {
-            document.body.classList.add('ready');
-          } else {
-            window.addEventListener('DOMContentLoaded', function() {
-              document.body.classList.add('ready');
-            });
-          }
-        `}} />
-      </head>
-      <body>
+    <html lang="en">
+      <body className={`${inter.variable} ${spaceGrotesk.variable}`}>
         <Navbar />
         <main>{children}</main>
         <Footer />

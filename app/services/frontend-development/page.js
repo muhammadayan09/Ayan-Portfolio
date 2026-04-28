@@ -269,7 +269,7 @@ export default function FrontendDevelopment() {
         }
 
         .svc-hero-title {
-          font-family: 'Space Grotesk', sans-serif;
+          font-family: var(--font-display), sans-serif;
           font-size: clamp(2.5rem, 5vw, 3.8rem);
           font-weight: 800;
           line-height: 1.15;
@@ -303,7 +303,7 @@ export default function FrontendDevelopment() {
           gap: 4px;
         }
         .svc-hero-stat-num {
-          font-family: 'Space Grotesk', sans-serif;
+          font-family: var(--font-display), sans-serif;
           font-size: 1.8rem;
           font-weight: 800;
           background: linear-gradient(135deg, #fff, var(--accent-light));
@@ -322,7 +322,7 @@ export default function FrontendDevelopment() {
         /* ===== SECTION HEADER ===== */
         .svc-section-header { text-align: center; margin-bottom: 56px; }
         .svc-section-title {
-          font-family: 'Space Grotesk', sans-serif;
+          font-family: var(--font-display), sans-serif;
           font-size: clamp(1.6rem, 3vw, 2.4rem);
           font-weight: 800;
           margin-bottom: 12px;
@@ -391,7 +391,7 @@ export default function FrontendDevelopment() {
         .svc-feature-title {
           position: relative;
           z-index: 2;
-          font-family: 'Space Grotesk', sans-serif;
+          font-family: var(--font-display), sans-serif;
           font-size: 1.1rem;
           font-weight: 700;
           margin-bottom: 10px;
@@ -460,7 +460,7 @@ export default function FrontendDevelopment() {
           flex-shrink: 0;
         }
         .svc-timeline-num {
-          font-family: 'Space Grotesk', sans-serif;
+          font-family: var(--font-display), sans-serif;
           font-size: 2rem;
           font-weight: 800;
           background: linear-gradient(135deg, var(--accent), var(--primary-light));
@@ -477,7 +477,7 @@ export default function FrontendDevelopment() {
           transform: scale(1.3);
         }
         .svc-timeline-title {
-          font-family: 'Space Grotesk', sans-serif;
+          font-family: var(--font-display), sans-serif;
           font-size: 1.1rem;
           font-weight: 700;
           margin-bottom: 8px;
@@ -593,7 +593,7 @@ export default function FrontendDevelopment() {
           background: linear-gradient(90deg, transparent, rgba(108, 99, 255, 0.5), transparent);
         }
         .svc-cta-title {
-          font-family: 'Space Grotesk', sans-serif;
+          font-family: var(--font-display), sans-serif;
           font-size: clamp(1.5rem, 3vw, 2.4rem);
           font-weight: 800;
           margin-bottom: 16px;
@@ -670,3 +670,4 @@ export default function FrontendDevelopment() {
     </>
   );
 }
+

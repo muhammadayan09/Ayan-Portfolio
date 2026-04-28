@@ -175,15 +175,15 @@ export default function ShopifyExpert() {
         .svc-hero-badge-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 12px var(--accent); animation: pulse 2s ease infinite; }
         @keyframes pulse { 0%, 100% { opacity: 1; transform: scale(1); } 50% { opacity: 0.5; transform: scale(0.8); } }
         @keyframes fadeInUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
-        .svc-hero-title { font-family: 'Space Grotesk', sans-serif; font-size: clamp(2.5rem, 5vw, 3.8rem); font-weight: 800; line-height: 1.15; margin-bottom: 20px; animation: fadeInUp 0.6s ease 0.1s both; }
+        .svc-hero-title { font-family: var(--font-display), sans-serif; font-size: clamp(2.5rem, 5vw, 3.8rem); font-weight: 800; line-height: 1.15; margin-bottom: 20px; animation: fadeInUp 0.6s ease 0.1s both; }
         .svc-hero-desc { font-size: 1.05rem; color: var(--text-secondary); line-height: 1.8; max-width: 600px; margin-bottom: 32px; animation: fadeInUp 0.6s ease 0.2s both; }
         .svc-hero-actions { display: flex; gap: 16px; flex-wrap: wrap; margin-bottom: 48px; animation: fadeInUp 0.6s ease 0.3s both; }
         .svc-hero-stats { display: flex; gap: 40px; flex-wrap: wrap; animation: fadeInUp 0.6s ease 0.4s both; }
         .svc-hero-stat { display: flex; flex-direction: column; gap: 4px; }
-        .svc-hero-stat-num { font-family: 'Space Grotesk', sans-serif; font-size: 1.8rem; font-weight: 800; background: linear-gradient(135deg, #fff, var(--accent-light)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+        .svc-hero-stat-num { font-family: var(--font-display), sans-serif; font-size: 1.8rem; font-weight: 800; background: linear-gradient(135deg, #fff, var(--accent-light)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
         .svc-hero-stat-label { font-size: 0.8rem; color: var(--text-muted); font-weight: 500; text-transform: uppercase; letter-spacing: 1px; }
         .svc-section-header { text-align: center; margin-bottom: 56px; }
-        .svc-section-title { font-family: 'Space Grotesk', sans-serif; font-size: clamp(1.6rem, 3vw, 2.4rem); font-weight: 800; margin-bottom: 12px; }
+        .svc-section-title { font-family: var(--font-display), sans-serif; font-size: clamp(1.6rem, 3vw, 2.4rem); font-weight: 800; margin-bottom: 12px; }
         .svc-section-subtitle { font-size: 0.95rem; color: var(--text-secondary); max-width: 520px; margin: 0 auto; line-height: 1.7; }
         .svc-features { padding: 80px 0; }
         .svc-features-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
@@ -193,7 +193,7 @@ export default function ShopifyExpert() {
         .svc-feature-card:hover { transform: translateY(-8px); border-color: rgba(108, 99, 255, 0.3); box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3), 0 0 30px rgba(108, 99, 255, 0.08); }
         .svc-feature-icon { position: relative; z-index: 2; width: 56px; height: 56px; border-radius: 16px; display: flex; align-items: center; justify-content: center; font-size: 1.6rem; margin-bottom: 20px; transition: transform 0.3s ease; }
         .svc-feature-card:hover .svc-feature-icon { transform: scale(1.1) rotate(5deg); }
-        .svc-feature-title { position: relative; z-index: 2; font-family: 'Space Grotesk', sans-serif; font-size: 1.1rem; font-weight: 700; margin-bottom: 10px; }
+        .svc-feature-title { position: relative; z-index: 2; font-family: var(--font-display), sans-serif; font-size: 1.1rem; font-weight: 700; margin-bottom: 10px; }
         .svc-feature-desc { position: relative; z-index: 2; font-size: 0.88rem; color: var(--text-secondary); line-height: 1.7; margin: 0; }
         .svc-feature-line { position: absolute; bottom: 0; left: 0; right: 0; height: 2px; opacity: 0; transition: opacity 0.3s ease; }
         .svc-feature-card:hover .svc-feature-line { opacity: 1; }
@@ -203,10 +203,10 @@ export default function ShopifyExpert() {
         .svc-timeline-item { display: flex; gap: 20px; padding: 32px 28px; border-radius: 20px; background: rgba(20, 20, 35, 0.5); border: 1px solid var(--border); backdrop-filter: blur(10px); transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); cursor: default; }
         .svc-timeline-item:hover, .svc-timeline-item.active { transform: translateY(-6px); border-color: rgba(0, 212, 170, 0.3); box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3), 0 0 30px rgba(0, 212, 170, 0.06); }
         .svc-timeline-num-wrap { display: flex; flex-direction: column; align-items: center; gap: 8px; flex-shrink: 0; }
-        .svc-timeline-num { font-family: 'Space Grotesk', sans-serif; font-size: 2rem; font-weight: 800; background: linear-gradient(135deg, var(--accent), var(--primary-light)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; line-height: 1; }
+        .svc-timeline-num { font-family: var(--font-display), sans-serif; font-size: 2rem; font-weight: 800; background: linear-gradient(135deg, var(--accent), var(--primary-light)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; line-height: 1; }
         .svc-timeline-icon { font-size: 1.2rem; transition: transform 0.3s ease; }
         .svc-timeline-item:hover .svc-timeline-icon { transform: scale(1.3); }
-        .svc-timeline-title { font-family: 'Space Grotesk', sans-serif; font-size: 1.1rem; font-weight: 700; margin-bottom: 8px; }
+        .svc-timeline-title { font-family: var(--font-display), sans-serif; font-size: 1.1rem; font-weight: 700; margin-bottom: 8px; }
         .svc-timeline-desc { font-size: 0.88rem; color: var(--text-secondary); line-height: 1.7; margin: 0; }
         .svc-tech-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
         .svc-tech-item { position: relative; display: flex; flex-direction: column; align-items: center; gap: 10px; padding: 28px 16px; border-radius: 16px; background: rgba(20, 20, 35, 0.5); border: 1px solid var(--border); transition: all 0.3s ease; cursor: default; overflow: hidden; }
@@ -223,7 +223,7 @@ export default function ShopifyExpert() {
         .svc-cta-orb-2 { width: 400px; height: 400px; background: rgba(0, 212, 170, 0.08); bottom: -100px; right: 20%; animation: floatOrb 8s ease-in-out infinite reverse; }
         .svc-cta-content { text-align: center; padding: 60px 40px; border-radius: 24px; background: linear-gradient(135deg, rgba(108, 99, 255, 0.08), rgba(0, 212, 170, 0.05)); border: 1px solid rgba(108, 99, 255, 0.15); backdrop-filter: blur(20px); position: relative; overflow: hidden; }
         .svc-cta-content::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, transparent, rgba(108, 99, 255, 0.5), transparent); }
-        .svc-cta-title { font-family: 'Space Grotesk', sans-serif; font-size: clamp(1.5rem, 3vw, 2.4rem); font-weight: 800; margin-bottom: 16px; }
+        .svc-cta-title { font-family: var(--font-display), sans-serif; font-size: clamp(1.5rem, 3vw, 2.4rem); font-weight: 800; margin-bottom: 16px; }
         .svc-cta-desc { font-size: 1rem; color: var(--text-secondary); max-width: 500px; margin: 0 auto 32px; line-height: 1.7; }
         .svc-cta-btn-primary { display: inline-flex; align-items: center; gap: 10px; padding: 14px 32px; border-radius: 50px; background: linear-gradient(135deg, var(--accent), var(--primary-light)); color: #fff; font-size: 0.95rem; font-weight: 700; text-decoration: none; transition: all 0.3s ease; box-shadow: 0 4px 20px rgba(0, 212, 170, 0.3); }
         .svc-cta-btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 32px rgba(0, 212, 170, 0.4); }
@@ -236,3 +236,4 @@ export default function ShopifyExpert() {
     </>
   );
 }
+

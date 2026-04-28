@@ -271,7 +271,7 @@ export default function Packages() {
         }
 
         .page-title {
-          font-family: 'Space Grotesk', sans-serif;
+          font-family: var(--font-display), sans-serif;
           font-size: clamp(2.2rem, 4.5vw, 3.5rem);
           font-weight: 800;
           margin-bottom: 16px;
@@ -340,7 +340,7 @@ export default function Packages() {
         }
 
         .package-name {
-          font-family: 'Space Grotesk', sans-serif;
+          font-family: var(--font-display), sans-serif;
           font-size: 1.4rem;
           font-weight: 700;
           margin-bottom: 8px;
@@ -364,7 +364,7 @@ export default function Packages() {
         }
 
         .price-amount {
-          font-family: 'Space Grotesk', sans-serif;
+          font-family: var(--font-display), sans-serif;
           font-size: 2rem;
           font-weight: 800;
         }
@@ -448,14 +448,14 @@ export default function Packages() {
         }
 
         .addon-title {
-          font-family: 'Space Grotesk', sans-serif;
+          font-family: var(--font-display), sans-serif;
           font-size: 1rem;
           font-weight: 700;
           margin-bottom: 2px;
         }
 
         .addon-price {
-          font-family: 'Space Grotesk', sans-serif;
+          font-family: var(--font-display), sans-serif;
           font-size: 0.85rem;
           font-weight: 600;
           color: var(--accent);
@@ -486,7 +486,7 @@ export default function Packages() {
         }
 
         .process-step {
-          font-family: 'Space Grotesk', sans-serif;
+          font-family: var(--font-display), sans-serif;
           font-size: 2.5rem;
           font-weight: 800;
           opacity: 0.08;
@@ -502,7 +502,7 @@ export default function Packages() {
         }
 
         .process-title {
-          font-family: 'Space Grotesk', sans-serif;
+          font-family: var(--font-display), sans-serif;
           font-size: 1.05rem;
           font-weight: 700;
           margin-bottom: 10px;
@@ -523,7 +523,7 @@ export default function Packages() {
         }
 
         .cta-title {
-          font-family: 'Space Grotesk', sans-serif;
+          font-family: var(--font-display), sans-serif;
           font-size: clamp(1.4rem, 3vw, 1.8rem);
           font-weight: 700;
           margin-bottom: 12px;
@@ -591,3 +591,4 @@ export default function Packages() {
     </>
   );
 }
+

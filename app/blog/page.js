@@ -115,7 +115,7 @@ export default function Blog() {
         }
 
         .page-title {
-          font-family: 'Space Grotesk', sans-serif;
+          font-family: var(--font-display), sans-serif;
           font-size: clamp(2.2rem, 4.5vw, 3.5rem);
           font-weight: 800;
           margin-bottom: 16px;
@@ -154,7 +154,7 @@ export default function Blog() {
           cursor: pointer;
           transition: var(--transition);
           white-space: nowrap;
-          font-family: 'Inter', sans-serif;
+          font-family: var(--font-sans), sans-serif;
         }
 
         .cat-btn:hover,
@@ -224,7 +224,7 @@ export default function Blog() {
         }
 
         .blog-title {
-          font-family: 'Space Grotesk', sans-serif;
+          font-family: var(--font-display), sans-serif;
           font-size: 1.15rem;
           font-weight: 700;
           line-height: 1.4;
@@ -279,7 +279,7 @@ export default function Blog() {
         }
 
         .blog-info-card h3 {
-          font-family: 'Space Grotesk', sans-serif;
+          font-family: var(--font-display), sans-serif;
           font-size: 1.2rem;
           font-weight: 700;
           margin-bottom: 10px;
@@ -338,7 +338,7 @@ export default function Blog() {
         }
 
         .newsletter-content h2 {
-          font-family: 'Space Grotesk', sans-serif;
+          font-family: var(--font-display), sans-serif;
           font-size: clamp(1.8rem, 4vw, 2.5rem);
           font-weight: 800;
           margin-bottom: 16px;
@@ -396,7 +396,7 @@ export default function Blog() {
           border: none;
           padding: 12px 28px;
           border-radius: 40px;
-          font-family: 'Space Grotesk', sans-serif;
+          font-family: var(--font-display), sans-serif;
           font-weight: 700;
           font-size: 1rem;
           cursor: pointer;
@@ -450,3 +450,4 @@ export default function Blog() {
     </>
   );
 }
+
