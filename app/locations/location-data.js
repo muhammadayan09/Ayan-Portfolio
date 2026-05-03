@@ -70,7 +70,7 @@ export async function getLocationPages() {
             `A city-focused website page for businesses in ${city} looking for a stronger digital presence and a cleaner online presentation.`,
           tone: override.tone || 'Live now',
           focus: override.focus || ['Business websites', 'Service pages', 'Website growth'],
-          href: `/locations/${slug}`,
+          href: `/locations/${slug}/`,
         };
       })
   );

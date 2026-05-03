@@ -31,7 +31,7 @@ export default function NextJsDevelopment() {
             From static sites to complex full-stack platforms — Next.js is our weapon of choice.
           </p>
           <div className="svc-hero-actions">
-            <Link href="/contact" className="btn btn-primary">Start Your Project →</Link>
+            <Link href="/contact/" className="btn btn-primary">Start Your Project →</Link>
             <a href="https://wa.me/917983505861?text=Hi!%20I%20need%20Next.js%20development." target="_blank" rel="noopener noreferrer" className="btn btn-outline">💬 Chat on WhatsApp</a>
           </div>
           <div className="svc-hero-stats">
@@ -146,7 +146,7 @@ export default function NextJsDevelopment() {
             <h2 className="svc-cta-title">Ready for a <span className="gradient-text">Next.js Project?</span></h2>
             <p className="svc-cta-desc">Let&apos;s build a blazing-fast, SEO-optimized web application that scales with your business.</p>
             <div className="svc-cta-actions">
-              <Link href="/contact" className="svc-cta-btn-primary">Start Your Project <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></Link>
+              <Link href="/contact/" className="svc-cta-btn-primary">Start Your Project <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></Link>
               <a href="https://wa.me/917983505861" target="_blank" rel="noopener noreferrer" className="svc-cta-btn-secondary">💬 WhatsApp Us</a>
             </div>
           </div>

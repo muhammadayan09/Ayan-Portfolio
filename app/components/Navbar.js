@@ -18,12 +18,12 @@ export default function Navbar() {
 
   const links = [
     { href: '/', label: 'Home' },
-    { href: '/about', label: 'About' },
-    { href: '/services', label: 'Services' },
-    { href: '/case-studies', label: 'Case Studies' },
-    { href: '/packages', label: 'Packages' },
-    { href: '/blog', label: 'Blog' },
-    { href: '/contact', label: 'Contact' },
+    { href: '/about/', label: 'About' },
+    { href: '/services/', label: 'Services' },
+    { href: '/case-studies/', label: 'Case Studies' },
+    { href: '/packages/', label: 'Packages' },
+    { href: '/blog/', label: 'Blog' },
+    { href: '/contact/', label: 'Contact' },
   ];
 
   return (

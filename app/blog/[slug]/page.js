@@ -96,10 +96,10 @@ export default function BlogPostPage({ params }) {
               We build fast, crawlable websites with better architecture, stronger technical SEO, and content systems that are easier for Google to discover and index.
             </p>
             <div className="reading-note-actions">
-              <Link href="/contact" className="btn btn-primary">
+              <Link href="/contact/" className="btn btn-primary">
                 Talk About Your Project
               </Link>
-              <Link href="/blog" className="btn btn-outline">
+              <Link href="/blog/" className="btn btn-outline">
                 Back to Articles
               </Link>
             </div>

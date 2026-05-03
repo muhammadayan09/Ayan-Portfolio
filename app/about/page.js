@@ -99,8 +99,8 @@ export default function About() {
                 Whether you’re a startup looking to establish your presence or a growing business aiming to scale, PilatuWeb helps you build a strong digital foundation that supports long-term growth.
               </p>
               <div className="about-actions">
-                <Link href="/contact" className="btn btn-primary">Contact Us</Link>
-                <Link href="/services" className="btn btn-outline">View Services</Link>
+                <Link href="/contact/" className="btn btn-primary">Contact Us</Link>
+                <Link href="/services/" className="btn btn-outline">View Services</Link>
               </div>
             </div>
           </div>

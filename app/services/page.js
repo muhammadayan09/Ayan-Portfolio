@@ -103,7 +103,7 @@ export default function Services() {
                 </div>
 
                 <div className="service-read-more">
-                  <Link href={`/services/${service.slug}`} className="read-more-btn" style={{ borderColor: `${service.color}40`, color: service.color }}>
+                  <Link href={`/services/${service.slug}/`} className="read-more-btn" style={{ borderColor: `${service.color}40`, color: service.color }}>
                     Read More →
                   </Link>
                 </div>
@@ -143,7 +143,7 @@ export default function Services() {
             <h2>Need a Custom Solution?</h2>
             <p>Our team is ready to build a tailored digital solution that fits your business needs and drives real results.</p>
             <div className="cta-btns">
-              <Link href="/contact" className="btn btn-primary">Start a Project</Link>
+              <Link href="/contact/" className="btn btn-primary">Start a Project</Link>
               <a href="https://wa.me/917983505861" target="_blank" rel="noopener noreferrer" className="btn btn-outline">👉 WhatsApp</a>
             </div>
           </div>

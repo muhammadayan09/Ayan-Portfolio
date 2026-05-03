@@ -73,7 +73,7 @@ export default function LocationsPageClient({ featuredLocations }) {
               <Link href={featuredLocations[0]?.href || '/contact'} className="btn btn-primary">
                 Open Live City
               </Link>
-              <Link href="/contact" className="btn btn-outline">
+              <Link href="/contact/" className="btn btn-outline">
                 Request New Location
               </Link>
             </div>
@@ -158,7 +158,7 @@ export default function LocationsPageClient({ featuredLocations }) {
                   <Link href={featuredLocations[0]?.href || '/contact'} className="btn btn-primary">
                     View Live City
                   </Link>
-                  <Link href="/contact" className="btn btn-outline">
+                  <Link href="/contact/" className="btn btn-outline">
                     Start Another City
                   </Link>
                 </div>

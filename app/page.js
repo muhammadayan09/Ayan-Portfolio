@@ -112,14 +112,10 @@ export default function Home() {
     return () => window.removeEventListener('resize', updateVisible);
   }, []);
 
-  // keep sliders index within bounds when visibility changes
-  useEffect(() => {
-    const maxCaseIndex = Math.max(0, caseStudies.length - caseVisible);
-    if (caseSlide > maxCaseIndex) setCaseSlide(maxCaseIndex);
-
-    const maxTestimonialIndex = Math.max(0, testimonials.length - testimonialVisible);
-    if (testimonialSlide > maxTestimonialIndex) setTestimonialSlide(maxTestimonialIndex);
-  }, [caseSlide, caseVisible, testimonialSlide, testimonialVisible]);
+  const maxCaseIndex = Math.max(0, caseStudies.length - caseVisible);
+  const safeCaseSlide = Math.min(caseSlide, maxCaseIndex);
+  const maxTestimonialIndex = Math.max(0, testimonials.length - testimonialVisible);
+  const safeTestimonialSlide = Math.min(testimonialSlide, maxTestimonialIndex);
 
   return (
     <>
@@ -152,11 +148,11 @@ export default function Home() {
             </p>
 
             <div className="hero-actions animate-fade-in-up delay-4">
-              <Link href="/contact" className="btn btn-primary">
+              <Link href="/contact/" className="btn btn-primary">
                 Start Your Project
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
               </Link>
-              <Link href="/case-studies" className="btn btn-secondary" style={{ marginLeft: '12px', border: '1px solid var(--border)', background: 'var(--bg-glass)', borderRadius: '50px', padding: '12px 28px', color: 'var(--text-primary)', textDecoration: 'none', display: 'inline-flex', alignItems: 'center', fontWeight: 600 }}>
+              <Link href="/case-studies/" className="btn btn-secondary" style={{ marginLeft: '12px', border: '1px solid var(--border)', background: 'var(--bg-glass)', borderRadius: '50px', padding: '12px 28px', color: 'var(--text-primary)', textDecoration: 'none', display: 'inline-flex', alignItems: 'center', fontWeight: 600 }}>
                 View Our Work
               </Link>
             </div>
@@ -319,7 +315,7 @@ export default function Home() {
           </div>
 
           <div className="skills-cta">
-            <Link href="/services" className="btn btn-primary">
+            <Link href="/services/" className="btn btn-primary">
               View All Services →
             </Link>
           </div>
@@ -342,8 +338,8 @@ export default function Home() {
             <div className="case-nav-group">
               <button
                 className="case-nav prev"
-                onClick={() => setCaseSlide((s) => Math.max(0, s - 1))}
-                disabled={caseSlide === 0}
+                onClick={() => setCaseSlide(Math.max(0, safeCaseSlide - 1))}
+                disabled={safeCaseSlide === 0}
                 aria-label="Previous"
               >
                 ‹
@@ -351,11 +347,9 @@ export default function Home() {
               <button
                 className="case-nav next"
                 onClick={() =>
-                  setCaseSlide((s) =>
-                    Math.min(s + 1, Math.max(0, caseStudies.length - caseVisible))
-                  )
+                  setCaseSlide(Math.min(safeCaseSlide + 1, maxCaseIndex))
                 }
-                disabled={caseSlide >= caseStudies.length - caseVisible}
+                disabled={safeCaseSlide >= maxCaseIndex}
                 aria-label="Next"
               >
                 ›
@@ -364,8 +358,8 @@ export default function Home() {
           </div>
 
           <div className="case-grid">
-            {caseStudies.slice(caseSlide, caseSlide + caseVisible).map((project, i) => (
-              <Link key={project.slug} href={`/case-studies/${project.slug}`} className="case-card-link">
+            {caseStudies.slice(safeCaseSlide, safeCaseSlide + caseVisible).map((project, i) => (
+              <Link key={project.slug} href={`/case-studies/${project.slug}/`} className="case-card-link">
                 <div className="case-card glass-card">
                   <div className="case-image" />
                   <div className="case-content">
@@ -397,8 +391,8 @@ export default function Home() {
             <div className="testimonial-nav-group">
               <button
                 className="case-nav prev"
-                onClick={() => setTestimonialSlide((s) => Math.max(0, s - 1))}
-                disabled={testimonialSlide === 0}
+                onClick={() => setTestimonialSlide(Math.max(0, safeTestimonialSlide - 1))}
+                disabled={safeTestimonialSlide === 0}
                 aria-label="Previous testimonial"
               >
                 ‹
@@ -406,11 +400,9 @@ export default function Home() {
               <button
                 className="case-nav next"
                 onClick={() =>
-                  setTestimonialSlide((s) =>
-                    Math.min(s + 1, Math.max(0, testimonials.length - testimonialVisible))
-                  )
+                  setTestimonialSlide(Math.min(safeTestimonialSlide + 1, maxTestimonialIndex))
                 }
-                disabled={testimonialSlide >= testimonials.length - testimonialVisible}
+                disabled={safeTestimonialSlide >= maxTestimonialIndex}
                 aria-label="Next testimonial"
               >
                 ›
@@ -423,7 +415,7 @@ export default function Home() {
               <div
                 className="testimonial-track"
                 style={{
-                  transform: `translateX(-${(100 / testimonialVisible) * testimonialSlide}%)`,
+                  transform: `translateX(-${(100 / testimonialVisible) * safeTestimonialSlide}%)`,
                 }}
               >
                 {testimonials.map((item, i) => (

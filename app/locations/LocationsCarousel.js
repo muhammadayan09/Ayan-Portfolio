@@ -33,12 +33,7 @@ export default function LocationsCarousel({ locations }) {
     () => Math.max(0, locations.length - visible),
     [locations.length, visible]
   );
-
-  useEffect(() => {
-    if (index > maxIndex) {
-      setIndex(maxIndex);
-    }
-  }, [index, maxIndex]);
+  const safeIndex = Math.min(index, maxIndex);
 
   return (
     <div className="locations-slider-shell">
@@ -51,16 +46,16 @@ export default function LocationsCarousel({ locations }) {
           <div className="slider-controls">
             <button
               className="slider-btn"
-              onClick={() => setIndex((current) => Math.max(0, current - 1))}
-              disabled={index === 0}
+              onClick={() => setIndex(Math.max(0, safeIndex - 1))}
+              disabled={safeIndex === 0}
               aria-label="Previous location"
             >
               {'<'}
             </button>
             <button
               className="slider-btn"
-              onClick={() => setIndex((current) => Math.min(maxIndex, current + 1))}
-              disabled={index >= maxIndex}
+              onClick={() => setIndex(Math.min(maxIndex, safeIndex + 1))}
+              disabled={safeIndex >= maxIndex}
               aria-label="Next location"
             >
               {'>'}
@@ -72,7 +67,7 @@ export default function LocationsCarousel({ locations }) {
       <div className="slider-window">
         <div
           className="slider-track"
-          style={{ transform: `translateX(-${index * (100 / visible)}%)` }}
+          style={{ transform: `translateX(-${safeIndex * (100 / visible)}%)` }}
         >
           {locations.map((item) => (
             <article key={item.slug} className="location-card glass-card">

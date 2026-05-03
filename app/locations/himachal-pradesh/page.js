@@ -110,10 +110,10 @@ export default function HimachalPradeshLocationPage() {
                 PilatuWeb helps you launch a stronger online presence with thoughtful structure and modern design.
               </p>
               <div className="hero-actions">
-                <Link href="/contact" className="btn btn-primary">
+                <Link href="/contact/" className="btn btn-primary">
                   Start A Website Project
                 </Link>
-                <Link href="/services" className="btn btn-outline">
+                <Link href="/services/" className="btn btn-outline">
                   Explore Services
                 </Link>
               </div>
@@ -287,10 +287,10 @@ export default function HimachalPradeshLocationPage() {
                   We can help you create a business website, landing page, or redesign that feels more polished and more effective.
                 </p>
                 <div className="cta-actions">
-                  <Link href="/contact" className="btn btn-primary">
+                  <Link href="/contact/" className="btn btn-primary">
                     Book A Discussion
                   </Link>
-                  <Link href="/locations" className="btn btn-outline">
+                  <Link href="/locations/" className="btn btn-outline">
                     View Locations
                   </Link>
                 </div>

@@ -29,7 +29,7 @@ export default function WordpressDevelopment() {
             We build high-performance WordPress websites that are fast, secure, and easy to manage. No unnecessary plugins or bloated themes — just clean, scalable, and efficient CMS solutions.
           </p>
           <div className="svc-hero-actions">
-            <Link href="/contact" className="btn btn-primary">Start Building →</Link>
+            <Link href="/contact/" className="btn btn-primary">Start Building →</Link>
             <a href="https://wa.me/917983505861" target="_blank" rel="noopener noreferrer" className="btn btn-outline">💬 Chat on WhatsApp</a>
           </div>
           <div className="svc-hero-stats">
@@ -150,7 +150,7 @@ export default function WordpressDevelopment() {
               Let’s build a website that is as easy to manage as it is beautiful to look at.
             </p>
             <div className="svc-cta-actions">
-              <Link href="/contact" className="svc-cta-btn-primary">
+              <Link href="/contact/" className="svc-cta-btn-primary">
                 Start My Build
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
               </Link>

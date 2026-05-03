@@ -4,21 +4,21 @@ import Link from 'next/link';
 export default function Footer() {
   const quickLinks = [
     { href: '/', label: 'Home' },
-    { href: '/about', label: 'About' },
-    { href: '/services', label: 'Services' },
-    { href: '/case-studies', label: 'Case Studies' },
-    { href: '/packages', label: 'Packages' },
-    { href: '/blog', label: 'Blog' },
-    { href: '/contact', label: 'Contact' },
+    { href: '/about/', label: 'About' },
+    { href: '/services/', label: 'Services' },
+    { href: '/case-studies/', label: 'Case Studies' },
+    { href: '/packages/', label: 'Packages' },
+    { href: '/blog/', label: 'Blog' },
+    { href: '/contact/', label: 'Contact' },
   ];
 
   const services = [
-    { label: 'Frontend Development', href: '/services/frontend-development' },
-    { label: 'WordPress Development', href: '/services/wordpress-development' },
-    { label: 'SEO Optimization', href: '/services/seo-optimization' },
-    { label: 'Shopify Expert', href: '/services/shopify-expert' },
-    { label: 'Angular Apps', href: '/services/angular-apps' },
-    { label: 'Next.js Development', href: '/services/next-js-development' },
+    { label: 'Frontend Development', href: '/services/frontend-development/' },
+    { label: 'WordPress Development', href: '/services/wordpress-development/' },
+    { label: 'SEO Optimization', href: '/services/seo-optimization/' },
+    { label: 'Shopify Expert', href: '/services/shopify-expert/' },
+    { label: 'Angular Apps', href: '/services/angular-apps/' },
+    { label: 'Next.js Development', href: '/services/next-js-development/' },
   ];
 
   return (
@@ -111,8 +111,8 @@ export default function Footer() {
         <div className="footer-bottom">
           <p>Copyright © 2026 PilatuWeb. All rights reserved</p>
           <div className="footer-legal" style={{ display: 'flex', gap: '16px' }}>
-            <Link href="/privacy-policy" className="footer-link">Privacy Policy</Link>
-            <Link href="/terms-and-conditions" className="footer-link">Terms & Conditions</Link>
+            <Link href="/privacy-policy/" className="footer-link">Privacy Policy</Link>
+            <Link href="/terms-and-conditions/" className="footer-link">Terms & Conditions</Link>
           </div>
         </div>
       </div>

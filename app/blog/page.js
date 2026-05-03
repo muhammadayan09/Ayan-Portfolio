@@ -54,7 +54,7 @@ export default function Blog() {
                   <p className="blog-excerpt">{post.excerpt}</p>
                   <div className="blog-footer">
                     <span className="blog-read-time">📖 {post.readTime}</span>
-                    <Link href={`/blog/${post.slug}`} className="blog-read-more" style={{ color: post.color }}>Read More →</Link>
+                    <Link href={`/blog/${post.slug}/`} className="blog-read-more" style={{ color: post.color }}>Read More →</Link>
                   </div>
                 </div>
               </article>

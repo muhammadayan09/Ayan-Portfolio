@@ -30,7 +30,7 @@ export default function FrontendDevelopment() {
             From landing pages to complex enterprise dashboards, we create fast, responsive, and visually engaging web interfaces that turn visitors into customers.
           </p>
           <div className="svc-hero-actions">
-            <Link href="/contact" className="btn btn-primary">Start Your Project →</Link>
+            <Link href="/contact/" className="btn btn-primary">Start Your Project →</Link>
             <a href="https://wa.me/917983505861?text=Hi!%20I%20need%20frontend%20development." target="_blank" rel="noopener noreferrer" className="btn btn-outline">💬 Chat on WhatsApp</a>
           </div>
           <div className="svc-hero-stats">
@@ -167,7 +167,7 @@ export default function FrontendDevelopment() {
               Tell us about your project and let’s create a frontend experience that delivers performance and results.
             </p>
             <div className="svc-cta-actions">
-              <Link href="/contact" className="svc-cta-btn-primary">
+              <Link href="/contact/" className="svc-cta-btn-primary">
                 Start Your Project
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
               </Link>

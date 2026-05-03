@@ -204,10 +204,10 @@ export default function CaseStudyDetail({ params }) {
             <h3>Have a Similar Project?</h3>
             <p>{data.ctaDesc}</p>
             <div className="cta-btns">
-              <Link href="/contact" className="btn btn-primary">
+              <Link href="/contact/" className="btn btn-primary">
                 Start Your Success Story
               </Link>
-              <Link href="/case-studies" className="btn btn-outline">
+              <Link href="/case-studies/" className="btn btn-outline">
                 View Other Case Studies
               </Link>
             </div>

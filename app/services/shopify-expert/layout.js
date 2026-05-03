@@ -2,10 +2,10 @@ export const metadata = {
   title: 'Shopify Development Expert India | Ecommerce Store',
   description: 'Hire Shopify expert in India for custom store design, conversion optimization, and high-performing ecommerce solutions.',
   alternates: {
-    canonical: 'https://pilatuweb.netlify.app/services/shopify-expert',
+    canonical: 'https://pilatuweb.netlify.app/services/shopify-expert/',
   },
   openGraph: {
-    url: 'https://pilatuweb.netlify.app/services/shopify-expert',
+    url: 'https://pilatuweb.netlify.app/services/shopify-expert/',
   },
 };
 

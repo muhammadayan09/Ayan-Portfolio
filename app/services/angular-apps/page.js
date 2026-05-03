@@ -16,7 +16,7 @@ export default function AngularApps() {
           <h1 className="svc-hero-title">Enterprise-Grade <span className="gradient-text">Angular</span><br />Applications</h1>
           <p className="svc-hero-desc">We build robust, scalable single-page applications with Angular&apos;s powerful ecosystem — perfect for complex business logic, real-time dashboards, and enterprise workflows.</p>
           <div className="svc-hero-actions">
-            <Link href="/contact" className="btn btn-primary">Start Your Project →</Link>
+            <Link href="/contact/" className="btn btn-primary">Start Your Project →</Link>
             <a href="https://wa.me/917983505861?text=Hi!%20I%20need%20Angular%20development." target="_blank" rel="noopener noreferrer" className="btn btn-outline">💬 Chat on WhatsApp</a>
           </div>
           <div className="svc-hero-stats">
@@ -101,7 +101,7 @@ export default function AngularApps() {
             <h2 className="svc-cta-title">Need an Enterprise <span className="gradient-text">Angular App?</span></h2>
             <p className="svc-cta-desc">Let&apos;s build a scalable, high-performance Angular application tailored to your business.</p>
             <div className="svc-cta-actions">
-              <Link href="/contact" className="svc-cta-btn-primary">Start Your Project <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></Link>
+              <Link href="/contact/" className="svc-cta-btn-primary">Start Your Project <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></Link>
               <a href="https://wa.me/917983505861" target="_blank" rel="noopener noreferrer" className="svc-cta-btn-secondary">💬 WhatsApp Us</a>
             </div>
           </div>

@@ -12,7 +12,7 @@ function withTrailingSlash(route) {
     return `${baseUrl}/`;
   }
 
-  return `${baseUrl}${route}/`;
+  return `${baseUrl}${route.endsWith('/') ? route : `${route}/`}`;
 }
 
 function toIsoDate(dateString) {

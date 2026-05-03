@@ -29,7 +29,7 @@ export default function ShopifyExpert() {
             We build high-converting Shopify stores with custom themes, seamless checkout experiences, and conversion-focused design that turns visitors into loyal customers.
           </p>
           <div className="svc-hero-actions">
-            <Link href="/contact" className="btn btn-primary">Launch Your Store →</Link>
+            <Link href="/contact/" className="btn btn-primary">Launch Your Store →</Link>
             <a href="https://wa.me/917983505861" target="_blank" rel="noopener noreferrer" className="btn btn-outline">💬 Chat on WhatsApp</a>
           </div>
           <div className="svc-hero-stats">
@@ -150,7 +150,7 @@ export default function ShopifyExpert() {
               Let’s build a Shopify store that not only looks great but drives real sales and business growth.
             </p>
             <div className="svc-cta-actions">
-              <Link href="/contact" className="svc-cta-btn-primary">
+              <Link href="/contact/" className="svc-cta-btn-primary">
                 Launch My Store
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
               </Link>

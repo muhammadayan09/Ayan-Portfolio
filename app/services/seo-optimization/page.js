@@ -16,7 +16,7 @@ export default function SeoOptimization() {
           <h1 className="svc-hero-title">Dominate <span className="gradient-text">Google</span><br />Search Rankings</h1>
           <p className="svc-hero-desc">We use data-driven SEO strategies to increase your organic traffic, improve search visibility, and turn your website into a powerful lead-generation system.</p>
           <div className="svc-hero-actions">
-            <Link href="/contact" className="btn btn-primary">Get a Free Audit →</Link>
+            <Link href="/contact/" className="btn btn-primary">Get a Free Audit →</Link>
             <a href="https://wa.me/917983505861?text=Hi!%20I%20need%20SEO%20services." target="_blank" rel="noopener noreferrer" className="btn btn-outline">💬 Chat on WhatsApp</a>
           </div>
           <div className="svc-hero-stats">
@@ -101,7 +101,7 @@ export default function SeoOptimization() {
             <h2 className="svc-cta-title">Ready to Rank #1 on <span className="gradient-text">Google?</span></h2>
             <p className="svc-cta-desc">Let&apos;s build an SEO strategy that drives real organic traffic and converts visitors into customers.</p>
             <div className="svc-cta-actions">
-              <Link href="/contact" className="svc-cta-btn-primary">Get a Free Audit <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></Link>
+              <Link href="/contact/" className="svc-cta-btn-primary">Get a Free Audit <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></Link>
               <a href="https://wa.me/917983505861" target="_blank" rel="noopener noreferrer" className="svc-cta-btn-secondary">💬 WhatsApp Us</a>
             </div>
           </div>

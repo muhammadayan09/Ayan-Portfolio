@@ -243,7 +243,7 @@ export default function Packages() {
               >
                 💬 Chat on WhatsApp
               </a>
-              <Link href="/contact" className="btn btn-outline">
+              <Link href="/contact/" className="btn btn-outline">
                 📧 Send a Message
               </Link>
             </div>

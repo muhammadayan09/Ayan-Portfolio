@@ -44,7 +44,7 @@ export default function CaseStudiesPage() {
             {caseStudies.map((project, i) => (
               <Link
                 key={project.slug}
-                href={`/case-studies/${project.slug}`}
+                href={`/case-studies/${project.slug}/`}
                 className="project-card-wrapper"
                 style={{ animationDelay: `${i * 0.1}s` }}
               >
